@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X, Home, Briefcase, Info, Settings, Mail, Globe } from 'lucide-react';
+import { Menu, X, Home, Briefcase, Info, Settings, Mail, Globe, MapPin } from 'lucide-react';
 import { useTranslation } from '../../contexts/TranslationContext';
 import { useTranslations } from '../../hooks/useTranslations';
 import './Navbar.css';
@@ -67,6 +67,10 @@ const Navbar = () => {
                     <Link to="/jobs" className={`nav-link ${location.pathname === '/jobs' ? 'active' : ''}`}>
                         <Briefcase size={18} />
                         <span>{t('nav.jobs')}</span>
+                    </Link>
+                    <Link to="/countries" className={`nav-link ${location.pathname === '/countries' ? 'active' : ''}`}>
+                        <MapPin size={18} />
+                        <span>Countries</span>
                     </Link>
                     <Link to="/contact" className={`nav-link ${location.pathname === '/contact' ? 'active' : ''}`}>
                         <Mail size={18} />
@@ -151,6 +155,10 @@ const Navbar = () => {
                     <Link to="/jobs">
                         <Briefcase size={18} />
                         <span>{t('nav.jobs')}</span>
+                    </Link>
+                    <Link to="/countries">
+                        <MapPin size={18} />
+                        <span>Countries</span>
                     </Link>
                     <Link to="/contact">
                         <Mail size={18} />

@@ -231,7 +231,7 @@ const Register = () => {
                                         <div className="register-input-group">
                                             <label className="register-label">
                                                 <User size={16} />
-                                                First Name
+                                                First Name *
                                             </label>
                                             <input
                                                 type="text"
@@ -240,13 +240,14 @@ const Register = () => {
                                                 onChange={handleChange}
                                                 className="register-input"
                                                 placeholder="Enter your first name"
+                                                required
                                             />
                                         </div>
 
                                         <div className="register-input-group">
                                             <label className="register-label">
                                                 <User size={16} />
-                                                Last Name
+                                                Last Name *
                                             </label>
                                             <input
                                                 type="text"
@@ -255,13 +256,14 @@ const Register = () => {
                                                 onChange={handleChange}
                                                 className="register-input"
                                                 placeholder="Enter your last name"
+                                                required
                                             />
                                         </div>
 
                                         <div className="register-input-group">
                                             <label className="register-label">
                                                 <Globe size={16} />
-                                                Nationality
+                                                Nationality *
                                             </label>
                                             <input
                                                 type="text"
@@ -270,13 +272,14 @@ const Register = () => {
                                                 onChange={handleChange}
                                                 className="register-input"
                                                 placeholder="e.g., Ethiopian"
+                                                required
                                             />
                                         </div>
 
                                         <div className="register-input-group">
                                             <label className="register-label">
                                                 <FileText size={16} />
-                                                Passport Number
+                                                Passport Number *
                                             </label>
                                             <input
                                                 type="text"
@@ -285,11 +288,12 @@ const Register = () => {
                                                 onChange={handleChange}
                                                 className="register-input"
                                                 placeholder="Enter your passport number"
+                                                required
                                             />
                                         </div>
 
                                         <div className="register-input-group">
-                                            <label className="register-label">Date of Birth</label>
+                                            <label className="register-label">Date of Birth *</label>
                                             <input
                                                 type="date"
                                                 name="dateOfBirth"
@@ -317,7 +321,7 @@ const Register = () => {
                                         <div className="register-input-group register-input-full">
                                             <label className="register-label">
                                                 <MapPin size={16} />
-                                                Address
+                                                Address *
                                             </label>
                                             <input
                                                 type="text"
@@ -330,12 +334,13 @@ const Register = () => {
                                         </div>
 
                                         <div className="register-input-group">
-                                            <label className="register-label">Marital Status</label>
+                                            <label className="register-label">Marital Status *</label>
                                             <select
                                                 name="maritalStatus"
                                                 value={formData.maritalStatus}
                                                 onChange={handleChange}
                                                 className="register-input"
+                                                required
                                             >
                                                 <option value="">Select status</option>
                                                 <option value="SINGLE">Single</option>

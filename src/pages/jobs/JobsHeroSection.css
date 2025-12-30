@@ -1,5 +1,5 @@
 .jobs-hero-section {
-    background: linear-gradient(135deg, var(--bg-beige-soft) 0%, var(--gradient-green-dark) 100%);
+    background: linear-gradient(135deg, var(--gradient-green-light) 0%, var(--gradient-green-dark) 100%);
     color: white;
     padding: 5.5rem 1rem 3.5rem;
 }
@@ -12,8 +12,9 @@
 
 .jobs-hero-container {
     max-width: 1152px;
-    margin: 0 auto;
+    margin: 30px auto 0 auto;
     padding: 0 1rem;
+    text-align: center;
 }
 
 @media (min-width: 768px) {
@@ -23,14 +24,14 @@
 }
 
 .jobs-hero-title {
-    font-size: 1.875rem;
+    font-size: 2.5rem;
     font-weight: 700;
     margin-bottom: 1rem;
 }
 
 @media (min-width: 768px) {
     .jobs-hero-title {
-        font-size: 2.25rem;
+        font-size: 3.5rem;
     }
 }
 

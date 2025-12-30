@@ -1,6 +1,6 @@
 /* ================= Trust Bar ================= */
 .trust-bar {
-  background: linear-gradient(135deg, #475B29 0%, #11602e 100%);
+  background: linear-gradient(135deg, var(--gradient-green-light) 0%, var(--gradient-green-dark) 100%);
   padding: 3rem 5%;
   color: white;
   width: 100%;

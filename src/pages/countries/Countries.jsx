@@ -1,7 +1,13 @@
+import React from 'react';
+import CountriesHeroSection from './CountriesHeroSection';
+import CountriesGridSection from './CountriesGridSection';
+import './Countries.css';
+
 const Countries = () => {
     return (
-        <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '80vh' }}>
-            <h1>Countries - Coming Soon</h1>
+        <div className="countries-container">
+            <CountriesHeroSection />
+            <CountriesGridSection />
         </div>
     );
 };
