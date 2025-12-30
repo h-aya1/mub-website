@@ -6,6 +6,7 @@ import Services from './pages/services/Services';
 import Countries from './pages/countries/Countries';
 import Jobs from './pages/jobs/Jobs';
 import Contact from './pages/contact/Contact';
+import FAQ from './pages/faq/FAQ';
 import Register from './pages/register/Register';
 import AuthChoice from './pages/auth/AuthChoice';
 import Login from './pages/auth/Login';
@@ -23,6 +24,7 @@ function App() {
         <Route path="/countries" element={<Countries />} />
         <Route path="/jobs" element={<Jobs />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/faq" element={<FAQ />} />
         <Route path="/auth-choice" element={<AuthChoice />} />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />

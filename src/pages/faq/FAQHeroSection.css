@@ -1,0 +1,51 @@
+.faq-hero-section {
+    background: linear-gradient(135deg, var(--gradient-green-light) 0%, var(--gradient-green-dark) 100%);
+
+    color: white;
+    padding: 6rem 1rem 4rem;
+    text-align: center;
+}
+
+@media (min-width: 768px) {
+    .faq-hero-section {
+        padding: 7rem 1rem 5rem;
+    }
+}
+
+.faq-hero-content {
+    max-width: 1152px;
+    margin: 30px auto 0 auto;
+    padding: 0 1rem;
+    text-align: center;
+}
+
+@media (min-width: 768px) {
+    .faq-hero-content {
+        padding: 0 1.5rem;
+    }
+}
+
+.faq-hero-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+@media (min-width: 768px) {
+    .faq-hero-title {
+        font-size: 3.5rem;
+    }
+}
+
+.faq-hero-subtitle {
+    font-size: 1.125rem;
+    opacity: 0.9;
+    line-height: 1.6;
+}
+
+@media (min-width: 768px) {
+    .faq-hero-subtitle {
+        font-size: 1.25rem;
+    }
+}
+
