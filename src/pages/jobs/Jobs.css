@@ -1,0 +1,9 @@
+.jobs-page {
+    width: 100%;
+    min-height: 100vh;
+    background: white;
+    overflow-x: hidden;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    display: flex;
+    flex-direction: column;
+}

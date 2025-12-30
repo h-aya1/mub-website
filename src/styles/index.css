@@ -1,0 +1,86 @@
+:root {
+  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  /* MUB Connect Color Palette */
+  --primary-green: #16a34a; /* Green-600 */
+  --primary-green-dark: #15803d; /* Green-700 */
+  --primary-green-light: #22c55e; /* Green-500 */
+  --primary-green-lighter: #4ade80; /* Green-400 - Light green for gradients */
+  --gradient-green-light: #a6ffc6; /* Green-300 - Light green for gradient start */
+  --gradient-green-dark: #104d27; /* Green-800 - Dark green for gradient end */
+
+  /* Beige / Cream theme */
+  --bg-beige: #f5efe3; /* Main beige background */
+  --bg-beige-soft: #faf5eb; /* Softer beige for sections */
+  --icon-beige: #e0c8a0; /* Beige icon background */
+  --icon-brown: #8b5e3c; /* Brownish-beige icon color */
+
+  --text-dark: #1f2937; /* Gray-800 */
+  --text-gray: #4b5563; /* Gray-600 */
+  --text-light: #6b7280; /* Gray-500 */
+  --bg-light: #f9fafb; /* Gray-50 */
+  --white: #ffffff;
+}
+
+/* Reset Box Sizing */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Base Styles */
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  width: 100%;
+  background-color: white;
+  color: #1f2937;
+  overflow-x: hidden;
+}
+
+#root {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Override default link styles */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Typography Defaults */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  line-height: 1.2;
+}
+
+p {
+  margin: 0;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Utility to ensure full width */
+.full-width {
+  width: 100%;
+}

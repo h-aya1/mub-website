@@ -1,0 +1,55 @@
+.jobs-page-cta-section {
+    background-color: var(--bg-light);
+    padding: 3rem 1rem;
+}
+
+@media (min-width: 768px) {
+    .jobs-page-cta-section {
+        padding: 4rem 1rem;
+    }
+}
+
+.jobs-page-cta-container {
+    max-width: 896px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    text-align: center;
+}
+
+@media (min-width: 768px) {
+    .jobs-page-cta-container {
+        padding: 0 1.5rem;
+    }
+}
+
+.jobs-page-cta-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--text-dark);
+    margin-bottom: 1rem;
+}
+
+.jobs-page-cta-description {
+    color: var(--text-gray);
+    margin-bottom: 1.5rem;
+}
+
+.jobs-page-cta-note {
+    background-color: #dbeafe;
+    border: 1px solid #93c5fd;
+    border-radius: 8px;
+    padding: 1rem;
+    text-align: left;
+    display: inline-block;
+}
+
+.jobs-page-cta-note-text {
+    font-size: 0.875rem;
+    color: #1e3a8a;
+    margin: 0;
+}
+
+.jobs-page-cta-note-text strong {
+    font-weight: 600;
+}
+

@@ -1,0 +1,6 @@
+/* Clean up App.css - remove default restrictive styles */
+/* We can keep this file for App-specific utility classes if needed, but for now we'll start fresh to avoid conflicts */
+
+.app-container {
+  width: 100%;
+}

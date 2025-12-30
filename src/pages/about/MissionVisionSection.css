@@ -1,0 +1,52 @@
+.mission-vision-section {
+    padding: 4rem 1rem;
+}
+
+@media (min-width: 768px) {
+    .mission-vision-section {
+        padding: 6rem 1rem;
+    }
+}
+
+.mission-vision-container {
+    max-width: 896px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+@media (min-width: 768px) {
+    .mission-vision-container {
+        padding: 0 1.5rem;
+    }
+}
+
+.mission-vision-grid {
+    display: grid;
+    gap: 3rem;
+}
+
+@media (min-width: 768px) {
+    .mission-vision-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.mission-vision-card {
+    display: flex;
+    flex-direction: column;
+}
+
+.mission-vision-title {
+    font-size: 1.875rem;
+    font-weight: 700;
+    color: var(--text-dark);
+    margin-bottom: 1rem;
+}
+
+.mission-vision-text {
+    font-size: 1.125rem;
+    color: var(--text-gray);
+    line-height: 1.75;
+}
+
+

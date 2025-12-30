@@ -1,0 +1,115 @@
+.process-section {
+    background-color: var(--bg-light);
+    padding: 4rem 1rem;
+}
+
+@media (min-width: 768px) {
+    .process-section {
+        padding: 6rem 1rem;
+    }
+}
+
+.process-container {
+    max-width: 1152px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+@media (min-width: 768px) {
+    .process-container {
+        padding: 0 1.5rem;
+    }
+}
+
+.process-title {
+    font-size: 1.875rem;
+    font-weight: 700;
+    text-align: center;
+    color: var(--text-dark);
+    margin-bottom: 3rem;
+}
+
+@media (min-width: 768px) {
+    .process-title {
+        font-size: 2.25rem;
+    }
+}
+
+.process-grid {
+    display: grid;
+    gap: 1.5rem;
+}
+
+@media (min-width: 768px) {
+    .process-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+    }
+}
+
+.process-item-wrapper {
+    position: relative;
+}
+
+.process-card {
+    padding: 1.5rem;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    background: white;
+    position: relative;
+    z-index: 2;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.process-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.process-step-number {
+    width: 3rem;
+    height: 3rem;
+    background-color: var(--primary-green);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.process-card-title {
+    font-weight: 700;
+    font-size: 1.125rem;
+    color: var(--text-dark);
+    margin-bottom: 0.5rem;
+}
+
+.process-card-description {
+    color: var(--text-gray);
+    line-height: 1.6;
+}
+
+.process-connector {
+    display: none;
+}
+
+@media (min-width: 768px) {
+    .process-connector {
+        display: block;
+        position: absolute;
+        top: 1.5rem;
+        left: calc(50% + 1.5rem);
+        width: calc(100% - 3rem);
+        height: 2px;
+        background-color: rgba(22, 163, 74, 0.3);
+        z-index: 1;
+    }
+
+    /* Hide connector after every 3rd item (end of row) */
+    .process-item-wrapper:nth-child(3n) .process-connector {
+        display: none;
+    }
+}
+

@@ -1,0 +1,39 @@
+/* ================= Trust Bar ================= */
+.trust-bar {
+  background: linear-gradient(135deg, #475B29 0%, #11602e 100%);
+  padding: 3rem 5%;
+  color: white;
+  width: 100%;
+}
+
+.trust-bar-content {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  text-align: center;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.trust-bar-item h3 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin-bottom: 0.5rem;
+  color: white;
+}
+
+.trust-bar-item p {
+  font-size: 1rem;
+  opacity: 0.9;
+  margin: 0;
+  font-weight: 500;
+}
+
+/* ================= Responsive Design ================= */
+@media (max-width: 768px) {
+  .trust-bar-content {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}
+

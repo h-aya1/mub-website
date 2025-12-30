@@ -1,0 +1,11 @@
+/* Global Home Styles */
+.home-container {
+  width: 100%;
+  overflow-x: hidden;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  display: flex;
+  flex-direction: column;
+}
+
+
+
