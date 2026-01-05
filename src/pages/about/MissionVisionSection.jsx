@@ -1,24 +1,23 @@
-import React from 'react';
+import { useTranslations } from '../../hooks/useTranslations';
 import './MissionVisionSection.css';
 
 const MissionVisionSection = () => {
+    const { t } = useTranslations();
+
     return (
         <section className="mission-vision-section">
             <div className="mission-vision-container">
                 <div className="mission-vision-grid">
                     <div className="mission-vision-card">
-                        <h2 className="mission-vision-title">Our Mission</h2>
+                        <h2 className="mission-vision-title">{t('about.mission.title')}</h2>
                         <p className="mission-vision-text">
-                            To provide ethical, professional employment placement services that connect qualified Ethiopian workers
-                            with quality opportunities in the Gulf region, while ensuring compliance with all local and
-                            international regulations.
+                            {t('about.mission.description')}
                         </p>
                     </div>
                     <div className="mission-vision-card">
-                        <h2 className="mission-vision-title">Our Vision</h2>
+                        <h2 className="mission-vision-title">{t('about.vision.title')}</h2>
                         <p className="mission-vision-text">
-                            To be the most trusted foreign employment agency in Ethiopia, known for our integrity, success rate, and
-                            unwavering commitment to the welfare of our job seekers.
+                            {t('about.vision.description')}
                         </p>
                     </div>
                 </div>

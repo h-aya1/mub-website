@@ -1,17 +1,19 @@
-import React from 'react';
+import { useTranslations } from '../../hooks/useTranslations';
 import './TeamSection.css';
 
 const TeamSection = () => {
+    const { t } = useTranslations();
+
     const team = [
-        { role: "Founder & CEO", name: "Name Here", bio: "15+ years in recruitment industry" },
-        { role: "Operations Director", name: "Name Here", bio: "Expert in Gulf employment regulations" },
-        { role: "Placement Specialist", name: "Name Here", bio: "Dedicated to candidate success" },
+        { role: t('about.team.roles.ceo'), name: "Name Here", bio: t('about.team.bios.ceo') },
+        { role: t('about.team.roles.operations'), name: "Name Here", bio: t('about.team.bios.operations') },
+        { role: t('about.team.roles.specialist'), name: "Name Here", bio: t('about.team.bios.specialist') },
     ];
 
     return (
         <section className="team-section">
             <div className="team-container">
-                <h2 className="team-title">Our Team</h2>
+                <h2 className="team-title">{t('about.team.title')}</h2>
                 <div className="team-grid">
                     {team.map((member, i) => (
                         <div key={i} className="team-card">

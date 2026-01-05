@@ -1,20 +1,22 @@
-import React from 'react';
+import { useTranslations } from '../../hooks/useTranslations';
 import './ProcessSection.css';
 
 const ProcessSection = () => {
+    const { t } = useTranslations();
+
     const process = [
-        { step: 1, title: "Application", description: "Submit your application and initial documents" },
-        { step: 2, title: "Screening", description: "We review your qualifications and background" },
-        { step: 3, title: "Interview", description: "Initial assessment and job preference discussion" },
-        { step: 4, title: "Matching", description: "Match with suitable employer opportunities" },
-        { step: 5, title: "Negotiation", description: "Finalize terms and contracts with employer" },
-        { step: 6, title: "Deployment", description: "Visa processing and preparation for departure" },
+        { step: 1, title: t('services.process.application'), description: t('services.process.applicationDesc') },
+        { step: 2, title: t('services.process.screening'), description: t('services.process.screeningDesc') },
+        { step: 3, title: t('services.process.interview'), description: t('services.process.interviewDesc') },
+        { step: 4, title: t('services.process.matching'), description: t('services.process.matchingDesc') },
+        { step: 5, title: t('services.process.negotiation'), description: t('services.process.negotiationDesc') },
+        { step: 6, title: t('services.process.deployment'), description: t('services.process.deploymentDesc') },
     ];
 
     return (
         <section className="process-section">
             <div className="process-container">
-                <h2 className="process-title">How It Works</h2>
+                <h2 className="process-title">{t('services.process.title')}</h2>
                 <div className="process-grid">
                     {process.map((item, i) => (
                         <div key={i} className="process-item-wrapper">

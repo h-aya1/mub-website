@@ -1,16 +1,79 @@
 export const translations = {
+    countries: {
+        hero: {
+            title: "Biyyoota Tajaajila Keenyaa",
+            subtitle: "Carraawwan naannoo Gulf keessa jiran michoota hojii amanmaoo waliin ilaalaa",
+        },
+        grid: {
+            title: "Carraawwan Biyyootaan Ilaalaa",
+            subtitle: "Biyyi hundi carraawwan fi faayidaalee addaa ni dhiyeessa. Bakka gubbaa dandeettii fi galma hojii keessan waliin wal simu filadhaa.",
+            labels: {
+                opportunities: "Carraawwan:",
+                averageSalary: "Madaalli Mindaa:",
+                activeJobs: "Hojiiwwan Jiran:",
+                popularCities: "Magaalota Beekamoo:",
+                explore: "Hojiiwwan Ilaali",
+            },
+        },
+        list: {
+            saudi: {
+                name: "Saud Arabiyyaa",
+                capital: "Riyadh",
+                description: "Dinagdee guddaa Giddugaleessa Bahaati, carraawwan hojii damee adda addaa keessatti.",
+                opportunities: "Fayyaa, Ijaarsa, Keessummeessuu, Tajaajila Mana Keessaa",
+                visaInfo: "Iyyannoo viisaa hojii ni argama",
+            },
+            uae: {
+                name: "Emireetota Arabaa Gamtoomanii",
+                capital: "Abu Dhabi",
+                description: "Ammayyaa, iddoo hawataa bu'uura misoomaa gaarii fi carraawwan hojii qulqullina qabu.",
+                opportunities: "Keessummeessuu, Daldala, Fayyaa, Ijaarsa, Tajaajila Mana Keessaa",
+                visaInfo: "Viisaa jireenyaa eeyyama hojii waliin",
+            },
+            qatar: {
+                name: "Qataar",
+                capital: "Doha",
+                description: "Dinagdee ariitiin guddachaa jiru tajaajila addunyaa fi faayidaa hojii dorgomaa.",
+                opportunities: "Keessummeessuu, Ijaarsa, Fayyaa, Tajaajila Mana Keessaa, Daldala",
+                visaInfo: "Eeyyama hojii fi kaardii jireenyaa",
+            },
+            kuwait: {
+                name: "Kuweet",
+                capital: "Kuwait City",
+                description: "Dinagdee tasgabbaa'aa fedhii guddaa hojjettoota ogeessa fi ogeessa hin taaneef.",
+                opportunities: "Tajaajila Mana Keessaa, Fayyaa, Ijaarsa, Keessummeessuu",
+                visaInfo: "Viisaa hojii fi waraqaa seeniyaa siviilii",
+            },
+            bahrain: {
+                name: "Baahreeyn",
+                capital: "Manama",
+                description: "Biyya odola xiqqoo garuu badhaatuu, carraawwan hojii damee tajaajilaa keessatti guddachaa.",
+                opportunities: "Keessummeessuu, Daldala, Tajaajila Mana Keessaa, Fayyaa",
+                visaInfo: "Eeyyama hojii fi kaardii CPR",
+            },
+            oman: {
+                name: "Omaan",
+                capital: "Muscat",
+                description: "Biyya miidhagduu dinagdee bal'achaa jiru fi fedhii hojjettoota idil-addunyaa dabalaa jiru.",
+                opportunities: "Keessummeessuu, Ijaarsa, Tajaajila Mana Keessaa, Fayyaa",
+                visaInfo: "Viisaa hojii fi eeyyama jireenyaa",
+            },
+        },
+    },
     nav: {
         home: "Mana",
         about: "Waa'ee",
         services: "Tajaajila",
         jobs: "Hojiiwwan Barbaadi",
         contact: "Nu Qunnamsiisi",
+        countries: "Biyyoota",
+        faq: "Gaaffilee Yeroo Baay'ee",
         startJourney: "Imalaa Keessan Jalqabaa",
     },
     home: {
         hero: {
-            title: "Haalliwwan",
-            titleHighlight: "Carraa Waliin Makuu",
+            title: "Hojjettoota Dandeessisuu,",
+            titleHighlight: "Addunyaa Walitti Hidhuu",
             subtitle: "Hirmaannaa dhugaa ta'ee, amantaa qabnu, dandeettii Itoophiyaa gara carraa Gulf fiixaan walitti qabsiisuuf.",
             startJourney: "Imalaa Keessan Jalqabaa",
             browseJobs: "Hojiiwwan Barbaadi",
@@ -36,7 +99,7 @@ export const translations = {
         },
         featured: {
             title: "Carraawwan Madaallamoo",
-            subtitle: "Hojiiwwan keenya dhihoo irraa ilaali",
+            subtitle: "Hojjettoota Itoophiyaa dandeettii qabaniif hojjechiistota Gulf amanamoo ta'an irraa carraawwan hojii filataman.",
             viewAll: "Hojiiwwan Hunda Ilaali",
             monthlySalary: "Madaalli Jiraataa",
             urgent: "Ariifachiisa",
@@ -50,11 +113,11 @@ export const translations = {
         },
         mission: {
             title: "Kaayyoo Keenya",
-            description: "Tajaajila hojiiwwan amantaa qabnu, ogummaa qaban, Itoophiyaa hojjettoota gara carraa Gulf qulqullinaan walitti qabsiisu, haala hundaanuuf haala mootummaa biyyaa fi addunyaa hundaanuuf.",
+            description: "Tajaajila qacaree ifa ta'e, kabaja qabuu fi afaan hedduu fayyadamu kennuudhaan hojjettoota Itoophiyaa dandeessisuu fi carraawwan hojii haqaa biyya alaa jiran waliin walitti qabsiisuuf hojjanna. Sadarkaa addunyaa ni kabajna, sagantaawwan dijiitaalaa ammayyaa fayyadamuun hojii ni ariifachiisna, akkasumas hojjettoota, hojjechiistotaa fi mootummoota gidduutti amantaa ni uumna.",
         },
         vision: {
             title: "Ilaalcha Keenya",
-            description: "Agencicha hojiiwwan ala biyyaa Itoophiyaa keessatti amantaa qabnu ta'uu, amantaa keenyaan, milkaa'ina keenyaan, fi hojiiwwan barbaadan toltuuf qabnuun beekkamu.",
+            description: "Itoophiyaa fi naannoo Gulf keessatti agencii hojii alaa gaggeessaa, kan kalaqaan, hirmaachisummaa fi miira aadaatiin beekamu ta'uu. Ilaalchi keenya hojjettoonni hundi karaawwan hojii addunyaa nageenya qaban, amanamoo fi dandeettii isaanii gabbisan kan dijiitaalaan walitti hidhaman fi michummaa amanamoo ta'een deggaraman akka argatan gochuudha.",
         },
         values: {
             title: "Gatiwwan Keenya",
@@ -64,8 +127,8 @@ export const translations = {
             excellenceDesc: "Gatiwwan ol'aanaa tajaajila walitti qabsiisuu fi galgaltuu keessatti hojjanna.",
             support: "Gargaarsa",
             supportDesc: "Gargaarsa itti fufaa hojiiwwan barbaadanifi hojjettoota hundaanuuf kennina.",
-            compliance: "Himannoo",
-            complianceDesc: "Himannoo hundaanuuf hojiiwwan Itoophiyaa fi addunyaa hundaanuuf.",
+            compliance: "Seera Kabajuu",
+            complianceDesc: "Hojiiwwan Itoophiyaa fi addunyaa hundaanuuf kabajuu.",
         },
         history: {
             title: "Imalaa Keenya",
@@ -80,6 +143,16 @@ export const translations = {
         },
         team: {
             title: "Gareen Keenya",
+            roles: {
+                ceo: "Hundeessaa fi CEO",
+                operations: "Daayirektara Hojii",
+                specialist: "Ogeessa Hojii Walitti Qabsiisuu",
+            },
+            bios: {
+                ceo: "Indaastrii qacaree keessatti waggaa 15+ muuxannoo",
+                operations: "Seera hojii Gulf irratti ogeessa",
+                specialist: "Milkaa'ina kaadhimamtootaatiif kan of kenne",
+            },
         },
         certifications: {
             title: "Hayyamaa fi Mirkaneessitoota",
@@ -93,6 +166,38 @@ export const translations = {
         hero: {
             title: "Tajaajilawwan Guutuu",
             subtitle: "Gargaarsa guutuu eegumsa irraa hojiiwwan hanga ol aanaa",
+        },
+        grid: {
+            recruitment: {
+                title: "Filannoo fi Wal-fudhatinsa",
+                description: "Kaadhimamtoota dandeettii qaban haala dandeettii, muuxannoo fi filannoo isaaniitiin bakka hojii mijataa waliin wal qunnamsiifna.",
+                features: ["Madaallii Dandeettii", "Gamaaggama Proofaayilii", "Systemii Wal-qabsiisa Hojii", "Carraawwan Filannoo Baay'ee"],
+            },
+            documentation: {
+                title: "Gessigesa Ragaalee fi Viisaa",
+                description: "Gargaarsa guutuu waraqaa barbaachisu, waliigaltee, fi iyyannoo viisaa irratti.",
+                features: ["Gamaaggama Waliigaltee", "Qophii Ragaalee", "Iyyannoo Viisaa", "Qindoomina Embaasii"],
+            },
+            training: {
+                title: "Leenjii Hojiirra Ooluun Duraa",
+                description: "Prograamota leenjii guutuu gahee keessan haaraa keessatti milkaa'inaaf isin qopheessu.",
+                features: ["Orientation Aadaa", "Bu'uura Afaanii", "Leenjii Hojii Idilee", "Fayyaa fi Nageenya"],
+            },
+            employer: {
+                title: "Tajaajila Qacartootaa",
+                description: "Qacartoota idil-addunyaa hojjettoota Itoophiyaa ga'umsa qaban barbaadaniif.",
+                features: ["Argannoo Kaadhimamaa", "Mirkaneessa Duubaa", "Deeggarsa Qacaruu", "Gargaarsa Hojiitti Galchuu"],
+            },
+            support: {
+                title: "Gargaarsa Itti Fufaa",
+                description: "Gargaarsa itti fufiinsa qabu imala hojii keessan biyya alaa keessatti.",
+                features: ["Sarara Hatattamaa 24/7", "Furmaata Rakkoo", "Hordoffii nageenyaa", "Gorsa Hojii"],
+            },
+            compliance: {
+                title: "Seera Kabajuu fi Seeraa",
+                description: "Seerota hojii Itoophiyaa fi Gulf hunda guutummaatti kabajuu mirkaneessuu.",
+                features: ["Kabaja Seeraa", "Raawwachiisa Waliigaltee", "Deeggarsa Seeraa", "Furmaata Wal-dhabbii"],
+            },
         },
         process: {
             title: "Akkamitti Hojjanna",
@@ -108,6 +213,38 @@ export const translations = {
             negotiationDesc: "Hojjettoota waliin haalaa fi walgahiiwwan xumuraa",
             deployment: "Odeeffannoo",
             deploymentDesc: "Odeeffannoo visa fi qophaa'ina ba'umsa",
+        },
+        resources: {
+            title: "Qabeenya Gargaaraa",
+            subtitle: "Websaayitootni kun meeshaalee gatii qaban kan hojii guyyaa guyyaa keenya keessatti itti fayyadamnudha. Tajaajila barbaachisaa qacaruu, odeeffannoo viisaa, fi bulchiinsa hojii mana keessaa ni kennu.",
+            visit: "Websaayitii Ilaalaa →",
+            items: {
+                tawtheeq: {
+                    name: "Tawtheeq - Waliigaltee Michummaa Musaned",
+                    description: "Platformiin kun uumuu fi bulchuu waliigaltee michummaa tajaajila hojii mana keessaa waliin walqabatan ni mijeessa.",
+                    category: "Bulchiinsa Waliigaltee",
+                },
+                lmis: {
+                    name: "Sirna Odeeffannoo Gabaa Hojii Itoophiyaa (LMIS)",
+                    description: "Marsariitiin kun daataa guutuu gabaa hojii Itoophiyaa irratti ni dhiyeessa, fayyadamtootni odeeffannoo murteessaa qacaruu fi karoora humna namaatiif akka argatan gargaara.",
+                    category: "Daataa Gabaa Hojii",
+                },
+                mofa: {
+                    name: "Visa MOFA - Tajaajila Gaaffii Viisaa",
+                    description: "Fayyadamtootni waa'ee odeeffannoo viisaa, adeemsa iyyannoo, fi ulaagaalee gosa viisaa adda addaa gaafachuu danda'u.",
+                    category: "Tajaajila Viisaa",
+                },
+                easyenjaz: {
+                    name: "Easyenjaz",
+                    description: "Platformiin kun adeemsa iyyannoo viisaa ni salphisa, tajaajila hojii mana keessaa fi waraqaa walqabatan bulchuu keessatti muuxannoo walxaxaa hin qabne kenna.",
+                    category: "Adeemsa Viisaa",
+                },
+                nyala: {
+                    name: "FETA|P Agency (Nyala Insurance)",
+                    description: "Websaayitiin kun akka karra tajaajila inshuuraansiitti tajaajila, gaaffiiwwan fi daldala inshuuraansii waliin walqabatan bulchuuf seensa fayyadamaa ni dhiyeessa.",
+                    category: "Tajaajila Inshuuraansii",
+                },
+            },
         },
         whyChoose: {
             title: "Maaliif MUB?",
@@ -271,6 +408,21 @@ export const translations = {
             nextStep: "Darbii Itti Aanu",
             submit: "Galmee Ergi",
         },
+    },
+    footer: {
+        description: "Abjuu Itoophiyaa carraawwan Gulf waliin tajaajila qacaree ifa ta'e fi aadaa hubateen walitti hidhuu.",
+        quickLinks: "Geessituuwwan Ariifachiisaa",
+        resources: "Qabeenya",
+        certifications: "Mirkaneessitoota",
+        culturalPre: "Qophii Aadaa",
+        successStories: "Seenaawwan Milkaa'inaa",
+        support: "Gargaarsa",
+        trackApp: "Iyyannoo Keessan Hordofaa",
+        register: "Galmaa'aa",
+        ministry: "Ministeera Hojii Itoophiyaa",
+        gcc: "Mirkaneessa Gumii Gulf",
+        support247: "Gargaarsa 24/7",
+        rights: "Mirgi Qabameera.",
     },
     common: {
         loading: "Hojii irra jira...",

@@ -1,30 +1,32 @@
-import React from 'react';
+import { useTranslations } from '../../hooks/useTranslations';
 import './ValuesSection.css';
 
 const ValuesSection = () => {
+    const { t } = useTranslations();
+
     const values = [
         {
-            title: "Integrity",
-            description: "We operate with complete transparency and ethical practices in all our dealings.",
+            title: t('about.values.integrity'),
+            description: t('about.values.integrityDesc'),
         },
         {
-            title: "Excellence",
-            description: "We strive for the highest standards in matching and placement services.",
+            title: t('about.values.excellence'),
+            description: t('about.values.excellenceDesc'),
         },
         {
-            title: "Support",
-            description: "We provide continuous support to both job seekers and employers.",
+            title: t('about.values.support'),
+            description: t('about.values.supportDesc'),
         },
         {
-            title: "Compliance",
-            description: "Full adherence to Ethiopian and international employment regulations.",
+            title: t('about.values.compliance'),
+            description: t('about.values.complianceDesc'),
         },
     ];
 
     return (
         <section className="values-section">
             <div className="values-container">
-                <h2 className="values-title">Our Core Values</h2>
+                <h2 className="values-title">{t('about.values.title')}</h2>
                 <div className="values-grid">
                     {values.map((value, i) => (
                         <div key={i} className="value-card">

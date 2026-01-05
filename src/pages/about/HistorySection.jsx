@@ -1,27 +1,29 @@
-import React from 'react';
+import { useTranslations } from '../../hooks/useTranslations';
 import './HistorySection.css';
 
 const HistorySection = () => {
+    const { t } = useTranslations();
+
     const milestones = [
         {
             year: "2010",
-            title: "Founded",
-            description: "MUB Agency was established with a vision to improve employment opportunities for Ethiopians.",
+            title: t('about.history.founded'),
+            description: t('about.history.foundedDesc'),
         },
         {
             year: "2015",
-            title: "Expansion",
-            description: "Expanded operations to cover all major Gulf countries with dedicated regional teams.",
+            title: t('about.history.expansion'),
+            description: t('about.history.expansionDesc'),
         },
         {
             year: "2020",
-            title: "Digital Transformation",
-            description: "Launched online application system to streamline the placement process.",
+            title: t('about.history.digital'),
+            description: t('about.history.digitalDesc'),
         },
         {
             year: "2025",
-            title: "Today",
-            description: "Proudly serving as Ethiopia's leading foreign employment agency with 10,000+ successful placements.",
+            title: t('about.history.today'),
+            description: t('about.history.todayDesc'),
             isLast: true,
         },
     ];
@@ -29,7 +31,7 @@ const HistorySection = () => {
     return (
         <section className="history-section">
             <div className="history-container">
-                <h2 className="history-title">Our Journey</h2>
+                <h2 className="history-title">{t('about.history.title')}</h2>
                 <div className="history-timeline">
                     {milestones.map((milestone, i) => (
                         <div key={i} className="history-item">

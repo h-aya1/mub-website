@@ -1,4 +1,4 @@
-import React from 'react';
+import { useTranslations } from '../../hooks/useTranslations';
 import { Link } from 'react-router-dom';
 import { MapPin, DollarSign, Briefcase } from 'lucide-react';
 import './JobsListingsSection.css';
@@ -13,6 +13,8 @@ const JobsListingsSection = ({
     locations,
     salaryRanges,
 }) => {
+    const { t } = useTranslations();
+
     return (
         <section className="jobs-listings-section">
             <div className="jobs-listings-container">
@@ -20,10 +22,10 @@ const JobsListingsSection = ({
                     {/* Sidebar Filters - Desktop */}
                     <div className="jobs-sidebar">
                         <div className="jobs-sidebar-card">
-                            <h3 className="jobs-sidebar-title">Filters</h3>
+                            <h3 className="jobs-sidebar-title">{t('jobs.search.filters')}</h3>
 
                             <div className="jobs-filter-group">
-                                <label className="jobs-filter-group-label">Location</label>
+                                <label className="jobs-filter-group-label">{t('jobs.search.location')}</label>
                                 <div className="jobs-filter-options">
                                     {locations.map((loc) => (
                                         <label key={loc} className="jobs-filter-option">
@@ -33,14 +35,14 @@ const JobsListingsSection = ({
                                                 onChange={() => handleLocationChange(loc)}
                                                 className="jobs-filter-checkbox"
                                             />
-                                            <span className="jobs-filter-option-text">{loc}</span>
+                                            <span className="jobs-filter-option-text">{loc === 'All' ? t('jobs.search.allLocations') : loc}</span>
                                         </label>
                                     ))}
                                 </div>
                             </div>
 
                             <div className="jobs-filter-group">
-                                <label className="jobs-filter-group-label">Minimum Salary</label>
+                                <label className="jobs-filter-group-label">{t('jobs.search.minSalary')}</label>
                                 <div className="jobs-filter-options">
                                     {salaryRanges.map((salary) => (
                                         <label key={salary} className="jobs-filter-option">
@@ -51,7 +53,7 @@ const JobsListingsSection = ({
                                                 className="jobs-filter-checkbox"
                                             />
                                             <span className="jobs-filter-option-text">
-                                                {salary === 0 ? "All Ranges" : `$${salary}+`}
+                                                {salary === 0 ? t('jobs.search.allRanges') : `$${salary}+`}
                                             </span>
                                         </label>
                                     ))}
@@ -64,7 +66,7 @@ const JobsListingsSection = ({
                     <div className="jobs-listings-content">
                         <div className="jobs-listings-header">
                             <p className="jobs-listings-count">
-                                Showing {filteredJobs.length} of {totalJobs} jobs
+                                {t('jobs.listings.showing', { filtered: filteredJobs.length, total: totalJobs })}
                             </p>
                         </div>
 
@@ -106,8 +108,8 @@ const JobsListingsSection = ({
                                 ))
                             ) : (
                                 <div className="jobs-empty-state">
-                                    <p className="jobs-empty-text">No jobs match your criteria</p>
-                                    <p className="jobs-empty-subtext">Try adjusting your filters or search terms</p>
+                                    <p className="jobs-empty-text">{t('jobs.listings.noJobs')}</p>
+                                    <p className="jobs-empty-subtext">{t('jobs.listings.noJobsDesc')}</p>
                                 </div>
                             )}
                         </div>

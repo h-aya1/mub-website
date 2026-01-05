@@ -1,8 +1,11 @@
 import { Link } from 'react-router-dom';
 import { Facebook, Twitter, Instagram, Linkedin, Youtube } from 'lucide-react';
+import { useTranslations } from '../../hooks/useTranslations';
 import './Footer.css';
 
 const Footer = () => {
+    const { t } = useTranslations();
+
     return (
         <footer className="footer-section">
             <div className="footer-content">
@@ -10,11 +13,11 @@ const Footer = () => {
                     <Link to="/" className="footer-logo">
                         <div className="footer-logo-icon">
                             <svg width="40" height="40" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M16 4L20 12L28 14L20 16L16 24L12 16L4 14L12 12L16 4Z" fill="url(#footerLogoGradient)"/>
+                                <path d="M16 4L20 12L28 14L20 16L16 24L12 16L4 14L12 12L16 4Z" fill="url(#footerLogoGradient)" />
                                 <defs>
                                     <linearGradient id="footerLogoGradient" x1="4" y1="4" x2="28" y2="24" gradientUnits="userSpaceOnUse">
-                                        <stop stopColor="#86efac"/>
-                                        <stop offset="1" stopColor="#166534"/>
+                                        <stop stopColor="#86efac" />
+                                        <stop offset="1" stopColor="#166534" />
                                     </linearGradient>
                                 </defs>
                             </svg>
@@ -22,7 +25,7 @@ const Footer = () => {
                         <span>MUB Connect</span>
                     </Link>
                     <p>
-                        Bridging Ethiopian dreams with Gulf opportunities through transparent, culturally-sensitive employment placement services.
+                        {t('footer.description')}
                     </p>
                     <div className="social-links">
                         <a href="#" aria-label="Facebook"><Facebook size={20} /></a>
@@ -34,39 +37,39 @@ const Footer = () => {
                 </div>
 
                 <div className="footer-col links-col">
-                    <h4>QUICK LINKS</h4>
+                    <h4>{t('footer.quickLinks')}</h4>
                     <ul>
-                        <li><Link to="/">Home</Link></li>
-                        <li><Link to="/jobs">Browse Jobs</Link></li>
-                        <li><Link to="/auth-choice">Register</Link></li>
-                        <li><Link to="/track">Track Application</Link></li>
+                        <li><Link to="/">{t('nav.home')}</Link></li>
+                        <li><Link to="/jobs">{t('nav.jobs')}</Link></li>
+                        <li><Link to="/auth-choice">{t('footer.register')}</Link></li>
+                        <li><Link to="/track">{t('footer.trackApp')}</Link></li>
                     </ul>
                 </div>
 
                 <div className="footer-col links-col">
-                    <h4>RESOURCES</h4>
+                    <h4>{t('footer.resources')}</h4>
                     <ul>
-                        <li><Link to="/cultural-prep">Cultural Preparation</Link></li>
-                        <li><Link to="/success-stories">Success Stories</Link></li>
-                        <li><Link to="/faq">FAQ</Link></li>
-                        <li><Link to="/support">Support</Link></li>
+                        <li><Link to="/cultural-prep">{t('footer.culturalPre')}</Link></li>
+                        <li><Link to="/success-stories">{t('footer.successStories')}</Link></li>
+                        <li><Link to="/faq">{t('nav.faq')}</Link></li>
+                        <li><Link to="/support">{t('footer.support')}</Link></li>
                     </ul>
                 </div>
 
                 <div className="footer-col certifications-col">
-                    <h4>CERTIFICATIONS</h4>
+                    <h4>{t('footer.certifications')}</h4>
                     <div className="certification-buttons">
-                        <button className="cert-btn">Ethiopian Ministry of Labor</button>
-                        <button className="cert-btn">Gulf Cooperation Council Certified</button>
+                        <button className="cert-btn">{t('footer.ministry')}</button>
+                        <button className="cert-btn">{t('footer.gcc')}</button>
                     </div>
                     <div className="support-badge">
-                        <span className="support-text">24/7 Support</span>
+                        <span className="support-text">{t('footer.support247')}</span>
                     </div>
                 </div>
             </div>
 
             <div className="footer-bottom">
-                <p>&copy; {new Date().getFullYear()} MUB Connect. All rights reserved.</p>
+                <p>&copy; {new Date().getFullYear()} MUB Connect. {t('footer.rights')}</p>
             </div>
         </footer>
     );

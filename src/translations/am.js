@@ -1,16 +1,79 @@
 export const translations = {
+    countries: {
+        hero: {
+            title: "የአገልግሎት ሀገሮቻችን",
+            subtitle: "በጎልፍ ክልል ያሉ የስራ እድሎችን ከተማመኑ አጋሮች ጋር ያስሱ",
+        },
+        grid: {
+            title: "በሀገር የስራ እድሎችን ያስሱ",
+            subtitle: "እያንዳንዱ ሀገር ልዩ እድሎችን እና ጥቅሞችን ይሰጣል። ከክህሎትዎ እና ከስራ ግቦችዎ ጋር የሚስማማውን መድረሻ ይምረጡ።",
+            labels: {
+                opportunities: "እድሎች:",
+                averageSalary: "አማካይ ደመወዝ:",
+                activeJobs: "የሚገኙ ስራዎች:",
+                popularCities: "ታዋቂ ከተሞች:",
+                explore: "ስራዎችን ያስሱ",
+            },
+        },
+        list: {
+            saudi: {
+                name: "ሳውዲ አረቢያ",
+                capital: "ሪያድ",
+                description: "በመካከለኛው ምስራቅ ትልቁ ኢኮኖሚ በተለያዩ ዘርፎች በርካታ የስራ እድሎች ያሉት።",
+                opportunities: "ጤና፣ ግንባታ፣ መስተንግዶ፣ የቤት ውስጥ አገልግሎቶች",
+                visaInfo: "የስራ ቪዛ ስፖንሰርሺፕ ይገኛል",
+            },
+            uae: {
+                name: "የተባበሩት አረብ ኤምሬትስ",
+                capital: "አቡ ዳቢ",
+                description: "ዘመናዊ፣ ኮስሞፖሊታን መድረሻ ከምርጥ መሰረተ ልማት እና ከፍተኛ ጥራት የስራ እድሎች ጋር።",
+                opportunities: "መስተንግዶ፣ ችርቻሮ፣ ጤና፣ ግንባታ፣ የቤት ውስጥ አገልግሎቶች",
+                visaInfo: "የመኖሪያ ቪዛ ከስራ ፈቃድ ጋር",
+            },
+            qatar: {
+                name: "ኳታር",
+                capital: "ዶሃ",
+                description: "በፍጥነት እያደገ ያለ ኢኮኖሚ ከአለም አቀፍ ደረጃ ተቋማት እና ተወዳዳሪ የስራ ጥቅሎች ጋር።",
+                opportunities: "መስተንግዶ፣ ግንባታ፣ ጤና፣ የቤት ውስጥ አገልግሎቶች፣ ችርቻሮ",
+                visaInfo: "የስራ ፈቃድ እና የመኖሪያ ካርድ",
+            },
+            kuwait: {
+                name: "ኩዌት",
+                capital: "ኩዌት ሲቲ",
+                description: "የተረጋጋ ኢኮኖሚ በተለያዩ ኢንዱስትሪዎች ለሰለጠኑ እና ላልሰለጠኑ ሰራተኞች ከፍተኛ ፍላጎት ያለው።",
+                opportunities: "የቤት ውስጥ አገልግሎቶች፣ ጤና፣ ግንባታ፣ መስተንግዶ",
+                visaInfo: "የስራ ቪዛ እና ሲቪል መታወቂያ ያስፈልጋል",
+            },
+            bahrain: {
+                name: "ባህሬን",
+                capital: "ማናማ",
+                description: "ትንሽ ነገር ግን ብልጽግና ያላት ደሴት ሀገር በአገልግሎት ዘርፎች እያደገ የስራ እድሎች ያላት።",
+                opportunities: "መስተንግዶ፣ ችርቻሮ፣ የቤት ውስጥ አገልግሎቶች፣ ጤና",
+                visaInfo: "የስራ ፈቃድ እና CPR ካርድ",
+            },
+            oman: {
+                name: "ኦማን",
+                capital: "ሙስካት",
+                description: "ውብ ሀገር እየሰፋ ካለ ኢኮኖሚ እና ለአለም አቀፍ ሰራተኞች እየጨመረ ያለ ፍላጎት።",
+                opportunities: "መስተንግዶ፣ ግንባታ፣ የቤት ውስጥ አገልግሎቶች፣ ጤና",
+                visaInfo: "የስራ ቪዛ እና የመኖሪያ ፈቃድ",
+            },
+        },
+    },
     nav: {
         home: "መነሻ",
         about: "ስለእኛ",
         services: "አገልግሎቶች",
         jobs: "ስራዎችን ይፈልጉ",
         contact: "ያግኙን",
+        countries: "ሀገራት",
+        faq: "ተደጋጋሚ ጥያቄዎች",
         startJourney: "ጉዞዎን ይጀምሩ",
     },
     home: {
         hero: {
-            title: "ሕልሞችን ከ",
-            titleHighlight: "ጊዜ ጋር ማገናኘት",
+            title: "ሰራተኞችን ማብቃት፣",
+            titleHighlight: "አለምን ማገናኘት",
             subtitle: "የኢትዮጵያውያንን ችሎታ ከጎልፍ እድሎች ጋር በታማኝነት የሚያገናኝ አጋር ነን።",
             startJourney: "ጉዞዎን ይጀምሩ",
             browseJobs: "ስራዎችን ይፈልጉ",
@@ -36,7 +99,7 @@ export const translations = {
         },
         featured: {
             title: "የተመረጡ እድሎች",
-            subtitle: "ከቅርብ ጊዜ ስራዎቻችንን ይመልከቱ",
+            subtitle: "ሀገራዊ ከሆነ ከጎልፍ ቀጠና አሰሪዎች ለታላቅ የኢትዮጵያ ባለሙያዎች የተመረጡ የስራ እድሎች።",
             viewAll: "ሁሉንም ስራዎች ይመልከቱ",
             monthlySalary: "ወራዊ ደመወዝ",
             urgent: "አስቸኳይ",
@@ -50,11 +113,11 @@ export const translations = {
         },
         mission: {
             title: "የእኛ ተልዕኮ",
-            description: "ብቃት ያላቸውን የኢትዮጵያ ሰራተኞች ከጎልፍ ክልል ጥራት ያላቸው እድሎች ጋር ማገናኘት እና ከሁሉም የአካባቢ እና አለም አቀፍ ደንቦች ጋር ማስተካከል።",
+            description: "ግልጽ፣ ክብር ያለው እና ብዙ ቋንቋዎችን የሚጠቀም የምልመላ አገልግሎት በመስጠት የኢትዮጵያ ሰራተኞችን ለማብቃት እና ከውጭ ከሚገኙ ፍትሃዊ የስራ እድሎች ጋር ለማገናኘት እንሰራለን። አለም አቀፍ ደረጃዎችን እናከብራለን፣ ሂደቶችን በዘመናዊ ዲጂታል ፕላትፎርሞች እናቀላጥፋለን፣ እና በሰራተኞች፣ በአሰሪዎች እና በመንግስታት መካከል እምነትን እንገነባለን።",
         },
         vision: {
             title: "የእኛ ራዕይ",
-            description: "በኢትዮጵያ ውስጥ በጣም የሚታመን የውጭ ስራ ኤጀንሲ ሆነን ለመሆን፣ በአገልግሎታችን ታማኝነት፣ የስኬት መጠን እና ለስራ ፈላጊዎቻችን ደህንነት ቁርጠኛነት።",
+            description: "በኢትዮጵያ እና በጎልፍ ቀጠና ውስጥ በፈጠራ፣ በአካታችነት እና በባህላዊ ስሜታዊነት የሚታወቅ መሪ እና ስነ-ምግባራዊ የውጭ ስራ ኤጀንሲ መሆን። ራዕያችን እያንዳንዱ ሰራተኛ ደህንነቱ የተጠበቀ፣ አስተማማኝ እና አቅምን የሚያሳድጉ የአለም አቀፍ የስራ መንገዶችን በዲጂታል ትስስር እና በታመኑ ሽርክናዎች ታግዞ የሚያገኝበትን መጻኢ ጊዜ መገንባት ነው።",
         },
         values: {
             title: "የእኛ ዋና እሴቶች",
@@ -64,8 +127,8 @@ export const translations = {
             excellenceDesc: "በማዛመጃ እና በማስቀመጥ አገልግሎቶች ውስጥ ከፍተኛ ደረጃዎችን እንጥራለን።",
             support: "ድጋፍ",
             supportDesc: "ለስራ ፈላጊዎች እና ለስራ ሰጪዎች ቀጣይነት ያለው ድጋፍ እንሰጣለን።",
-            compliance: "መጣላት",
-            complianceDesc: "ከኢትዮጵያ እና ከአለም አቀፍ የስራ ደንቦች ሙሉ መጣላት።",
+            compliance: "ተገዢነት",
+            complianceDesc: "ከኢትዮጵያ እና ከአለም አቀፍ የስራ ደንቦች ጋር ሙሉ ተገዢነት።",
         },
         history: {
             title: "የእኛ ጉዞ",
@@ -80,6 +143,16 @@ export const translations = {
         },
         team: {
             title: "የእኛ ቡድን",
+            roles: {
+                ceo: "መስራች እና ዋና ስራ አስፈፃሚ",
+                operations: "የስራ ማስኬጃ ዳይሬክተር",
+                specialist: "የስራ ምደባ ባለሙያ",
+            },
+            bios: {
+                ceo: "በቅጥር ኢንዱስትሪ ውስጥ ከ15 ዓመት በላይ ልምድ",
+                operations: "በጎልፍ የስራ ህጎች ላይ ባለሙያ",
+                specialist: "ለእጩዎች ስኬት ቁርጠኛ",
+            },
         },
         certifications: {
             title: "ፈቃዶች እና የተመሰከሩ",
@@ -93,6 +166,38 @@ export const translations = {
         hero: {
             title: "ሙሉ አገልግሎቶች",
             subtitle: "ከመጠየቂያ እስከ ስራ እና ከዚያ በላይ ሙሉ ድጋፍ",
+        },
+        grid: {
+            recruitment: {
+                title: "ምልመላ እና ማዛመድ",
+                description: "ብቃት ያላቸውን እጩዎች ለይተን በክህሎት፣ ልምድ እና ምርጫ መሰረት ከተስማሚ ቦታዎች ጋር እናዛምዳለን።",
+                features: ["የክህሎት ግምገማ", "የመገለጫ ግምገማ", "የስራ ማዛመድ አልጎሪዝም", "በርካታ የእድል አማራጮች"],
+            },
+            documentation: {
+                title: "ሰነዶች እና ቪዛ ሂደት",
+                description: "ከሚያስፈልጉ ወረቀቶች፣ ውሎች እና የቪዛ ማመልከቻዎች ጋር ሙሉ እገዛ።",
+                features: ["የውል ግምገማ", "የሰነድ ዝግጅት", "የቪዛ ማመልከቻ", "የኤምባሲ ትብብር"],
+            },
+            training: {
+                title: "ከስምሪት በፊት ስልጠና",
+                description: "በአዲሱ ሚናዎ ስኬታማ እንዲሆኑ የሚያዘጋጁ አጠቃላይ ስልጠና ፕሮግራሞች።",
+                features: ["የባህል ዝግጅት", "የቋንቋ መሰረታዊ", "ስራ-ተኮር ስልጠና", "ጤና እና ደህንነት"],
+            },
+            employer: {
+                title: "የአሰሪ አገልግሎቶች",
+                description: "ብቃት ያላቸውን የኢትዮጵያ ሰራተኞች ለሚፈልጉ አለም አቀፍ አሰሪዎች።",
+                features: ["እጩ ማፈላለግ", "የኋላ ታሪክ ማረጋገጥ", "የምልመላ ድጋፍ", "የቅጥር እገዛ"],
+            },
+            support: {
+                title: "ቀጣይነት ያለው ድጋፍ",
+                description: "በውጭ ሀገር የስራ ጉዞዎ በሙሉ ቀጣይነት ያለው ድጋፍ።",
+                features: ["24/7 የአደጋ ጊዜ መስመር", "የችግር መፍታት", "የደህንነት ክትትል", "የስራ ምክር"],
+            },
+            compliance: {
+                title: "ህጋዊነት እና ተገዢነት",
+                description: "ከኢትዮጵያ እና የጎልፍ ስራ ህጎች ጋር ሙሉ ተገዢነትን ማረጋገጥ።",
+                features: ["የደንብ ተገዢነት", "የውል ማስፈጸም", "የህግ ድጋፍ", "የክርክር መፍታት"],
+            },
         },
         process: {
             title: "እንዴት እንሰራለን",
@@ -108,6 +213,38 @@ export const translations = {
             negotiationDesc: "ከስራ ሰጪው ጋር ውሎችን እና ውልዎችን ያጠናቅቁ",
             deployment: "ማስጀመር",
             deploymentDesc: "የቪዛ ሂደት እና ለመነሻ ዝግጅት",
+        },
+        resources: {
+            title: "ጠቃሚ ግብዓቶች",
+            subtitle: "እነዚህ ድህረ ገጾች በዕለታዊ ስራችን የምንጠቀምባቸው ጠቃሚ መሳሪያዎች ናቸው። ለስራ፣ ለቪዛ መረጃ እና ለቤት ውስጥ ስራ አስተዳደር አስፈላጊ አገልግሎቶችን ይሰጣሉ።",
+            visit: "ድህረ ገጹን ይጎብኙ →",
+            items: {
+                tawtheeq: {
+                    name: "Tawtheeq - የ Musaned አጋርነት ውሎች",
+                    description: "ይህ መድረክ ከቤት ውስጥ ስራ አገልግሎቶች ጋር የተያያዙ የአጋርነት ውሎችን መፍጠር እና ማስተዳደርን ያመቻቻል።",
+                    category: "የውል አስተዳደር",
+                },
+                lmis: {
+                    name: "የኢትዮጵያ የስራ ገበያ መረጃ ስርዓት (LMIS)",
+                    description: "ይህ ጣቢያ በኢትዮጵያ የስራ ገበያ ላይ አጠቃላይ መረጃ ይሰጣል፣ ይህም ተጠቃሚዎች ለስራ እና ለሰው ኃይል እቅድ ወሳኝ መረጃ እንዲያገኙ ይረዳል።",
+                    category: "የስራ ገበያ መረጃ",
+                },
+                mofa: {
+                    name: "Visa MOFA - የቪዛ መጠየቂያ አገልግሎቶች",
+                    description: "ተጠቃሚዎች ስለ ቪዛ መረጃ፣ የማመልከቻ ሂደቶች እና ለተለያዩ የቪዛ አይነቶች መስፈርቶች መጠየቅ ይችላሉ።",
+                    category: "የቪዛ አገልግሎቶች",
+                },
+                easyenjaz: {
+                    name: "Easyenjaz",
+                    description: "ይህ መድረክ የቪዛ ማመልከቻ ሂደትን ያቀላጥፋል፣ የቤት ውስጥ ስራ አገልግሎቶችን እና ተያያዥ ወረቀቶችን በማስተዳደር እንከን የለሽ ልምድ ይሰጣል።",
+                    category: "የቪዛ ሂደት",
+                },
+                nyala: {
+                    name: "FETA|P Agency (Nyala Insurance)",
+                    description: "ይህ ድህረ ገጽ ለኢንሹራንስ አገልግሎቶች መግቢያ ሆኖ ያገለግላል፣ ከኢንሹራንስ ጋር የተያያዙ ጥያቄዎችን እና ግብይቶችን ለማስተዳደር የተጠቃሚ መግቢያ ይሰጣል።",
+                    category: "የኢንሹራንስ አገልግሎቶች",
+                },
+            },
         },
         whyChoose: {
             title: "ለምን MUB?",
@@ -161,6 +298,68 @@ export const translations = {
             title: "ቢሮችን ይጎብኙ",
             placeholder: "የ Google ካርታ ምትክ",
             placeholderDesc: "የ Google Maps embed እዚህ ያስገቡ",
+        },
+    },
+    faq: {
+        hero: {
+            title: "ተደጋጋሚ ጥያቄዎች",
+            subtitle: "ስለ አገልግሎቶቻችን፣ የማመልከቻ ሂደት እና የስራ እድሎች ለተለመዱ ጥያቄዎች መልሶችን ያግኙ",
+        },
+        cta: {
+            title: "ሌላ ጥያቄ አለዎት?",
+            text: "የሚፈልጉትን መልስ ካላገኙ፣ እባክዎ እኛን ለማነጋገር አያመንቱ።",
+            button: "ያግኙን",
+        },
+        categories: {
+            general: {
+                title: "አጠቃላይ መረጃ",
+                items: {
+                    q1: { q: "What is MUB Connect?", a: "MUB Connect is a licensed employment agency..." },
+                    q2: { q: "Which countries do you serve?", a: "We facilitate employment opportunities in Saudi Arabia..." },
+                    q3: { q: "Are your services free for applicants?", a: "Our services are designed to support applicants..." },
+                },
+            },
+            process: {
+                title: "የማመልከቻ ሂደት",
+                items: {
+                    q1: { q: "How do I apply?", a: "You can start by registering on our website..." },
+                    q2: { q: "What documents do I need?", a: "Required documents typically include: valid passport..." },
+                    q3: { q: "How long does it take?", a: "The timeline varies... typically 2-6 months..." },
+                    q4: { q: "What happens after I submit?", a: "After submission, our team will review your profile..." },
+                },
+            },
+            employment: {
+                title: "ስራ እና ውሎች",
+                items: {
+                    q1: { q: "What types of jobs are available?", a: "We offer opportunities across various sectors..." },
+                    q2: { q: "What are typical salary ranges?", a: "Salary ranges vary significantly..." },
+                    q3: { q: "What benefits are included?", a: "Benefits vary by employer..." },
+                    q4: { q: "Can I choose the country?", a: "Yes, you can indicate your country preferences..." },
+                },
+            },
+            visa: {
+                title: "ቪዛ እና ሰነዶች",
+                items: {
+                    q1: { q: "Who handles visa processing?", a: "We assist with the visa application process..." },
+                    q2: { q: "What visa types are available?", a: "Most employment opportunities require work visas..." },
+                    q3: { q: "How long are work visas valid?", a: "Work visa validity varies by country..." },
+                },
+            },
+            training: {
+                title: "ስልጠና እና ዝግጅት",
+                items: {
+                    q1: { q: "Do you provide training?", a: "Yes, we offer pre-deployment training..." },
+                    q2: { q: "What to expect in training?", a: "Training typically covers culture, communication..." },
+                },
+            },
+            support: {
+                title: "ድጋፍ እና እርዳታ",
+                items: {
+                    q1: { q: "What support after deployment?", a: "We provide ongoing support including 24/7 hotline..." },
+                    q2: { q: "What if I have problems?", a: "If you encounter any issues, contact our support team..." },
+                    q3: { q: "Can I change jobs?", a: "Job changes depend on your contract terms..." },
+                },
+            },
         },
     },
     jobs: {
@@ -271,6 +470,21 @@ export const translations = {
             nextStep: "ቀጣይ ደረጃ",
             submit: "ምዝገባ ይላኩ",
         },
+    },
+    footer: {
+        description: "የኢትዮጵያውያንን ሕልሞች ከጎልፍ እድሎች ጋር በግልጽ እና ባህልን ባገናዘበ የስራ ምደባ አገልግሎት ማገናኘት።",
+        quickLinks: "ፈጣን ሊንኮች",
+        resources: "ግብዓቶች",
+        certifications: "ማረጋገጫዎች",
+        culturalPre: "የባህል ዝግጅት",
+        successStories: "የስኬት ታሪኮች",
+        support: "ድጋፍ",
+        trackApp: "ማመልከቻን ይከታተሉ",
+        register: "ይመዝገቡ",
+        ministry: "የኢትዮጵያ የስራ ሚኒስቴር",
+        gcc: "የጎልፍ ትብብር ምክር ቤት የተረጋገጠ",
+        support247: "24/7 ድጋፍ",
+        rights: "መብቱ በህግ የተጠበቀ ነው።",
     },
     common: {
         loading: "በመጫን ላይ...",

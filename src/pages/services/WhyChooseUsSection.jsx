@@ -1,31 +1,32 @@
-import React from 'react';
+import { useTranslations } from '../../hooks/useTranslations';
 import './WhyChooseUsSection.css';
 
 const WhyChooseUsSection = () => {
+    const { t } = useTranslations();
+
     const reasons = [
         {
-            title: "15+ Years of Experience",
-            description: "Proven track record with thousands of successful placements.",
+            title: t('services.whyChoose.experience'),
+            description: t('services.whyChoose.experienceDesc'),
         },
         {
-            title: "Ethical Practices",
-            description:
-                "Fully compliant with all Ethiopian and international employment regulations.",
+            title: t('services.whyChoose.ethical'),
+            description: t('services.whyChoose.ethicalDesc'),
         },
         {
-            title: "Comprehensive Support",
-            description: "From initial application through employment and beyond.",
+            title: t('services.whyChoose.support'),
+            description: t('services.whyChoose.supportDesc'),
         },
         {
-            title: "Competitive Opportunities",
-            description: "Access to positions with attractive salaries and benefits.",
+            title: t('services.whyChoose.opportunities'),
+            description: t('services.whyChoose.opportunitiesDesc'),
         },
     ];
 
     return (
         <section className="why-choose-us-section">
             <div className="why-choose-us-container">
-                <h2 className="why-choose-us-title">Why Choose MUB?</h2>
+                <h2 className="why-choose-us-title">{t('services.whyChoose.title')}</h2>
                 <div className="why-choose-us-list">
                     {reasons.map((reason, i) => (
                         <div key={i} className="why-choose-us-card">

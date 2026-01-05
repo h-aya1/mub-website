@@ -1,18 +1,19 @@
-import React from 'react';
+import { useTranslations } from '../../hooks/useTranslations';
 import './JobsPageCTA.css';
 
 const JobsPageCTA = () => {
+    const { t } = useTranslations();
+
     return (
         <section className="jobs-page-cta-section">
             <div className="jobs-page-cta-container">
-                <h2 className="jobs-page-cta-title">Ready to Apply?</h2>
+                <h2 className="jobs-page-cta-title">{t('jobs.cta.title')}</h2>
                 <p className="jobs-page-cta-description">
-                    Select a job and proceed to the application system to begin your overseas employment journey.
+                    {t('jobs.cta.subtitle')}
                 </p>
                 <div className="jobs-page-cta-note">
                     <p className="jobs-page-cta-note-text">
-                        <strong>Note:</strong> The application system is coming soon. For now, visit our office or contact us
-                        directly to apply.
+                        <strong>{t('jobs.cta.note')}</strong> {t('jobs.cta.noteText')}
                     </p>
                 </div>
             </div>

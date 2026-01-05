@@ -1,79 +1,81 @@
-import React from 'react';
+import { useTranslations } from '../../hooks/useTranslations';
 import { MapPin, DollarSign, Users, Briefcase, ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import './CountriesGridSection.css';
 
 const CountriesGridSection = () => {
+    const { t } = useTranslations();
+
     const countries = [
         {
             id: 1,
-            name: 'Saudi Arabia',
+            name: t('countries.list.saudi.name'),
             flag: '🇸🇦',
-            capital: 'Riyadh',
-            description: 'Largest economy in the Middle East with diverse employment opportunities across multiple sectors.',
-            opportunities: 'Healthcare, Construction, Hospitality, Domestic Services',
+            capital: t('countries.list.saudi.capital'),
+            description: t('countries.list.saudi.description'),
+            opportunities: t('countries.list.saudi.opportunities'),
             averageSalary: '$300-800/month',
-            visaInfo: 'Work visa sponsorship available',
+            visaInfo: t('countries.list.saudi.visaInfo'),
             jobCount: '500+',
             popularCities: ['Riyadh', 'Jeddah', 'Dammam', 'Mecca']
         },
         {
             id: 2,
-            name: 'United Arab Emirates',
+            name: t('countries.list.uae.name'),
             flag: '🇦🇪',
-            capital: 'Abu Dhabi',
-            description: 'Modern, cosmopolitan destination with excellent infrastructure and high-quality employment opportunities.',
-            opportunities: 'Hospitality, Retail, Healthcare, Construction, Domestic Services',
+            capital: t('countries.list.uae.capital'),
+            description: t('countries.list.uae.description'),
+            opportunities: t('countries.list.uae.opportunities'),
             averageSalary: '$400-900/month',
-            visaInfo: 'Residence visa with work permit',
+            visaInfo: t('countries.list.uae.visaInfo'),
             jobCount: '400+',
             popularCities: ['Dubai', 'Abu Dhabi', 'Sharjah', 'Al Ain']
         },
         {
             id: 3,
-            name: 'Qatar',
+            name: t('countries.list.qatar.name'),
             flag: '🇶🇦',
-            capital: 'Doha',
-            description: 'Rapidly growing economy with world-class facilities and competitive employment packages.',
-            opportunities: 'Hospitality, Construction, Healthcare, Domestic Services, Retail',
+            capital: t('countries.list.qatar.capital'),
+            description: t('countries.list.qatar.description'),
+            opportunities: t('countries.list.qatar.opportunities'),
             averageSalary: '$350-850/month',
-            visaInfo: 'Work permit and residence card',
+            visaInfo: t('countries.list.qatar.visaInfo'),
             jobCount: '200+',
             popularCities: ['Doha', 'Al Rayyan', 'Al Wakrah']
         },
         {
             id: 4,
-            name: 'Kuwait',
+            name: t('countries.list.kuwait.name'),
             flag: '🇰🇼',
-            capital: 'Kuwait City',
-            description: 'Stable economy with strong demand for skilled and unskilled workers across various industries.',
-            opportunities: 'Domestic Services, Healthcare, Construction, Hospitality',
+            capital: t('countries.list.kuwait.capital'),
+            description: t('countries.list.kuwait.description'),
+            opportunities: t('countries.list.kuwait.opportunities'),
             averageSalary: '$300-700/month',
-            visaInfo: 'Work visa and civil ID required',
+            visaInfo: t('countries.list.kuwait.visaInfo'),
             jobCount: '150+',
             popularCities: ['Kuwait City', 'Al Ahmadi', 'Hawalli']
         },
         {
             id: 5,
-            name: 'Bahrain',
+            name: t('countries.list.bahrain.name'),
             flag: '🇧🇭',
-            capital: 'Manama',
-            description: 'Small but prosperous island nation with growing employment opportunities in service sectors.',
-            opportunities: 'Hospitality, Retail, Domestic Services, Healthcare',
+            capital: t('countries.list.bahrain.capital'),
+            description: t('countries.list.bahrain.description'),
+            opportunities: t('countries.list.bahrain.opportunities'),
             averageSalary: '$280-650/month',
-            visaInfo: 'Work permit and CPR card',
+            visaInfo: t('countries.list.bahrain.visaInfo'),
             jobCount: '100+',
             popularCities: ['Manama', 'Riffa', 'Muharraq']
         },
         {
             id: 6,
-            name: 'Oman',
+            name: t('countries.list.oman.name'),
             flag: '🇴🇲',
-            capital: 'Muscat',
-            description: 'Beautiful country with expanding economy and increasing demand for international workers.',
-            opportunities: 'Hospitality, Construction, Domestic Services, Healthcare',
+            capital: t('countries.list.oman.capital'),
+            description: t('countries.list.oman.description'),
+            opportunities: t('countries.list.oman.opportunities'),
             averageSalary: '$250-600/month',
-            visaInfo: 'Work visa and residence permit',
+            visaInfo: t('countries.list.oman.visaInfo'),
             jobCount: '80+',
             popularCities: ['Muscat', 'Salalah', 'Sohar']
         }
@@ -83,9 +85,9 @@ const CountriesGridSection = () => {
         <section className="countries-grid-section">
             <div className="countries-grid-container">
                 <div className="countries-grid-header">
-                    <h2 className="countries-grid-title">Explore Opportunities by Country</h2>
+                    <h2 className="countries-grid-title">{t('countries.grid.title')}</h2>
                     <p className="countries-grid-subtitle">
-                        Each country offers unique opportunities and benefits. Choose the destination that matches your skills and career goals.
+                        {t('countries.grid.subtitle')}
                     </p>
                 </div>
 
@@ -109,7 +111,7 @@ const CountriesGridSection = () => {
                                 <div className="country-detail-item">
                                     <Briefcase size={16} />
                                     <div>
-                                        <span className="country-detail-label">Opportunities:</span>
+                                        <span className="country-detail-label">{t('countries.grid.labels.opportunities')}</span>
                                         <span className="country-detail-value">{country.opportunities}</span>
                                     </div>
                                 </div>
@@ -117,7 +119,7 @@ const CountriesGridSection = () => {
                                 <div className="country-detail-item">
                                     <DollarSign size={16} />
                                     <div>
-                                        <span className="country-detail-label">Average Salary:</span>
+                                        <span className="country-detail-label">{t('countries.grid.labels.averageSalary')}</span>
                                         <span className="country-detail-value">{country.averageSalary}</span>
                                     </div>
                                 </div>
@@ -125,14 +127,14 @@ const CountriesGridSection = () => {
                                 <div className="country-detail-item">
                                     <Users size={16} />
                                     <div>
-                                        <span className="country-detail-label">Active Jobs:</span>
+                                        <span className="country-detail-label">{t('countries.grid.labels.activeJobs')}</span>
                                         <span className="country-detail-value">{country.jobCount}</span>
                                     </div>
                                 </div>
                             </div>
 
                             <div className="country-popular-cities">
-                                <span className="popular-cities-label">Popular Cities:</span>
+                                <span className="popular-cities-label">{t('countries.grid.labels.popularCities')}</span>
                                 <div className="cities-tags">
                                     {country.popularCities.map((city, idx) => (
                                         <span key={idx} className="city-tag">{city}</span>
@@ -145,7 +147,7 @@ const CountriesGridSection = () => {
                             </div>
 
                             <Link to="/jobs" className="country-explore-btn">
-                                Explore Jobs
+                                {t('countries.grid.labels.explore')}
                                 <ArrowRight size={18} />
                             </Link>
                         </div>

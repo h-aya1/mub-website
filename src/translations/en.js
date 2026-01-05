@@ -1,16 +1,79 @@
 export const translations = {
+    countries: {
+        hero: {
+            title: "Our Service Countries",
+            subtitle: "Explore opportunities across the Gulf region with trusted employment partners",
+        },
+        grid: {
+            title: "Explore Opportunities by Country",
+            subtitle: "Each country offers unique opportunities and benefits. Choose the destination that matches your skills and career goals.",
+            labels: {
+                opportunities: "Opportunities:",
+                averageSalary: "Average Salary:",
+                activeJobs: "Active Jobs:",
+                popularCities: "Popular Cities:",
+                explore: "Explore Jobs",
+            },
+        },
+        list: {
+            saudi: {
+                name: "Saudi Arabia",
+                capital: "Riyadh",
+                description: "Largest economy in the Middle East with diverse employment opportunities across multiple sectors.",
+                opportunities: "Healthcare, Construction, Hospitality, Domestic Services",
+                visaInfo: "Work visa sponsorship available",
+            },
+            uae: {
+                name: "United Arab Emirates",
+                capital: "Abu Dhabi",
+                description: "Modern, cosmopolitan destination with excellent infrastructure and high-quality employment opportunities.",
+                opportunities: "Hospitality, Retail, Healthcare, Construction, Domestic Services",
+                visaInfo: "Residence visa with work permit",
+            },
+            qatar: {
+                name: "Qatar",
+                capital: "Doha",
+                description: "Rapidly growing economy with world-class facilities and competitive employment packages.",
+                opportunities: "Hospitality, Construction, Healthcare, Domestic Services, Retail",
+                visaInfo: "Work permit and residence card",
+            },
+            kuwait: {
+                name: "Kuwait",
+                capital: "Kuwait City",
+                description: "Stable economy with strong demand for skilled and unskilled workers across various industries.",
+                opportunities: "Domestic Services, Healthcare, Construction, Hospitality",
+                visaInfo: "Work visa and civil ID required",
+            },
+            bahrain: {
+                name: "Bahrain",
+                capital: "Manama",
+                description: "Small but prosperous island nation with growing employment opportunities in service sectors.",
+                opportunities: "Hospitality, Retail, Domestic Services, Healthcare",
+                visaInfo: "Work permit and CPR card",
+            },
+            oman: {
+                name: "Oman",
+                capital: "Muscat",
+                description: "Beautiful country with expanding economy and increasing demand for international workers.",
+                opportunities: "Hospitality, Construction, Domestic Services, Healthcare",
+                visaInfo: "Work visa and residence permit",
+            },
+        },
+    },
     nav: {
         home: "Home",
         about: "About",
         services: "Services",
         jobs: "Browse Jobs",
         contact: "Contact",
+        countries: "Countries",
+        faq: "FAQ",
         startJourney: "Start Your Journey",
     },
     home: {
         hero: {
-            title: "Bridging Dreams with",
-            titleHighlight: "Opportunity",
+            title: "Empowering Workers,",
+            titleHighlight: "Bridging Worlds",
             subtitle: "Your trusted partner connecting Ethiopian talent with Gulf opportunities through transparent, culturally-sensitive employment placement.",
             startJourney: "Start Your Journey",
             browseJobs: "Browse Jobs",
@@ -36,7 +99,7 @@ export const translations = {
         },
         featured: {
             title: "Featured Opportunities",
-            subtitle: "Explore some of our latest job openings",
+            subtitle: "Handpicked positions from trusted Gulf employers seeking dedicated Ethiopian professionals.",
             viewAll: "View All Jobs",
             monthlySalary: "Monthly Salary",
             urgent: "Urgent",
@@ -50,11 +113,11 @@ export const translations = {
         },
         mission: {
             title: "Our Mission",
-            description: "To provide ethical, professional employment placement services that connect qualified Ethiopian workers with quality opportunities in the Gulf region, while ensuring compliance with all local and international regulations.",
+            description: "To empower Ethiopian workers by providing transparent, dignified, and multilingual recruitment services that connect them with fair employment opportunities abroad. We ensure compliance with international standards, streamline processes through modern digital platforms, and foster trust between workers, employers, and governments.",
         },
         vision: {
             title: "Our Vision",
-            description: "To be the most trusted foreign employment agency in Ethiopia, known for our integrity, success rate, and unwavering commitment to the welfare of our job seekers.",
+            description: "To become the leading ethical foreign employment agency in Ethiopia and the Gulf region, recognized for innovation, inclusivity, and cultural sensitivity. Our vision is to build a future where every worker can access safe, reliable, and empowering pathways to global employment, supported by seamless digital integration and trusted partnerships.",
         },
         values: {
             title: "Our Core Values",
@@ -80,6 +143,16 @@ export const translations = {
         },
         team: {
             title: "Our Team",
+            roles: {
+                ceo: "Founder & CEO",
+                operations: "Operations Director",
+                specialist: "Placement Specialist",
+            },
+            bios: {
+                ceo: "15+ years in recruitment industry",
+                operations: "Expert in Gulf employment regulations",
+                specialist: "Dedicated to candidate success",
+            },
         },
         certifications: {
             title: "Licenses & Certifications",
@@ -93,6 +166,38 @@ export const translations = {
         hero: {
             title: "Comprehensive Services",
             subtitle: "Full support from application to employment and beyond",
+        },
+        grid: {
+            recruitment: {
+                title: "Recruitment & Matching",
+                description: "We identify qualified candidates and match them with suitable positions based on skills, experience, and preferences.",
+                features: ["Skills assessment", "Profile evaluation", "Job matching algorithm", "Multiple opportunity options"],
+            },
+            documentation: {
+                title: "Documentation & Visa Processing",
+                description: "Complete assistance with all required paperwork, contracts, and visa applications.",
+                features: ["Contract review", "Document preparation", "Visa application", "Embassy coordination"],
+            },
+            training: {
+                title: "Pre-Deployment Training",
+                description: "Comprehensive training programs to prepare you for success in your new role.",
+                features: ["Cultural orientation", "Language basics", "Job-specific training", "Health & safety"],
+            },
+            employer: {
+                title: "Employer Services",
+                description: "For international employers seeking qualified Ethiopian workers.",
+                features: ["Candidate sourcing", "Background verification", "Recruitment support", "On-boarding assistance"],
+            },
+            support: {
+                title: "Ongoing Support",
+                description: "Continuous support throughout your employment journey abroad.",
+                features: ["24/7 emergency hotline", "Problem resolution", "Welfare checks", "Career counseling"],
+            },
+            compliance: {
+                title: "Compliance & Legal",
+                description: "Ensuring full compliance with all Ethiopian and Gulf employment laws.",
+                features: ["Regulatory compliance", "Contract enforcement", "Legal support", "Dispute resolution"],
+            },
         },
         process: {
             title: "How It Works",
@@ -108,6 +213,38 @@ export const translations = {
             negotiationDesc: "Finalize terms and contracts with employer",
             deployment: "Deployment",
             deploymentDesc: "Visa processing and preparation for departure",
+        },
+        resources: {
+            title: "Helpful Resources",
+            subtitle: "These websites are valuable tools used in our daily operations. They provide essential services for employment, visa information, and domestic labor management.",
+            visit: "Visit Website →",
+            items: {
+                tawtheeq: {
+                    name: "Tawtheeq - Musaned Partnership Contracts",
+                    description: "This platform facilitates the creation and management of partnership contracts related to domestic labor services.",
+                    category: "Contract Management",
+                },
+                lmis: {
+                    name: "Ethiopian Labor Market Information System (LMIS)",
+                    description: "This site offers comprehensive data on the labor market in Ethiopia, helping users access vital information for employment and workforce planning.",
+                    category: "Labor Market Data",
+                },
+                mofa: {
+                    name: "Visa MOFA - Visa Inquiry Services",
+                    description: "Users can inquire about visa information, application procedures, and requirements for various visa types.",
+                    category: "Visa Services",
+                },
+                easyenjaz: {
+                    name: "Easyenjaz",
+                    description: "This platform simplifies the visa application process, providing a seamless experience in managing domestic labor services and related paperwork.",
+                    category: "Visa Processing",
+                },
+                nyala: {
+                    name: "FETA|P Agency (Nyala Insurance)",
+                    description: "This website serves as a portal for insurance services, offering user login access for managing insurance-related queries and transactions.",
+                    category: "Insurance Services",
+                },
+            },
         },
         whyChoose: {
             title: "Why Choose MUB?",
@@ -161,6 +298,68 @@ export const translations = {
             title: "Visit Our Office",
             placeholder: "Google Map Placeholder",
             placeholderDesc: "Insert Google Maps embed here",
+        },
+    },
+    faq: {
+        hero: {
+            title: "Frequently Asked Questions",
+            subtitle: "Find answers to common questions about our services, application process, and employment opportunities",
+        },
+        cta: {
+            title: "Still have questions?",
+            text: "If you couldn't find the answer you're looking for, please don't hesitate to contact us.",
+            button: "Contact Us",
+        },
+        categories: {
+            general: {
+                title: "General Information",
+                items: {
+                    q1: { q: "What is MUB Connect?", a: "MUB Connect is a licensed employment agency..." },
+                    q2: { q: "Which countries do you serve?", a: "We facilitate employment opportunities in Saudi Arabia..." },
+                    q3: { q: "Are your services free for applicants?", a: "Our services are designed to support applicants..." },
+                },
+            },
+            process: {
+                title: "Application Process",
+                items: {
+                    q1: { q: "How do I apply?", a: "You can start by registering on our website..." },
+                    q2: { q: "What documents do I need?", a: "Required documents typically include: valid passport..." },
+                    q3: { q: "How long does it take?", a: "The timeline varies... typically 2-6 months..." },
+                    q4: { q: "What happens after I submit?", a: "After submission, our team will review your profile..." },
+                },
+            },
+            employment: {
+                title: "Employment & Contracts",
+                items: {
+                    q1: { q: "What types of jobs are available?", a: "We offer opportunities across various sectors..." },
+                    q2: { q: "What are typical salary ranges?", a: "Salary ranges vary significantly..." },
+                    q3: { q: "What benefits are included?", a: "Benefits vary by employer..." },
+                    q4: { q: "Can I choose the country?", a: "Yes, you can indicate your country preferences..." },
+                },
+            },
+            visa: {
+                title: "Visa & Documentation",
+                items: {
+                    q1: { q: "Who handles visa processing?", a: "We assist with the visa application process..." },
+                    q2: { q: "What visa types are available?", a: "Most employment opportunities require work visas..." },
+                    q3: { q: "How long are work visas valid?", a: "Work visa validity varies by country..." },
+                },
+            },
+            training: {
+                title: "Training & Preparation",
+                items: {
+                    q1: { q: "Do you provide training?", a: "Yes, we offer pre-deployment training..." },
+                    q2: { q: "What to expect in training?", a: "Training typically covers culture, communication..." },
+                },
+            },
+            support: {
+                title: "Support & Assistance",
+                items: {
+                    q1: { q: "What support after deployment?", a: "We provide ongoing support including 24/7 hotline..." },
+                    q2: { q: "What if I have problems?", a: "If you encounter any issues, contact our support team..." },
+                    q3: { q: "Can I change jobs?", a: "Job changes depend on your contract terms..." },
+                },
+            },
         },
     },
     jobs: {
@@ -271,6 +470,21 @@ export const translations = {
             nextStep: "Next Step",
             submit: "Submit Registration",
         },
+    },
+    footer: {
+        description: "Bridging Ethiopian dreams with Gulf opportunities through transparent, culturally-sensitive employment placement services.",
+        quickLinks: "QUICK LINKS",
+        resources: "RESOURCES",
+        certifications: "CERTIFICATIONS",
+        culturalPre: "Cultural Preparation",
+        successStories: "Success Stories",
+        support: "Support",
+        trackApp: "Track Application",
+        register: "Register",
+        ministry: "Ethiopian Ministry of Labor",
+        gcc: "Gulf Cooperation Council Certified",
+        support247: "24/7 Support",
+        rights: "All rights reserved.",
     },
     common: {
         loading: "Loading...",

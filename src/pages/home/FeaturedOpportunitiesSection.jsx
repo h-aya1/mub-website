@@ -1,9 +1,11 @@
-import React from 'react';
+import { useTranslations } from '../../hooks/useTranslations';
 import { Link } from 'react-router-dom';
-import { ArrowRight, CheckCircle, MapPin, Clock, AlertCircle } from 'lucide-react';
+import { ArrowRight, AlertCircle, MapPin, Clock, CheckCircle } from 'lucide-react';
 import './FeaturedOpportunitiesSection.css';
 
 const FeaturedOpportunitiesSection = () => {
+    const { t } = useTranslations();
+
     // Fetch first 3 jobs (same data structure as jobs page)
     const featuredJobs = [
         {
@@ -51,11 +53,11 @@ const FeaturedOpportunitiesSection = () => {
         <section className="featured-opportunities-section">
             <div className="section-header-with-action">
                 <div className="section-header-left">
-                    <h2>Featured Opportunities</h2>
-                    <p>Handpicked positions from trusted Gulf employers seeking dedicated Ethiopian professionals.</p>
+                    <h2>{t('home.featured.title')}</h2>
+                    <p>{t('home.featured.subtitle')}</p>
                 </div>
                 <Link to="/jobs" className="btn-view-all">
-                    View All Jobs
+                    {t('home.featured.viewAll')}
                     <ArrowRight size={20} />
                 </Link>
             </div>
@@ -69,7 +71,7 @@ const FeaturedOpportunitiesSection = () => {
                                 {job.urgent && (
                                     <span className="urgent-badge">
                                         <AlertCircle size={14} />
-                                        Urgent
+                                        {t('home.featured.urgent')}
                                     </span>
                                 )}
                             </div>
@@ -80,7 +82,7 @@ const FeaturedOpportunitiesSection = () => {
                         </div>
 
                         <div className="job-salary-bar">
-                            {job.salary}
+                            {t('home.featured.monthlySalary')}
                         </div>
 
                         <div className="job-type-badge">
@@ -89,7 +91,7 @@ const FeaturedOpportunitiesSection = () => {
                         </div>
 
                         <div className="job-requirements">
-                            <h4>Key Requirements:</h4>
+                            <h4>{t('home.featured.requirements')}:</h4>
                             <ul>
                                 {job.requirements.map((req, idx) => (
                                     <li key={idx}>
@@ -101,7 +103,7 @@ const FeaturedOpportunitiesSection = () => {
                         </div>
 
                         <Link to="/auth-choice" state={{ from: `/jobs/${job.id}` }} className="btn-apply-featured">
-                            Apply Now
+                            {t('services.cta.applyNow')}
                             <ArrowRight size={18} />
                         </Link>
                     </div>

@@ -1,47 +1,49 @@
-import React from 'react';
+import { useTranslations } from '../../hooks/useTranslations';
 import { ExternalLink, FileText, Database, Globe, CheckCircle, Shield } from 'lucide-react';
 import './HelpfulResourcesSection.css';
 
 const HelpfulResourcesSection = () => {
+    const { t } = useTranslations();
+
     const resources = [
         {
             id: 1,
-            name: 'Tawtheeq - Musaned Partnership Contracts',
-            description: 'This platform facilitates the creation and management of partnership contracts related to domestic labor services.',
+            name: t('services.resources.items.tawtheeq.name'),
+            description: t('services.resources.items.tawtheeq.description'),
             icon: FileText,
-            category: 'Contract Management',
+            category: t('services.resources.items.tawtheeq.category'),
             url: 'https://tawtheeq.musaned.com.sa/'
         },
         {
             id: 2,
-            name: 'Ethiopian Labor Market Information System (LMIS)',
-            description: 'This site offers comprehensive data on the labor market in Ethiopia, helping users access vital information for employment and workforce planning.',
+            name: t('services.resources.items.lmis.name'),
+            description: t('services.resources.items.lmis.description'),
             icon: Database,
-            category: 'Labor Market Data',
+            category: t('services.resources.items.lmis.category'),
             url: 'https://lmis.gov.et/'
         },
         {
             id: 3,
-            name: 'Visa MOFA - Visa Inquiry Services',
-            description: 'Users can inquire about visa information, application procedures, and requirements for various visa types.',
+            name: t('services.resources.items.mofa.name'),
+            description: t('services.resources.items.mofa.description'),
             icon: Globe,
-            category: 'Visa Services',
+            category: t('services.resources.items.mofa.category'),
             url: 'https://visa.mofa.gov.sa/'
         },
         {
             id: 4,
-            name: 'Easyenjaz',
-            description: 'This platform simplifies the visa application process, providing a seamless experience in managing domestic labor services and related paperwork.',
+            name: t('services.resources.items.easyenjaz.name'),
+            description: t('services.resources.items.easyenjaz.description'),
             icon: CheckCircle,
-            category: 'Visa Processing',
+            category: t('services.resources.items.easyenjaz.category'),
             url: 'https://www.easyenjaz.net/'
         },
         {
             id: 5,
-            name: 'FETA|P Agency (Nyala Insurance)',
-            description: 'This website serves as a portal for insurance services, offering user login access for managing insurance-related queries and transactions.',
+            name: t('services.resources.items.nyala.name'),
+            description: t('services.resources.items.nyala.description'),
             icon: Shield,
-            category: 'Insurance Services',
+            category: t('services.resources.items.nyala.category'),
             url: 'https://www.nyalainsurancesc.com/'
         }
     ];
@@ -50,9 +52,9 @@ const HelpfulResourcesSection = () => {
         <section className="helpful-resources-section">
             <div className="helpful-resources-container">
                 <div className="helpful-resources-header">
-                    <h2 className="helpful-resources-title">Helpful Resources</h2>
+                    <h2 className="helpful-resources-title">{t('services.resources.title')}</h2>
                     <p className="helpful-resources-subtitle">
-                        These websites are valuable tools used in our daily operations. They provide essential services for employment, visa information, and domestic labor management.
+                        {t('services.resources.subtitle')}
                     </p>
                 </div>
 

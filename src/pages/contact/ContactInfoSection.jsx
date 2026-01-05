@@ -1,28 +1,30 @@
-import React from 'react';
+import { useTranslations } from '../../hooks/useTranslations';
 import { MapPin, Phone, Mail, Clock } from 'lucide-react';
 import './ContactInfoSection.css';
 
 const ContactInfoSection = () => {
+    const { t } = useTranslations();
+
     const contactInfo = [
         {
             icon: MapPin,
-            title: "Office Location",
+            title: t('contact.info.officeLocation'),
             content: ["Addis Ababa, Ethiopia", "High-rise business district"],
         },
         {
             icon: Phone,
-            title: "Phone",
-            content: ["+251-XXX-XXXX-XXX", "Available during business hours"],
+            title: t('contact.info.phone'),
+            content: ["+251-XXX-XXXX-XXX", t('contact.info.availableHours')],
         },
         {
             icon: Mail,
-            title: "Email",
+            title: t('contact.info.email'),
             content: ["info@mubagency.com", "support@mubagency.com"],
         },
         {
             icon: Clock,
-            title: "Business Hours",
-            content: ["Monday - Friday: 8:00 AM - 5:00 PM", "Saturday: 9:00 AM - 1:00 PM"],
+            title: t('contact.info.businessHours'),
+            content: [t('contact.info.mondayFriday'), t('contact.info.saturday')],
         },
     ];
 

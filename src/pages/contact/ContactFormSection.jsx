@@ -1,8 +1,9 @@
-import React, { useState } from 'react';
+import { useTranslations } from '../../hooks/useTranslations';
 import { MessageSquare } from 'lucide-react';
 import './ContactFormSection.css';
 
 const ContactFormSection = () => {
+    const { t } = useTranslations();
     const [formData, setFormData] = useState({
         firstName: '',
         lastName: '',
@@ -30,13 +31,13 @@ const ContactFormSection = () => {
                 <div className="contact-form-grid">
                     {/* Form */}
                     <div className="contact-form-wrapper">
-                        <h2 className="contact-form-title">Send us a Message</h2>
+                        <h2 className="contact-form-title">{t('contact.form.title')}</h2>
                         <form className="contact-form" onSubmit={handleSubmit}>
                             <div className="contact-form-row">
                                 <input
                                     type="text"
                                     name="firstName"
-                                    placeholder="First Name"
+                                    placeholder={t('contact.form.firstName')}
                                     className="contact-input"
                                     value={formData.firstName}
                                     onChange={handleChange}
@@ -45,7 +46,7 @@ const ContactFormSection = () => {
                                 <input
                                     type="text"
                                     name="lastName"
-                                    placeholder="Last Name"
+                                    placeholder={t('contact.form.lastName')}
                                     className="contact-input"
                                     value={formData.lastName}
                                     onChange={handleChange}
@@ -55,7 +56,7 @@ const ContactFormSection = () => {
                             <input
                                 type="email"
                                 name="email"
-                                placeholder="Email Address"
+                                placeholder={t('contact.form.email')}
                                 className="contact-input contact-input-full"
                                 value={formData.email}
                                 onChange={handleChange}
@@ -64,7 +65,7 @@ const ContactFormSection = () => {
                             <input
                                 type="text"
                                 name="subject"
-                                placeholder="Subject"
+                                placeholder={t('contact.form.subject')}
                                 className="contact-input contact-input-full"
                                 value={formData.subject}
                                 onChange={handleChange}
@@ -72,7 +73,7 @@ const ContactFormSection = () => {
                             />
                             <textarea
                                 name="message"
-                                placeholder="Message"
+                                placeholder={t('contact.form.message')}
                                 rows={5}
                                 className="contact-textarea"
                                 value={formData.message}
@@ -80,22 +81,22 @@ const ContactFormSection = () => {
                                 required
                             />
                             <button type="submit" className="contact-submit-button">
-                                Send Message
+                                {t('contact.form.sendMessage')}
                             </button>
                         </form>
                     </div>
 
                     {/* Info & Social */}
                     <div className="contact-connect-wrapper">
-                        <h2 className="contact-form-title">Connect with Us</h2>
-                        
+                        <h2 className="contact-form-title">{t('contact.connect.title')}</h2>
+
                         <div className="contact-connect-card">
                             <h3 className="contact-connect-card-title">
                                 <MessageSquare className="contact-connect-icon" size={20} />
-                                WhatsApp Support
+                                {t('contact.connect.whatsapp')}
                             </h3>
                             <p className="contact-connect-description">
-                                Chat with us on WhatsApp for quick responses and instant support.
+                                {t('contact.connect.whatsappDesc')}
                             </p>
                             <a
                                 href="https://wa.me/251XXXXXXXXX"
@@ -103,14 +104,14 @@ const ContactFormSection = () => {
                                 rel="noopener noreferrer"
                                 className="contact-whatsapp-button"
                             >
-                                Message on WhatsApp
+                                {t('contact.connect.whatsappButton')}
                             </a>
                         </div>
 
                         <div className="contact-connect-card">
-                            <h3 className="contact-connect-card-title">Follow Our Social Media</h3>
+                            <h3 className="contact-connect-card-title">{t('contact.connect.socialMedia')}</h3>
                             <p className="contact-connect-description">
-                                Stay updated with job postings, company news, and employment tips.
+                                {t('contact.connect.socialMediaDesc')}
                             </p>
                             <div className="contact-social-buttons">
                                 <a

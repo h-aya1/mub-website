@@ -1,13 +1,15 @@
-import React from 'react';
+import { useTranslations } from '../../hooks/useTranslations';
 import './ServicesHeroSection.css';
 
 const ServicesHeroSection = () => {
+    const { t } = useTranslations();
+
     return (
         <section className="services-hero-section">
             <div className="services-hero-content">
-                <h1 className="services-hero-title">Comprehensive Services</h1>
+                <h1 className="services-hero-title">{t('services.hero.title')}</h1>
                 <p className="services-hero-subtitle">
-                    Full support from application to employment and beyond
+                    {t('services.hero.subtitle')}
                 </p>
             </div>
         </section>

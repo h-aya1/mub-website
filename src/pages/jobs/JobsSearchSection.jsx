@@ -1,4 +1,4 @@
-import React from 'react';
+import { useTranslations } from '../../hooks/useTranslations';
 import { Search, Filter } from 'lucide-react';
 import './JobsSearchSection.css';
 
@@ -14,6 +14,8 @@ const JobsSearchSection = ({
     locations,
     salaryRanges,
 }) => {
+    const { t } = useTranslations();
+
     return (
         <section className="jobs-search-section">
             <div className="jobs-search-container">
@@ -22,7 +24,7 @@ const JobsSearchSection = ({
                         <Search className="jobs-search-icon" size={20} />
                         <input
                             type="text"
-                            placeholder="Search by job title, skills..."
+                            placeholder={t('jobs.search.placeholder')}
                             value={searchTerm}
                             onChange={(e) => setSearchTerm(e.target.value)}
                             className="jobs-search-input"
@@ -33,7 +35,7 @@ const JobsSearchSection = ({
                         className="jobs-filter-button"
                     >
                         <Filter size={20} />
-                        Filters
+                        {t('jobs.search.filters')}
                     </button>
                 </div>
 
@@ -42,7 +44,7 @@ const JobsSearchSection = ({
                     <div className="jobs-mobile-filters">
                         <div className="jobs-mobile-filters-content">
                             <div className="jobs-mobile-filter-group">
-                                <label className="jobs-filter-label">Location</label>
+                                <label className="jobs-filter-label">{t('jobs.search.location')}</label>
                                 <div className="jobs-mobile-checkboxes">
                                     {locations.map((loc) => (
                                         <label key={loc} className="jobs-mobile-checkbox-label">
@@ -52,13 +54,13 @@ const JobsSearchSection = ({
                                                 onChange={() => handleLocationChange(loc)}
                                                 className="jobs-mobile-checkbox"
                                             />
-                                            <span>{loc}</span>
+                                            <span>{loc === "All" ? t('jobs.search.allLocations') : loc}</span>
                                         </label>
                                     ))}
                                 </div>
                             </div>
                             <div className="jobs-mobile-filter-group">
-                                <label className="jobs-filter-label">Minimum Salary</label>
+                                <label className="jobs-filter-label">{t('jobs.search.minSalary')}</label>
                                 <div className="jobs-mobile-checkboxes">
                                     {salaryRanges.map((salary) => (
                                         <label
@@ -71,7 +73,11 @@ const JobsSearchSection = ({
                                                 onChange={() => handleSalaryChange(salary)}
                                                 className="jobs-mobile-checkbox"
                                             />
-                                            <span>{salary === 0 ? "All Ranges" : `$${salary}+`}</span>
+                                            <span>
+                                                {salary === 0
+                                                    ? t('jobs.search.allRanges')
+                                                    : `$${salary}+`}
+                                            </span>
                                         </label>
                                     ))}
                                 </div>

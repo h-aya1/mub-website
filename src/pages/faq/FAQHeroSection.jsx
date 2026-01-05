@@ -1,13 +1,15 @@
-import React from 'react';
+import { useTranslations } from '../../hooks/useTranslations';
 import './FAQHeroSection.css';
 
 const FAQHeroSection = () => {
+    const { t } = useTranslations();
+
     return (
         <section className="faq-hero-section">
             <div className="faq-hero-content">
-                <h1 className="faq-hero-title">Frequently Asked Questions</h1>
+                <h1 className="faq-hero-title">{t('faq.hero.title')}</h1>
                 <p className="faq-hero-subtitle">
-                    Find answers to common questions about our services, application process, and employment opportunities
+                    {t('faq.hero.subtitle')}
                 </p>
             </div>
         </section>

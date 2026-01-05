@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X, Home, Briefcase, Info, Settings, Mail, Globe, MapPin, HelpCircle } from 'lucide-react';
 import { useTranslation } from '../../contexts/TranslationContext';
@@ -12,6 +12,23 @@ const Navbar = () => {
     const location = useLocation();
     const { language, changeLanguage } = useTranslation();
     const { t } = useTranslations();
+    const languageMenuRef = useRef(null);
+
+    // Handle click outside to close language menu
+    useEffect(() => {
+        const handleClickOutside = (event) => {
+            if (languageMenuRef.current && !languageMenuRef.current.contains(event.target)) {
+                setShowLanguageMenu(false);
+            }
+        };
+
+        if (showLanguageMenu) {
+            document.addEventListener('mousedown', handleClickOutside);
+        }
+        return () => {
+            document.removeEventListener('mousedown', handleClickOutside);
+        };
+    }, [showLanguageMenu]);
 
     // Handle scroll effect
     useEffect(() => {
@@ -35,18 +52,18 @@ const Navbar = () => {
                     <div className="logo-icon">
                         <svg width="40" height="32" viewBox="0 0 40 32" fill="none" xmlns="http://www.w3.org/2000/svg">
                             {/* Green base */}
-                            <rect x="2" y="22" width="36" height="6" rx="3" fill="#16a34a"/>
+                            <rect x="2" y="22" width="36" height="6" rx="3" fill="#16a34a" />
                             {/* Golden-yellow arch */}
-                            <path d="M6 22 Q20 6 34 22" stroke="#eab308" strokeWidth="4" fill="none" strokeLinecap="round" strokeLinejoin="round"/>
+                            <path d="M6 22 Q20 6 34 22" stroke="#eab308" strokeWidth="4" fill="none" strokeLinecap="round" strokeLinejoin="round" />
                             {/* Three dots on top of arch */}
-                            <circle cx="12" cy="12" r="2.5" fill="#16a34a"/>
-                            <circle cx="20" cy="8" r="2.5" fill="#eab308"/>
-                            <circle cx="28" cy="12" r="2.5" fill="#dc2626"/>
+                            <circle cx="12" cy="12" r="2.5" fill="#16a34a" />
+                            <circle cx="20" cy="8" r="2.5" fill="#eab308" />
+                            <circle cx="28" cy="12" r="2.5" fill="#dc2626" />
                         </svg>
                     </div>
                     <div className="logo-text-container">
                         <span className="logo-text">MUB Connect</span>
-                        <span className="logo-tagline">Bridging Dreams with Opportunity</span>
+                        <span className="logo-tagline">Empowering Workers, Bridging Worlds</span>
                     </div>
                 </Link>
 
@@ -70,11 +87,11 @@ const Navbar = () => {
                     </Link>
                     <Link to="/countries" className={`nav-link ${location.pathname === '/countries' ? 'active' : ''}`}>
                         <MapPin size={18} />
-                        <span>Countries</span>
+                        <span>{t('nav.countries')}</span>
                     </Link>
                     <Link to="/faq" className={`nav-link ${location.pathname === '/faq' ? 'active' : ''}`}>
                         <HelpCircle size={18} />
-                        <span>FAQ</span>
+                        <span>{t('nav.faq')}</span>
                     </Link>
                     <Link to="/contact" className={`nav-link ${location.pathname === '/contact' ? 'active' : ''}`}>
                         <Mail size={18} />
@@ -85,12 +102,15 @@ const Navbar = () => {
                 {/* Right Side Actions */}
                 <div className="nav-actions">
                     {/* Language Toggle */}
-                    <div 
+                    <div
                         className="language-toggle-wrapper"
-                        onMouseEnter={() => setShowLanguageMenu(true)}
-                        onMouseLeave={() => setShowLanguageMenu(false)}
+                        ref={languageMenuRef}
                     >
-                        <button className="language-toggle-button" aria-label="Change language">
+                        <button
+                            className="language-toggle-button"
+                            aria-label="Change language"
+                            onClick={() => setShowLanguageMenu(!showLanguageMenu)}
+                        >
                             <Globe size={20} />
                             <span className="language-code">{language.toUpperCase()}</span>
                         </button>
@@ -162,17 +182,17 @@ const Navbar = () => {
                     </Link>
                     <Link to="/countries">
                         <MapPin size={18} />
-                        <span>Countries</span>
+                        <span>{t('nav.countries')}</span>
                     </Link>
                     <Link to="/faq">
                         <HelpCircle size={18} />
-                        <span>FAQ</span>
+                        <span>{t('nav.faq')}</span>
                     </Link>
                     <Link to="/contact">
                         <Mail size={18} />
                         <span>{t('nav.contact')}</span>
                     </Link>
-                    
+
                     {/* Mobile Language Selector */}
                     <div className="mobile-language-selector">
                         <label className="mobile-language-label">Language / ቋንቋ / Afaan</label>
