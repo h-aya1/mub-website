@@ -1,7 +1,7 @@
 .faq-hero-section {
-    background: linear-gradient(135deg, var(--gradient-green-light) 0%, var(--gradient-green-dark) 100%);
+    background: linear-gradient(135deg, var(--gradient-blue-light) 0%, var(--gradient-blue-dark) 100%);
 
-    color: white;
+    color: var(--primary-gold-lighter);
     padding: 6rem 1rem 4rem;
     text-align: center;
 }

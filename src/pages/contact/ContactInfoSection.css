@@ -39,22 +39,22 @@
 
 .contact-info-card {
     padding: 1.5rem;
-    border: 1px solid rgba(0, 0, 0, 0.06);
+    border: 1px solid rgba(25, 45, 99, 0.06);
     border-radius: 8px;
-    background: var(--bg-beige-soft);
+    background: var(--primary-gold-light);
     text-align: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .contact-info-card:hover {
     transform: translateY(-4px);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 12px rgba(25, 45, 99, 0.1);
 }
 
 .contact-info-icon-wrapper {
     width: 3rem;
     height: 3rem;
-    background-color: var(--icon-beige);
+    background-color: var(--primary-gold);
     border-radius: 8px;
     display: flex;
     align-items: center;
@@ -63,7 +63,7 @@
 }
 
 .contact-info-icon {
-    color: var(--icon-brown);
+    color: var(--primary-gold-dark);
 }
 
 .contact-info-title {

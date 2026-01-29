@@ -42,16 +42,16 @@
 
 .why-choose-us-card {
     padding: 1.5rem;
-    border: 1px solid rgba(0, 0, 0, 0.1);
-    border-left: 4px solid var(--primary-green);
+    border: 1px solid rgba(25, 45, 99, 0.1);
+    border-left: 4px solid var(--primary-blue);
     border-radius: 8px;
-    background: white;
+    background: var(--primary-gold-lighter);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .why-choose-us-card:hover {
     transform: translateX(4px);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 12px rgba(25, 45, 99, 0.1);
 }
 
 .why-choose-us-card-title {

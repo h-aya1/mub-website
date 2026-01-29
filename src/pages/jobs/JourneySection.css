@@ -55,10 +55,10 @@
 }
 
 .journey-step-content {
-    background: white;
+    background: var(--primary-gold-lighter);
     border-radius: 12px;
     padding: 2rem;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 2px 8px rgba(25, 45, 99, 0.08);
     width: 100%;
     text-align: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -66,15 +66,15 @@
 
 .journey-step-content:hover {
     transform: translateY(-5px);
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+    box-shadow: 0 8px 24px rgba(25, 45, 99, 0.12);
 }
 
 .journey-number {
     width: 60px;
     height: 60px;
     border-radius: 50%;
-    background: var(--primary-green);
-    color: white;
+    background: var(--primary-blue);
+    color: var(--primary-gold-lighter);
     display: flex;
     align-items: center;
     justify-content: center;

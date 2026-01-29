@@ -38,9 +38,9 @@
 
 .jobs-sidebar-card {
     padding: 1.5rem;
-    border: 1px solid rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(25, 45, 99, 0.1);
     border-radius: 8px;
-    background: white;
+    background: var(--primary-gold-lighter);
     position: sticky;
     top: 200px;
 }
@@ -85,7 +85,7 @@
     width: 1rem;
     height: 1rem;
     cursor: pointer;
-    accent-color: var(--primary-green);
+    accent-color: var(--primary-blue);
 }
 
 .jobs-filter-option-text {
@@ -120,15 +120,15 @@
 
 .jobs-job-card {
     padding: 1.5rem;
-    border: 1px solid rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(25, 45, 99, 0.1);
     border-radius: 8px;
-    background: white;
+    background: var(--primary-gold-lighter);
     transition: all 0.3s ease;
     cursor: pointer;
 }
 
 .jobs-job-card:hover {
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 8px 20px rgba(25, 45, 99, 0.15);
     transform: translateY(-2px);
 }
 
@@ -159,7 +159,7 @@
 }
 
 .jobs-job-card:hover .jobs-job-title {
-    color: var(--primary-green);
+    color: var(--primary-blue);
 }
 
 .jobs-job-company {
@@ -184,7 +184,7 @@
 }
 
 .jobs-job-info-icon {
-    color: var(--primary-green);
+    color: var(--primary-blue);
     flex-shrink: 0;
 }
 
@@ -207,8 +207,8 @@
 
 .jobs-job-type {
     font-size: 0.75rem;
-    background-color: rgba(22, 163, 74, 0.2);
-    color: var(--primary-green);
+    background-color: rgba(25, 45, 99, 0.2);
+    color: var(--primary-blue);
     padding: 0.25rem 0.75rem;
     border-radius: 9999px;
     font-weight: 500;
@@ -222,9 +222,9 @@
 .jobs-empty-state {
     padding: 3rem 1.5rem;
     text-align: center;
-    border: 1px solid rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(25, 45, 99, 0.1);
     border-radius: 8px;
-    background: white;
+    background: var(--primary-gold-lighter);
 }
 
 .jobs-empty-text {

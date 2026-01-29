@@ -1,14 +1,14 @@
 .register-page {
     width: 100%;
     min-height: 100vh;
-    background: var(--bg-beige-soft);
+    background: var(--primary-gold-light);
     padding-top: 80px;
 }
 
 /* Hero Section */
 .register-hero-section {
-    background: linear-gradient(135deg, var(--bg-beige-soft) 0%, var(--gradient-green-dark) 100%);
-    color: white;
+    background: linear-gradient(135deg, var(--primary-gold-light) 0%, var(--gradient-blue-dark) 100%);
+    color: var(--primary-gold-lighter);
     padding: 5.5rem 1rem 3.5rem;
 }
 
@@ -50,8 +50,8 @@
 
 /* Progress Section */
 .register-progress-section {
-    background: white;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    background: var(--primary-gold-lighter);
+    border-bottom: 1px solid rgba(25, 45, 99, 0.1);
     padding: 2rem 1rem;
 }
 
@@ -87,12 +87,12 @@
 }
 
 .register-step.active {
-    background: rgba(22, 163, 74, 0.1);
+    background: rgba(25, 45, 99, 0.1);
 }
 
 .register-step.completed .register-step-icon {
-    background: var(--primary-green);
-    color: white;
+    background: var(--primary-blue);
+    color: var(--primary-gold-lighter);
 }
 
 .register-step-icon {
@@ -109,8 +109,8 @@
 }
 
 .register-step.active .register-step-icon {
-    background: var(--primary-green);
-    color: white;
+    background: var(--primary-blue);
+    color: var(--primary-gold-lighter);
 }
 
 .register-step-info {
@@ -126,7 +126,7 @@
 }
 
 .register-step.active .register-step-number {
-    color: var(--primary-green);
+    color: var(--primary-blue);
     font-weight: 600;
 }
 
@@ -137,7 +137,7 @@
 }
 
 .register-step.active .register-step-title {
-    color: var(--primary-green);
+    color: var(--primary-blue);
 }
 
 .register-step-connector {
@@ -149,7 +149,7 @@
 }
 
 .register-step-connector.completed {
-    background: var(--primary-green);
+    background: var(--primary-blue);
 }
 
 @media (max-width: 768px) {
@@ -191,10 +191,10 @@
 }
 
 .register-form {
-    background: white;
+    background: var(--primary-gold-lighter);
     border-radius: 12px;
     padding: 2rem;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 4px 20px rgba(25, 45, 99, 0.08);
 }
 
 @media (min-width: 768px) {
@@ -264,7 +264,7 @@
 }
 
 .register-label svg {
-    color: var(--primary-green);
+    color: var(--primary-blue);
 }
 
 .register-input,
@@ -272,9 +272,9 @@
 .register-select {
     width: 100%;
     padding: 0.75rem 1rem;
-    border: 1px solid rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(25, 45, 99, 0.1);
     border-radius: 8px;
-    background: white;
+    background: var(--primary-gold-lighter);
     color: var(--text-dark);
     font-family: inherit;
     font-size: 1rem;
@@ -285,8 +285,8 @@
 .register-textarea:focus,
 .register-select:focus {
     outline: none;
-    border-color: var(--primary-green);
-    box-shadow: 0 0 0 3px rgba(22, 163, 74, 0.1);
+    border-color: var(--primary-blue);
+    box-shadow: 0 0 0 3px rgba(25, 45, 99, 0.1);
 }
 
 .register-textarea {
@@ -312,7 +312,7 @@
 }
 
 .register-file-label svg {
-    color: var(--primary-green);
+    color: var(--primary-blue);
 }
 
 .register-file-hint {
@@ -323,7 +323,7 @@
 
 .register-file-input {
     padding: 1rem;
-    border: 2px dashed rgba(0, 0, 0, 0.1);
+    border: 2px dashed rgba(25, 45, 99, 0.1);
     border-radius: 8px;
     background: var(--bg-light);
     cursor: pointer;
@@ -331,13 +331,13 @@
 }
 
 .register-file-input:hover {
-    border-color: var(--primary-green);
-    background: rgba(22, 163, 74, 0.05);
+    border-color: var(--primary-blue);
+    background: rgba(25, 45, 99, 0.05);
 }
 
 .register-file-name {
     font-size: 0.875rem;
-    color: var(--primary-green);
+    color: var(--primary-blue);
     font-weight: 500;
     margin-top: 0.25rem;
 }
@@ -353,7 +353,7 @@
     padding: 1.5rem;
     background: var(--bg-light);
     border-radius: 8px;
-    border-left: 4px solid var(--primary-green);
+    border-left: 4px solid var(--primary-blue);
 }
 
 .register-review-title {
@@ -398,18 +398,18 @@
     width: 1.25rem;
     height: 1.25rem;
     cursor: pointer;
-    accent-color: var(--primary-green);
+    accent-color: var(--primary-blue);
     margin-top: 0.125rem;
     flex-shrink: 0;
 }
 
 .register-checkbox-label a {
-    color: var(--primary-green);
+    color: var(--primary-blue);
     text-decoration: underline;
 }
 
 .register-checkbox-label a:hover {
-    color: var(--primary-green-dark);
+    color: var(--primary-blue-dark);
 }
 
 /* Navigation Buttons */
@@ -419,7 +419,7 @@
     gap: 1rem;
     margin-top: 2rem;
     padding-top: 2rem;
-    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    border-top: 1px solid rgba(25, 45, 99, 0.1);
 }
 
 .register-navigation-spacer {
@@ -438,15 +438,15 @@
 }
 
 .register-btn-primary {
-    background: var(--primary-green);
-    color: white;
-    box-shadow: 0 4px 15px rgba(22, 163, 74, 0.4);
+    background: var(--primary-blue);
+    color: var(--primary-gold-lighter);
+    box-shadow: 0 4px 15px rgba(25, 45, 99, 0.4);
 }
 
 .register-btn-primary:hover:not(:disabled) {
-    background: var(--primary-green-dark);
+    background: var(--primary-blue-dark);
     transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(22, 163, 74, 0.6);
+    box-shadow: 0 6px 20px rgba(25, 45, 99, 0.6);
 }
 
 .register-btn-primary:disabled {
@@ -457,30 +457,30 @@
 .register-btn-secondary {
     background: transparent;
     color: var(--text-dark);
-    border: 2px solid rgba(0, 0, 0, 0.1);
+    border: 2px solid rgba(25, 45, 99, 0.1);
 }
 
 .register-btn-secondary:hover {
     background: var(--bg-light);
-    border-color: var(--primary-green);
-    color: var(--primary-green);
+    border-color: var(--primary-blue);
+    color: var(--primary-blue);
 }
 
 .register-error {
-    background: #fee2e2;
-    color: #dc2626;
+    background: var(--primary-gold-lighter);
+    color: var(--primary-gold);
     padding: 0.75rem 1rem;
     border-radius: 8px;
     margin-bottom: 1.5rem;
     font-size: 0.875rem;
-    border: 1px solid #fecaca;
+    border: 1px solid var(--primary-gold);
 }
 
 .register-success {
-    background: white;
+    background: var(--primary-gold-lighter);
     border-radius: 12px;
     padding: 3rem 2rem;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 4px 20px rgba(25, 45, 99, 0.08);
     text-align: center;
 }
 
@@ -488,11 +488,11 @@
     width: 5rem;
     height: 5rem;
     border-radius: 50%;
-    background: rgba(22, 163, 74, 0.1);
+    background: rgba(25, 45, 99, 0.1);
     display: flex;
     align-items: center;
     justify-content: center;
-    color: var(--primary-green);
+    color: var(--primary-blue);
     margin: 0 auto 1.5rem;
 }
 
@@ -529,7 +529,7 @@
 }
 
 .register-success-link {
-    color: var(--primary-green);
+    color: var(--primary-blue);
     font-weight: 600;
     text-decoration: none;
     transition: all 0.3s ease;
@@ -594,15 +594,15 @@
 
 .document-upload-card {
     background: var(--bg-light);
-    border: 2px solid rgba(0, 0, 0, 0.08);
+    border: 2px solid rgba(25, 45, 99, 0.08);
     border-radius: 12px;
     padding: 1.5rem;
     transition: all 0.3s ease;
 }
 
 .document-upload-card:hover {
-    border-color: var(--primary-green);
-    box-shadow: 0 4px 12px rgba(22, 163, 74, 0.1);
+    border-color: var(--primary-blue);
+    box-shadow: 0 4px 12px rgba(25, 45, 99, 0.1);
 }
 
 .document-upload-header {
@@ -620,7 +620,7 @@
 }
 
 .document-check {
-    color: var(--primary-green);
+    color: var(--primary-blue);
 }
 
 .document-upload-label {
@@ -638,17 +638,17 @@
     justify-content: center;
     gap: 0.5rem;
     padding: 1rem;
-    background: white;
-    border: 2px dashed rgba(0, 0, 0, 0.2);
+    background: var(--primary-gold-lighter);
+    border: 2px dashed rgba(25, 45, 99, 0.2);
     border-radius: 8px;
-    color: var(--primary-green);
+    color: var(--primary-blue);
     font-weight: 600;
     transition: all 0.3s ease;
 }
 
 .document-upload-button:hover {
-    border-color: var(--primary-green);
-    background: rgba(22, 163, 74, 0.05);
+    border-color: var(--primary-blue);
+    background: rgba(25, 45, 99, 0.05);
 }
 
 .document-upload-hint {
@@ -664,12 +664,12 @@
     align-items: center;
     justify-content: space-between;
     padding: 0.75rem 1rem;
-    background: rgba(22, 163, 74, 0.1);
+    background: rgba(25, 45, 99, 0.1);
     border-radius: 8px;
 }
 
 .document-uploaded-text {
-    color: var(--primary-green);
+    color: var(--primary-blue);
     font-weight: 600;
     font-size: 0.9rem;
 }
@@ -679,10 +679,10 @@
     align-items: center;
     gap: 0.25rem;
     padding: 0.5rem 0.75rem;
-    background: white;
-    border: 1px solid rgba(0, 0, 0, 0.1);
+    background: var(--primary-gold-lighter);
+    border: 1px solid rgba(25, 45, 99, 0.1);
     border-radius: 6px;
-    color: #dc2626;
+    color: var(--primary-gold);
     font-size: 0.8rem;
     font-weight: 600;
     cursor: pointer;
@@ -690,20 +690,20 @@
 }
 
 .document-remove-btn:hover {
-    background: #fee2e2;
-    border-color: #dc2626;
+    background: var(--primary-gold-light);
+    border-color: var(--primary-gold);
 }
 
 .document-info-box {
-    background: #dbeafe;
-    border-left: 4px solid #3b82f6;
+    background: var(--primary-gold-lighter);
+    border-left: 4px solid var(--primary-blue);
     padding: 1.25rem;
     border-radius: 8px;
     margin-top: 1.5rem;
 }
 
 .document-info-box p {
-    color: #1e40af;
+    color: var(--primary-blue-dark);
     font-size: 0.9rem;
     line-height: 1.5;
     margin: 0;

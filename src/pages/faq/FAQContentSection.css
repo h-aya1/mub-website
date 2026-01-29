@@ -22,10 +22,10 @@
 }
 
 .faq-category {
-    background: white;
+    background: var(--primary-gold-lighter);
     border-radius: 12px;
     padding: 2rem;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 4px 20px rgba(25, 45, 99, 0.08);
 }
 
 @media (min-width: 768px) {
@@ -47,7 +47,7 @@
 }
 
 .faq-category-title svg {
-    color: var(--primary-green);
+    color: var(--primary-blue);
 }
 
 .faq-questions {
@@ -64,7 +64,7 @@
 }
 
 .faq-item:hover {
-    border-color: var(--primary-green);
+    border-color: var(--primary-blue);
 }
 
 .faq-question {
@@ -86,7 +86,7 @@
 }
 
 .faq-question.open {
-    background: rgba(22, 163, 74, 0.05);
+    background: rgba(25, 45, 99, 0.05);
     border-bottom: 1px solid var(--bg-light);
 }
 
@@ -105,7 +105,7 @@
 }
 
 .faq-chevron {
-    color: var(--primary-green);
+    color: var(--primary-blue);
     transition: transform 0.3s ease;
     flex-shrink: 0;
 }
@@ -116,7 +116,7 @@
 
 .faq-answer {
     padding: 1.5rem;
-    background: white;
+    background: var(--primary-gold-lighter);
     animation: slideDown 0.3s ease;
 }
 
@@ -139,11 +139,11 @@
 }
 
 .faq-cta {
-    background: linear-gradient(135deg, var(--primary-green) 0%, var(--primary-green-dark) 100%);
+    background: linear-gradient(135deg, var(--primary-blue) 0%, var(--primary-blue-dark) 100%);
     border-radius: 12px;
     padding: 3rem 2rem;
     text-align: center;
-    color: white;
+    color: var(--primary-gold-lighter);
 }
 
 .faq-cta-title {
@@ -168,18 +168,18 @@
 .faq-cta-button {
     display: inline-block;
     padding: 0.75rem 2rem;
-    background: white;
-    color: var(--primary-green);
+    background: var(--primary-gold-lighter);
+    color: var(--primary-blue);
     border-radius: 8px;
     text-decoration: none;
     font-weight: 600;
     font-size: 1rem;
     transition: all 0.3s ease;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 15px rgba(25, 45, 99, 0.2);
 }
 
 .faq-cta-button:hover {
     transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 6px 20px rgba(25, 45, 99, 0.3);
 }
 

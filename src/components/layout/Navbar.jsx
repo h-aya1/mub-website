@@ -51,14 +51,14 @@ const Navbar = () => {
                 <Link to="/" className="navbar-logo">
                     <div className="logo-icon">
                         <svg width="40" height="32" viewBox="0 0 40 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            {/* Green base */}
-                            <rect x="2" y="22" width="36" height="6" rx="3" fill="#16a34a" />
+                            {/* Blue base */}
+                            <rect x="2" y="22" width="36" height="6" rx="3" fill="var(--primary-blue)" />
                             {/* Golden-yellow arch */}
-                            <path d="M6 22 Q20 6 34 22" stroke="#eab308" strokeWidth="4" fill="none" strokeLinecap="round" strokeLinejoin="round" />
+                            <path d="M6 22 Q20 6 34 22" stroke="var(--primary-gold)" strokeWidth="4" fill="none" strokeLinecap="round" strokeLinejoin="round" />
                             {/* Three dots on top of arch */}
-                            <circle cx="12" cy="12" r="2.5" fill="#16a34a" />
-                            <circle cx="20" cy="8" r="2.5" fill="#eab308" />
-                            <circle cx="28" cy="12" r="2.5" fill="#dc2626" />
+                            <circle cx="12" cy="12" r="2.5" fill="var(--primary-blue)" />
+                            <circle cx="20" cy="8" r="2.5" fill="var(--primary-gold)" />
+                            <circle cx="28" cy="12" r="2.5" fill="var(--primary-blue-light)" />
                         </svg>
                     </div>
                     <div className="logo-text-container">
@@ -150,7 +150,7 @@ const Navbar = () => {
                         )}
                     </div>
 
-                    <Link to="/auth-choice" className="btn-primary-nav">
+                    <Link to="/register-type" className="btn-primary-nav">
                         {t('nav.startJourney')}
                     </Link>
 
@@ -227,7 +227,7 @@ const Navbar = () => {
                         </div>
                     </div>
 
-                    <Link to="/auth-choice" className="mobile-cta">{t('nav.startJourney')}</Link>
+                    <Link to="/register-type" className="mobile-cta">{t('nav.startJourney')}</Link>
                 </div>
             </div>
         </nav>

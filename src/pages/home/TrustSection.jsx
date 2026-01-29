@@ -14,28 +14,28 @@ const TrustSection = () => {
 
             <div className="trust-cards">
                 <div className="trust-card">
-                    <div className="trust-icon trust-icon-green">
+                    <div className="trust-icon trust-icon-gold">
                         <CheckCircle size={32} />
                     </div>
                     <h3>{t('home.trust.governmentLicensed')}</h3>
                     <p>{t('home.trust.governmentLicensedDesc')}</p>
                 </div>
                 <div className="trust-card">
-                    <div className="trust-icon trust-icon-orange">
+                    <div className="trust-icon trust-icon-gold-light">
                         <CheckCircle size={32} />
                     </div>
                     <h3>{t('home.trust.gccCertified')}</h3>
                     <p>{t('home.trust.gccCertifiedDesc')}</p>
                 </div>
                 <div className="trust-card">
-                    <div className="trust-icon trust-icon-yellow">
+                    <div className="trust-icon trust-icon-gold-medium">
                         <Clock size={32} />
                     </div>
                     <h3>{t('home.trust.support247')}</h3>
                     <p>{t('home.trust.support247Desc')}</p>
                 </div>
                 <div className="trust-card">
-                    <div className="trust-icon trust-icon-dark-green">
+                    <div className="trust-icon trust-icon-gold-dark">
                         <Eye size={32} />
                     </div>
                     <h3>{t('home.trust.transparentProcess')}</h3>

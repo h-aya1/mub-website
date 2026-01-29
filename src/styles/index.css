@@ -8,25 +8,36 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
-  /* MUB Connect Color Palette */
-  --primary-green: #16a34a; /* Green-600 */
-  --primary-green-dark: #106c32; /* Green-700 */
-  --primary-green-light: #22c55e; /* Green-500 */
-  --primary-green-lighter: #4ade80; /* Green-400 - Light green for gradients */
-  --gradient-green-light: #a6ffc6; /* Green-300 - Light green for gradient start */
-  --gradient-green-dark: #104d27; /* Green-800 - Dark green for gradient end */
+  /* MUB Connect Color Palette - Luxurious Blue */
+  --primary-blue: #192d63;
+  /* Blue-900 (Luxurious Deep Blue) */
+  --primary-blue-dark: #1c2648;
+  /* Blue-950 (Darker Navy) */
+  --primary-blue-light: #0a295b;
+  /* Blue-600 (Royal Blue Accent) */
+  --primary-blue-lighter: #45505c;
+  /* Blue-400 (Soft Blue Accent) */
+  --gradient-blue-light: #64769b;
+  /* Blue-700 (Gradient Start) */
+  --gradient-blue-dark: #091f5c;
+  /* Blue-900 (Gradient End) */
 
   /* Beige / Cream theme */
-  --bg-beige: #f5efe3; /* Main beige background */
-  --bg-beige-soft: #faf5eb; /* Softer beige for sections */
-  --icon-beige: #e0c8a0; /* Beige icon background */
-  --icon-brown: #8b5e3c; /* Brownish-beige icon color */
+  /* Gold / Metallic theme */
+  --primary-gold: #a7810d;
+  /* Golden Brown / Dark Gold */
+  --primary-gold-dark: #8c540169;
+  /* Soft Gold Background */
+  --primary-gold-light: #ece5b3;
+  /* Very Light Gold / Background */
+  --primary-gold-lighter: #fff2c6;
 
-  --text-dark: #1f2937; /* Gray-800 */
-  --text-gray: #4b5563; /* Gray-600 */
-  --text-light: #6b7280; /* Gray-500 */
-  --bg-light: #f9fafb; /* Gray-50 */
-  --white: #ffffff;
+  /* Core Design System - Strictly Navy & Gold */
+  --text-dark: var(--primary-blue-dark);
+  --text-gray: var(--primary-blue);
+  --text-light: var(--gradient-blue-light);
+  --bg-light: var(--primary-gold-lighter);
+  --white: var(--primary-gold-lighter);
 }
 
 /* Reset Box Sizing */
@@ -42,8 +53,8 @@ body {
   padding: 0;
   min-height: 100vh;
   width: 100%;
-  background-color: white;
-  color: #1f2937;
+  background-color: var(--primary-gold-lighter);
+  color: var(--primary-blue-dark);
   overflow-x: hidden;
 }
 

@@ -8,7 +8,10 @@ import Jobs from './pages/jobs/Jobs';
 import Contact from './pages/contact/Contact';
 import FAQ from './pages/faq/FAQ';
 import Register from './pages/register/Register';
+import PartnerRegister from './pages/register/PartnerRegister';
 import AuthChoice from './pages/auth/AuthChoice';
+import PartnerAuthChoice from './pages/auth/PartnerAuthChoice';
+import RegistrationType from './pages/auth/RegistrationType';
 import Login from './pages/auth/Login';
 import Track from './pages/track/Track';
 import NotFound from './pages/not-found/NotFound';
@@ -26,6 +29,9 @@ function App() {
         <Route path="/contact" element={<Contact />} />
         <Route path="/faq" element={<FAQ />} />
         <Route path="/auth-choice" element={<AuthChoice />} />
+        <Route path="/register-type" element={<RegistrationType />} />
+        <Route path="/partner-auth" element={<PartnerAuthChoice />} />
+        <Route path="/partner-register" element={<PartnerRegister />} />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
         <Route path="/track" element={<Track />} />

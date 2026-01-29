@@ -16,8 +16,8 @@ const Footer = () => {
                                 <path d="M16 4L20 12L28 14L20 16L16 24L12 16L4 14L12 12L16 4Z" fill="url(#footerLogoGradient)" />
                                 <defs>
                                     <linearGradient id="footerLogoGradient" x1="4" y1="4" x2="28" y2="24" gradientUnits="userSpaceOnUse">
-                                        <stop stopColor="#86efac" />
-                                        <stop offset="1" stopColor="#166534" />
+                                        <stop stopColor="var(--primary-gold)" />
+                                        <stop offset="1" stopColor="var(--primary-blue)" />
                                     </linearGradient>
                                 </defs>
                             </svg>
@@ -41,7 +41,7 @@ const Footer = () => {
                     <ul>
                         <li><Link to="/">{t('nav.home')}</Link></li>
                         <li><Link to="/jobs">{t('nav.jobs')}</Link></li>
-                        <li><Link to="/auth-choice">{t('footer.register')}</Link></li>
+                        <li><Link to="/register-type">{t('footer.register')}</Link></li>
                         <li><Link to="/track">{t('footer.trackApp')}</Link></li>
                     </ul>
                 </div>

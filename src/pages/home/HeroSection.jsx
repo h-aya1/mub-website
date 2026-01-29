@@ -18,7 +18,7 @@ const HeroSection = () => {
                     {t('home.hero.subtitle')}
                 </p>
                 <div className="hero-buttons">
-                    <Link to="/auth-choice" className="btn btn-primary">
+                    <Link to="/register-type" className="btn btn-primary">
                         {t('home.hero.startJourney')}
                         <ArrowRight size={20} />
                     </Link>

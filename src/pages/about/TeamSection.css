@@ -47,21 +47,21 @@
 }
 
 .team-card {
-    border: 1px solid rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(25, 45, 99, 0.1);
     border-radius: 8px;
     overflow: hidden;
-    background: white;
+    background: var(--primary-gold-lighter);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .team-card:hover {
     transform: translateY(-4px);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 12px rgba(25, 45, 99, 0.1);
 }
 
 .team-card-image {
     height: 12rem;
-    background: linear-gradient(135deg, rgba(134, 239, 172, 0.2) 0%, rgba(22, 163, 74, 0.2) 100%);
+    background: linear-gradient(135deg, rgba(134, 239, 172, 0.2) 0%, rgba(25, 45, 99, 0.2) 100%);
 }
 
 .team-card-content {
@@ -76,7 +76,7 @@
 }
 
 .team-card-role {
-    color: var(--primary-green);
+    color: var(--primary-blue);
     font-weight: 600;
     font-size: 0.875rem;
     margin-bottom: 0.5rem;

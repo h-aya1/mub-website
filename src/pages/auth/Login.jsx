@@ -31,10 +31,10 @@ const Login = () => {
             // TODO: Implement actual login API call
             // For now, just show a message
             console.log('Login attempt:', formData);
-            
+
             // Simulate API call
             await new Promise(resolve => setTimeout(resolve, 1000));
-            
+
             // Navigate to the page they came from or home
             const from = location.state?.from || '/';
             navigate(from);
@@ -48,8 +48,8 @@ const Login = () => {
     return (
         <div className="login-page">
             <div className="login-container">
-                <button 
-                    onClick={() => navigate(-1)} 
+                <button
+                    onClick={() => navigate(-1)}
                     className="login-back-btn"
                 >
                     <ArrowLeft size={20} />
@@ -126,7 +126,7 @@ const Login = () => {
                     <div className="login-footer">
                         <p>
                             Don't have an account?{' '}
-                            <Link to="/register" state={{ from: location.state?.from }} className="login-link">
+                            <Link to="/register-type" state={{ from: location.state?.from }} className="login-link">
                                 Register here
                             </Link>
                         </p>

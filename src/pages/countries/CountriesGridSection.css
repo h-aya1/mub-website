@@ -1,6 +1,6 @@
 .countries-grid-section {
     padding: 4rem 1rem;
-    background: var(--bg-beige-soft);
+    background: var(--primary-gold-light);
 }
 
 .countries-grid-container {
@@ -60,10 +60,10 @@
 }
 
 .country-card {
-    background: white;
+    background: var(--primary-gold-lighter);
     border-radius: 12px;
     padding: 2rem;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 4px 20px rgba(25, 45, 99, 0.08);
     transition: all 0.3s ease;
     display: flex;
     flex-direction: column;
@@ -71,7 +71,7 @@
 
 .country-card:hover {
     transform: translateY(-4px);
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+    box-shadow: 0 8px 30px rgba(25, 45, 99, 0.12);
 }
 
 .country-card-header {
@@ -108,7 +108,7 @@
 }
 
 .country-capital svg {
-    color: var(--primary-green);
+    color: var(--primary-blue);
 }
 
 .country-description {
@@ -133,7 +133,7 @@
 }
 
 .country-detail-item svg {
-    color: var(--primary-green);
+    color: var(--primary-blue);
     margin-top: 0.125rem;
     flex-shrink: 0;
 }
@@ -190,7 +190,7 @@
 }
 
 .country-visa-info {
-    background: rgba(22, 163, 74, 0.1);
+    background: rgba(25, 45, 99, 0.1);
     padding: 0.75rem 1rem;
     border-radius: 8px;
     margin-bottom: 1.5rem;
@@ -198,7 +198,7 @@
 
 .visa-info-text {
     font-size: 0.875rem;
-    color: var(--primary-green);
+    color: var(--primary-blue);
     font-weight: 600;
 }
 
@@ -208,8 +208,8 @@
     justify-content: center;
     gap: 0.5rem;
     padding: 0.75rem 1.5rem;
-    background: var(--primary-green);
-    color: white;
+    background: var(--primary-blue);
+    color: var(--primary-gold-lighter);
     border-radius: 8px;
     text-decoration: none;
     font-weight: 600;
@@ -219,9 +219,9 @@
 }
 
 .country-explore-btn:hover {
-    background: var(--primary-green-dark);
+    background: var(--primary-blue-dark);
     transform: translateY(-2px);
-    box-shadow: 0 4px 15px rgba(22, 163, 74, 0.4);
+    box-shadow: 0 4px 15px rgba(25, 45, 99, 0.4);
 }
 
 .country-explore-btn svg {

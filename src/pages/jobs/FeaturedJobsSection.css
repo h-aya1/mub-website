@@ -8,7 +8,7 @@
 /* Featured Jobs Section */
 .featured-jobs-section {
     padding: 5rem 0;
-    background: white;
+    background: var(--primary-gold-lighter);
 }
 
 .section-header-with-action {
@@ -38,20 +38,20 @@
     align-items: center;
     gap: 0.5rem;
     padding: 0.75rem 1.5rem;
-    background: var(--primary-green);
-    color: white;
+    background: var(--primary-blue);
+    color: var(--primary-gold-lighter);
     text-decoration: none;
     font-weight: 600;
     border-radius: 50px;
     transition: all 0.3s ease;
     white-space: nowrap;
-    box-shadow: 0 2px 8px rgba(22, 163, 74, 0.3);
+    box-shadow: 0 2px 8px rgba(25, 45, 99, 0.3);
 }
 
 .btn-view-all:hover {
-    background: var(--primary-green-dark);
+    background: var(--primary-blue-dark);
     transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(22, 163, 74, 0.4);
+    box-shadow: 0 4px 12px rgba(25, 45, 99, 0.4);
 }
 
 .jobs-grid {
@@ -61,11 +61,11 @@
 }
 
 .job-card-featured {
-    background: white;
+    background: var(--primary-gold-lighter);
     border-radius: 12px;
     padding: 1.5rem;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-    border: 1px solid #f3f4f6;
+    box-shadow: 0 2px 8px rgba(25, 45, 99, 0.08);
+    border: 1px solid var(--primary-gold-light);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     display: flex;
     flex-direction: column;
@@ -73,7 +73,7 @@
 
 .job-card-featured:hover {
     transform: translateY(-5px);
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+    box-shadow: 0 8px 24px rgba(25, 45, 99, 0.12);
 }
 
 .job-card-header-featured {
@@ -101,7 +101,7 @@
     align-items: center;
     gap: 0.25rem;
     background: #fee2e2;
-    color: #dc2626;
+    color: var(--primary-gold);
     padding: 0.25rem 0.75rem;
     border-radius: 20px;
     font-size: 0.75rem;
@@ -122,8 +122,8 @@
 }
 
 .job-salary-bar {
-    background: var(--primary-green);
-    color: white;
+    background: var(--primary-blue);
+    color: var(--primary-gold-lighter);
     padding: 0.75rem 1rem;
     border-radius: 8px;
     font-weight: 600;
@@ -175,7 +175,7 @@
 }
 
 .job-requirements li svg {
-    color: var(--primary-green);
+    color: var(--primary-blue);
     flex-shrink: 0;
     margin-top: 2px;
 }
@@ -186,8 +186,8 @@
     justify-content: center;
     gap: 0.5rem;
     padding: 0.75rem 1.5rem;
-    background: var(--primary-green);
-    color: white;
+    background: var(--primary-blue);
+    color: var(--primary-gold-lighter);
     text-decoration: none;
     font-weight: 600;
     border-radius: 8px;
@@ -196,9 +196,9 @@
 }
 
 .btn-apply-featured:hover {
-    background: var(--primary-green-dark);
+    background: var(--primary-blue-dark);
     transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(22, 163, 74, 0.3);
+    box-shadow: 0 4px 12px rgba(25, 45, 99, 0.3);
 }
 
 /* Responsive Design */

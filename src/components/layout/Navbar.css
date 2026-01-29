@@ -6,15 +6,15 @@
     width: 100%;
     z-index: 1000;
     padding: 1.25rem 2rem;
-    background: #eff1e7;
+    background: var(--primary-gold-lighter);
     transition: all 0.3s ease;
     backdrop-filter: blur(10px);
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 2px 10px rgba(25, 45, 99, 0.05);
 }
 
 .navbar.scrolled {
     padding: 0.9rem 2rem;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 4px 20px rgba(25, 45, 99, 0.08);
 }
 
 .navbar-container {
@@ -51,7 +51,7 @@
 .logo-text {
     font-size: 1.5rem;
     font-weight: 700;
-    color: var(--primary-green);
+    color: var(--primary-blue);
     line-height: 1.2;
     letter-spacing: -0.5px;
 }
@@ -116,9 +116,9 @@
     top: 100%;
     left: 0;
     margin-top: 0.5rem;
-    background: white;
+    background: var(--primary-gold-lighter);
     border-radius: 8px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 20px rgba(25, 45, 99, 0.1);
     padding: 0.5rem 0;
     min-width: 180px;
     z-index: 1002;
@@ -134,8 +134,8 @@
 }
 
 .dropdown-menu a:hover {
-    color: var(--primary-green);
-    background: #f0fdf4;
+    color: var(--primary-blue);
+    background: var(--primary-gold-light);
 }
 
 /* Actions */
@@ -156,7 +156,7 @@
     gap: 0.5rem;
     padding: 0.5rem 0.75rem;
     background: transparent;
-    border: 1px solid rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(25, 45, 99, 0.1);
     border-radius: 8px;
     color: var(--text-dark);
     cursor: pointer;
@@ -167,8 +167,8 @@
 
 .language-toggle-button:hover {
     background: var(--bg-light);
-    border-color: var(--primary-green);
-    color: var(--primary-green);
+    border-color: var(--primary-blue);
+    color: var(--primary-blue);
 }
 
 .language-code {
@@ -180,13 +180,13 @@
     position: absolute;
     top: calc(100% + 0.5rem);
     right: 0;
-    background: white;
+    background: var(--primary-gold-lighter);
     border-radius: 8px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 20px rgba(25, 45, 99, 0.1);
     padding: 0.5rem 0;
     min-width: 160px;
     z-index: 1002;
-    border: 1px solid rgba(0, 0, 0, 0.05);
+    border: 1px solid rgba(25, 45, 99, 0.05);
 }
 
 .language-option {
@@ -206,17 +206,17 @@
 
 .language-option:hover {
     background: var(--bg-light);
-    color: var(--primary-green);
+    color: var(--primary-blue);
 }
 
 .language-option.active {
-    background: #f0fdf4;
-    color: var(--primary-green);
+    background: var(--primary-gold-light);
+    color: var(--primary-blue);
     font-weight: 600;
 }
 
 .language-option .check {
-    color: var(--primary-green);
+    color: var(--primary-blue);
     font-weight: bold;
     margin-left: 0.5rem;
 }
@@ -225,8 +225,8 @@
 .mobile-language-selector {
     margin: 1.5rem 0;
     padding: 1rem 0;
-    border-top: 1px solid #f3f4f6;
-    border-bottom: 1px solid #f3f4f6;
+    border-top: 1px solid var(--primary-gold-light);
+    border-bottom: 1px solid var(--primary-gold-light);
 }
 
 .mobile-language-label {
@@ -246,7 +246,7 @@
     flex: 1;
     padding: 0.75rem 1rem;
     background: transparent;
-    border: 2px solid rgba(0, 0, 0, 0.1);
+    border: 2px solid rgba(25, 45, 99, 0.1);
     border-radius: 8px;
     color: var(--text-dark);
     font-weight: 600;
@@ -256,33 +256,33 @@
 }
 
 .mobile-language-btn:hover {
-    border-color: var(--primary-green);
-    color: var(--primary-green);
+    border-color: var(--primary-blue);
+    color: var(--primary-blue);
 }
 
 .mobile-language-btn.active {
-    background: var(--primary-green);
-    color: white;
-    border-color: var(--primary-green);
+    background: var(--primary-blue);
+    color: var(--primary-gold-lighter);
+    border-color: var(--primary-blue);
 }
 
 .btn-primary-nav {
     padding: 0.75rem 1.5rem;
-    background: var(--primary-green);
-    color: white;
+    background: var(--primary-blue);
+    color: var(--primary-gold-lighter);
     text-decoration: none;
     font-weight: 600;
     font-size: 0.95rem;
     border-radius: 50px;
     transition: all 0.3s ease;
     white-space: nowrap;
-    box-shadow: 0 2px 8px rgba(22, 163, 74, 0.3);
+    box-shadow: 0 2px 8px rgba(25, 45, 99, 0.3);
 }
 
 .btn-primary-nav:hover {
-    background: var(--primary-green-dark);
+    background: var(--primary-blue-dark);
     transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(22, 163, 74, 0.4);
+    box-shadow: 0 4px 12px rgba(25, 45, 99, 0.4);
 }
 
 /* Mobile Toggle */
@@ -304,10 +304,10 @@
     width: 100%;
     max-width: 320px;
     height: 100vh;
-    background: white;
+    background: var(--primary-gold-lighter);
     z-index: 999;
     padding: 5rem 2rem 2rem;
-    box-shadow: -10px 0 30px rgba(0, 0, 0, 0.1);
+    box-shadow: -10px 0 30px rgba(25, 45, 99, 0.1);
     transition: right 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     display: flex;
     flex-direction: column;
@@ -330,7 +330,7 @@
     text-decoration: none;
     font-weight: 500;
     padding: 0.75rem 0;
-    border-bottom: 1px solid #f3f4f6;
+    border-bottom: 1px solid var(--primary-gold-light);
     transition: color 0.2s;
     display: flex;
     align-items: center;
@@ -343,17 +343,17 @@
 }
 
 .mobile-menu-links a:hover {
-    color: var(--primary-green);
+    color: var(--primary-blue);
 }
 
 .mobile-menu-links a:hover svg {
-    color: var(--primary-green);
+    color: var(--primary-blue);
 }
 
 .mobile-cta {
     margin-top: 1rem;
-    background: var(--primary-green);
-    color: white !important;
+    background: var(--primary-blue);
+    color: var(--primary-gold-lighter) !important;
     padding: 1rem !important;
     border-radius: 8px;
     text-align: center;
@@ -361,7 +361,7 @@
 }
 
 .mobile-cta:hover {
-    background: var(--primary-green-dark) !important;
+    background: var(--primary-blue-dark) !important;
 }
 
 /* Responsive */

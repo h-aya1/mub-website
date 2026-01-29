@@ -39,21 +39,21 @@
 
 .service-card {
     padding: 1.5rem;
-    border: 1px solid rgba(0, 0, 0, 0.06);
+    border: 1px solid rgba(25, 45, 99, 0.06);
     border-radius: 8px;
-    background: var(--bg-beige-soft);
+    background: var(--primary-gold-light);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .service-card:hover {
     transform: translateY(-4px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 8px 20px rgba(25, 45, 99, 0.15);
 }
 
 .service-icon-wrapper {
     width: 3rem;
     height: 3rem;
-    background-color: var(--icon-beige);
+    background-color: var(--primary-gold);
     border-radius: 8px;
     display: flex;
     align-items: center;
@@ -62,7 +62,7 @@
 }
 
 .service-icon {
-    color: var(--icon-brown);
+    color: var(--primary-gold-dark);
 }
 
 .service-card-title {
@@ -97,7 +97,7 @@
 }
 
 .service-feature-icon {
-    color: var(--icon-brown);
+    color: var(--primary-gold-dark);
     flex-shrink: 0;
 }
 

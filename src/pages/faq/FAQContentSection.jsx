@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { useTranslations } from '../../hooks/useTranslations';
 import { ChevronDown, HelpCircle } from 'lucide-react';
 import './FAQContentSection.css';

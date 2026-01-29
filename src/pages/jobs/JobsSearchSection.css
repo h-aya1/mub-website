@@ -1,6 +1,6 @@
 .jobs-search-section {
     background-color: var(--bg-light);
-    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid rgba(25, 45, 99, 0.1);
     position: sticky;
     top: 80px;
     z-index: 40;
@@ -47,9 +47,9 @@
 .jobs-search-input {
     width: 100%;
     padding: 0.75rem 1rem 0.75rem 3rem;
-    border: 1px solid rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(25, 45, 99, 0.1);
     border-radius: 8px;
-    background: white;
+    background: var(--primary-gold-lighter);
     color: var(--text-dark);
     font-size: 1rem;
     transition: all 0.3s ease;
@@ -61,8 +61,8 @@
 
 .jobs-search-input:focus {
     outline: none;
-    border-color: var(--primary-green);
-    box-shadow: 0 0 0 3px rgba(22, 163, 74, 0.1);
+    border-color: var(--primary-blue);
+    box-shadow: 0 0 0 3px rgba(25, 45, 99, 0.1);
 }
 
 .jobs-filter-button {
@@ -70,9 +70,9 @@
     align-items: center;
     gap: 0.5rem;
     padding: 0.75rem 1rem;
-    border: 1px solid rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(25, 45, 99, 0.1);
     border-radius: 8px;
-    background: white;
+    background: var(--primary-gold-lighter);
     color: var(--text-dark);
     cursor: pointer;
     transition: all 0.3s ease;
@@ -86,9 +86,9 @@
 .jobs-mobile-filters {
     margin-top: 1rem;
     padding: 1rem;
-    border: 1px solid rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(25, 45, 99, 0.1);
     border-radius: 8px;
-    background: white;
+    background: var(--primary-gold-lighter);
 }
 
 @media (min-width: 768px) {
@@ -128,7 +128,7 @@
     width: 1rem;
     height: 1rem;
     cursor: pointer;
-    accent-color: var(--primary-green);
+    accent-color: var(--primary-blue);
 }
 
 .jobs-filter-label {
@@ -142,9 +142,9 @@
 .jobs-filter-select {
     width: 100%;
     padding: 0.5rem 0.75rem;
-    border: 1px solid rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(25, 45, 99, 0.1);
     border-radius: 8px;
-    background: white;
+    background: var(--primary-gold-lighter);
     color: var(--text-dark);
     font-size: 1rem;
     cursor: pointer;
@@ -153,7 +153,7 @@
 
 .jobs-filter-select:focus {
     outline: none;
-    border-color: var(--primary-green);
-    box-shadow: 0 0 0 3px rgba(22, 163, 74, 0.1);
+    border-color: var(--primary-blue);
+    box-shadow: 0 0 0 3px rgba(25, 45, 99, 0.1);
 }
 

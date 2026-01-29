@@ -1,7 +1,7 @@
 .login-page {
     width: 100%;
     min-height: 100vh;
-    background: var(--bg-beige-soft);
+    background: var(--primary-gold-light);
     padding-top: 80px;
     display: flex;
     align-items: center;
@@ -21,7 +21,7 @@
     gap: 0.5rem;
     padding: 0.5rem 1rem;
     background: transparent;
-    border: 1px solid rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(25, 45, 99, 0.1);
     border-radius: 8px;
     color: var(--text-dark);
     font-size: 0.875rem;
@@ -31,9 +31,9 @@
 }
 
 .login-back-btn:hover {
-    background: white;
-    border-color: var(--primary-green);
-    color: var(--primary-green);
+    background: var(--primary-gold-lighter);
+    border-color: var(--primary-blue);
+    color: var(--primary-blue);
 }
 
 .login-header {
@@ -45,11 +45,11 @@
     width: 4rem;
     height: 4rem;
     border-radius: 50%;
-    background: rgba(22, 163, 74, 0.1);
+    background: rgba(25, 45, 99, 0.1);
     display: flex;
     align-items: center;
     justify-content: center;
-    color: var(--primary-green);
+    color: var(--primary-blue);
     margin: 0 auto 1.5rem;
 }
 
@@ -66,10 +66,10 @@
 }
 
 .login-form {
-    background: white;
+    background: var(--primary-gold-lighter);
     border-radius: 12px;
     padding: 2rem;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 4px 20px rgba(25, 45, 99, 0.08);
 }
 
 @media (min-width: 768px) {
@@ -80,7 +80,7 @@
 
 .login-error {
     background: #fee2e2;
-    color: #dc2626;
+    color: var(--primary-gold);
     padding: 0.75rem 1rem;
     border-radius: 8px;
     margin-bottom: 1.5rem;
@@ -105,15 +105,15 @@
 }
 
 .login-label svg {
-    color: var(--primary-green);
+    color: var(--primary-blue);
 }
 
 .login-input {
     width: 100%;
     padding: 0.75rem 1rem;
-    border: 1px solid rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(25, 45, 99, 0.1);
     border-radius: 8px;
-    background: white;
+    background: var(--primary-gold-lighter);
     color: var(--text-dark);
     font-family: inherit;
     font-size: 1rem;
@@ -122,8 +122,8 @@
 
 .login-input:focus {
     outline: none;
-    border-color: var(--primary-green);
-    box-shadow: 0 0 0 3px rgba(22, 163, 74, 0.1);
+    border-color: var(--primary-blue);
+    box-shadow: 0 0 0 3px rgba(25, 45, 99, 0.1);
 }
 
 .login-actions {
@@ -146,11 +146,11 @@
     width: 1rem;
     height: 1rem;
     cursor: pointer;
-    accent-color: var(--primary-green);
+    accent-color: var(--primary-blue);
 }
 
 .login-forgot-link {
-    color: var(--primary-green);
+    color: var(--primary-blue);
     font-size: 0.875rem;
     text-decoration: none;
     transition: all 0.3s ease;
@@ -163,22 +163,22 @@
 .login-btn {
     width: 100%;
     padding: 0.75rem 2rem;
-    background: var(--primary-green);
-    color: white;
+    background: var(--primary-blue);
+    color: var(--primary-gold-lighter);
     border: none;
     border-radius: 8px;
     font-weight: 600;
     font-size: 1rem;
     cursor: pointer;
     transition: all 0.3s ease;
-    box-shadow: 0 4px 15px rgba(22, 163, 74, 0.4);
+    box-shadow: 0 4px 15px rgba(25, 45, 99, 0.4);
     margin-bottom: 1.5rem;
 }
 
 .login-btn:hover:not(:disabled) {
-    background: var(--primary-green-dark);
+    background: var(--primary-blue-dark);
     transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(22, 163, 74, 0.6);
+    box-shadow: 0 6px 20px rgba(25, 45, 99, 0.6);
 }
 
 .login-btn:disabled {
@@ -189,7 +189,7 @@
 .login-footer {
     text-align: center;
     padding-top: 1.5rem;
-    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    border-top: 1px solid rgba(25, 45, 99, 0.1);
 }
 
 .login-footer p {
@@ -198,7 +198,7 @@
 }
 
 .login-link {
-    color: var(--primary-green);
+    color: var(--primary-blue);
     font-weight: 600;
     text-decoration: none;
     transition: all 0.3s ease;

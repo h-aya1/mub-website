@@ -54,21 +54,21 @@
 
 .value-card {
     padding: 1.5rem;
-    border: 1px solid rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(25, 45, 99, 0.1);
     border-radius: 8px;
-    background: white;
+    background: var(--primary-gold-lighter);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .value-card:hover {
     transform: translateY(-4px);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 12px rgba(25, 45, 99, 0.1);
 }
 
 .value-card-title {
     font-weight: 700;
     font-size: 1.125rem;
-    color: var(--primary-green);
+    color: var(--primary-blue);
     margin-bottom: 0.75rem;
 }
 

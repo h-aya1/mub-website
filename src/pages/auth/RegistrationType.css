@@ -1,0 +1,136 @@
+.registration-type-page {
+    width: 100%;
+    min-height: 100vh;
+    background: var(--primary-gold-light);
+    padding-top: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 6rem 1rem 2rem;
+}
+
+.registration-type-container {
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.registration-type-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.registration-type-back-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    background: transparent;
+    border: 1px solid rgba(25, 45, 99, 0.1);
+    border-radius: 8px;
+    color: var(--text-dark);
+    font-size: 0.875rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-bottom: 2rem;
+}
+
+.registration-type-back-btn:hover {
+    background: var(--primary-gold-lighter);
+    border-color: var(--primary-blue);
+    color: var(--primary-blue);
+}
+
+.registration-type-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--text-dark);
+    margin-bottom: 0.5rem;
+}
+
+@media (min-width: 768px) {
+    .registration-type-title {
+        font-size: 3rem;
+    }
+}
+
+.registration-type-subtitle {
+    font-size: 1.125rem;
+    color: var(--text-gray);
+}
+
+.registration-type-options {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+}
+
+@media (min-width: 768px) {
+    .registration-type-options {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.registration-type-card {
+    background: var(--primary-gold-lighter);
+    border-radius: 12px;
+    padding: 2.5rem;
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    box-shadow: 0 4px 20px rgba(25, 45, 99, 0.08);
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+    cursor: pointer;
+}
+
+.registration-type-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 30px rgba(25, 45, 99, 0.12);
+    border-color: var(--primary-blue);
+}
+
+.registration-type-icon {
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    background: rgba(25, 45, 99, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--primary-blue);
+    margin-bottom: 1.5rem;
+}
+
+.registration-type-card:hover .registration-type-icon {
+    background: var(--primary-blue);
+    color: var(--primary-gold-lighter);
+}
+
+.registration-type-card-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--text-dark);
+    margin-bottom: 0.75rem;
+}
+
+.registration-type-card-description {
+    font-size: 0.95rem;
+    color: var(--text-gray);
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+
+.registration-type-link {
+    color: var(--primary-blue);
+    font-weight: 600;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.registration-type-card:hover .registration-type-link {
+    transform: translateX(4px);
+}

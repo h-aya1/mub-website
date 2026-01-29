@@ -65,9 +65,9 @@
 .contact-textarea {
     width: 100%;
     padding: 0.75rem 1rem;
-    border: 1px solid rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(25, 45, 99, 0.1);
     border-radius: 8px;
-    background: white;
+    background: var(--primary-gold-lighter);
     color: var(--text-dark);
     font-family: inherit;
     font-size: 1rem;
@@ -82,8 +82,8 @@
 .contact-input:focus,
 .contact-textarea:focus {
     outline: none;
-    border-color: var(--primary-green);
-    box-shadow: 0 0 0 3px rgba(22, 163, 74, 0.1);
+    border-color: var(--primary-blue);
+    box-shadow: 0 0 0 3px rgba(25, 45, 99, 0.1);
 }
 
 .contact-input-full {
@@ -98,8 +98,8 @@
 .contact-submit-button {
     width: 100%;
     padding: 0.75rem 2rem;
-    background-color: var(--primary-green);
-    color: white;
+    background-color: var(--primary-blue);
+    color: var(--primary-gold-lighter);
     font-weight: 600;
     font-size: 1rem;
     border: none;
@@ -109,9 +109,9 @@
 }
 
 .contact-submit-button:hover {
-    background-color: var(--primary-green-dark);
+    background-color: var(--primary-blue-dark);
     transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(22, 163, 74, 0.4);
+    box-shadow: 0 4px 12px rgba(25, 45, 99, 0.4);
 }
 
 .contact-connect-wrapper {
@@ -122,9 +122,9 @@
 
 .contact-connect-card {
     padding: 1.5rem;
-    border: 1px solid rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(25, 45, 99, 0.1);
     border-radius: 8px;
-    background: white;
+    background: var(--primary-gold-lighter);
 }
 
 .contact-connect-card-title {
@@ -137,7 +137,7 @@
 }
 
 .contact-connect-icon {
-    color: var(--primary-green);
+    color: var(--primary-blue);
 }
 
 .contact-connect-description {
@@ -151,7 +151,7 @@
     width: 100%;
     padding: 0.75rem 1.5rem;
     background-color: #25d366;
-    color: white;
+    color: var(--primary-gold-lighter);
     font-weight: 600;
     font-size: 1rem;
     border: none;
@@ -177,7 +177,7 @@
 .contact-social-button {
     width: 100%;
     padding: 0.75rem 1.5rem;
-    border: 1px solid rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(25, 45, 99, 0.1);
     border-radius: 8px;
     background: transparent;
     color: var(--text-dark);
@@ -189,8 +189,8 @@
 
 .contact-social-button:hover {
     background-color: var(--bg-light);
-    border-color: var(--primary-green);
-    color: var(--primary-green);
+    border-color: var(--primary-blue);
+    color: var(--primary-blue);
 }
 
 
