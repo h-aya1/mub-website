@@ -1,5 +1,5 @@
 .jobs-page-cta-section {
-    background-color: var(--bg-light);
+    background-color: var(--primary-blue-dark);
     padding: 3rem 1rem;
 }
 
@@ -23,19 +23,19 @@
 }
 
 .jobs-page-cta-title {
-    font-size: 1.5rem;
+    font-size: 2rem;
     font-weight: 700;
-    color: var(--text-dark);
+    color: var(--primary-gold-light);
     margin-bottom: 1rem;
 }
 
 .jobs-page-cta-description {
-    color: var(--text-gray);
+    color: var(--primary-gold-light);
     margin-bottom: 1.5rem;
 }
 
 .jobs-page-cta-note {
-    background-color: #dbeafe;
+    background-color: var(--primary-gold-light);
     border: 1px solid #93c5fd;
     border-radius: 8px;
     padding: 1rem;
@@ -44,8 +44,8 @@
 }
 
 .jobs-page-cta-note-text {
-    font-size: 0.875rem;
-    color: #1e3a8a;
+    font-size: 1rem;
+    color: var(--primary-blue-dark);
     margin: 0;
 }
 

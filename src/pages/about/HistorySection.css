@@ -1,4 +1,5 @@
 .history-section {
+    background: var(--primary-blue-dark);
     padding: 4rem 1rem;
 }
 
@@ -23,7 +24,7 @@
 .history-title {
     font-size: 1.875rem;
     font-weight: 700;
-    color: var(--text-dark);
+    color: var(--primary-gold);
     margin-bottom: 3rem;
     text-align: center;
 }
@@ -54,8 +55,8 @@
 .history-year-badge {
     width: 3rem;
     height: 3rem;
-    background-color: var(--primary-blue);
-    color: var(--primary-gold-lighter);
+    background: var(--gold-gradient);
+    color: var(--primary-blue);
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -67,7 +68,7 @@
 .history-connector {
     width: 2px;
     height: 5rem;
-    background-color: rgba(25, 45, 99, 0.1);
+    background: var(--gold-gradient);
     margin-top: 1rem;
 }
 
@@ -79,12 +80,12 @@
 .history-item-title {
     font-weight: 700;
     font-size: 1.125rem;
-    color: var(--text-dark);
+    color: var(--primary-gold);
     margin-bottom: 0.5rem;
 }
 
 .history-item-description {
-    color: var(--text-gray);
+    color: var(--primary-gold-lighter);
     line-height: 1.6;
 }
 

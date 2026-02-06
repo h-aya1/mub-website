@@ -1,7 +1,7 @@
 .register-page {
     width: 100%;
     min-height: 100vh;
-    background: var(--primary-gold-light);
+    background: var(--gold-gradient-light);
     padding-top: 80px;
 }
 
@@ -50,7 +50,7 @@
 
 /* Progress Section */
 .register-progress-section {
-    background: var(--primary-gold-lighter);
+    background: var(--gold-gradient-light);
     border-bottom: 1px solid rgba(25, 45, 99, 0.1);
     padding: 2rem 1rem;
 }
@@ -191,7 +191,7 @@
 }
 
 .register-form {
-    background: var(--primary-gold-lighter);
+    background: var(--gold-gradient-light);
     border-radius: 12px;
     padding: 2rem;
     box-shadow: 0 4px 20px rgba(25, 45, 99, 0.08);

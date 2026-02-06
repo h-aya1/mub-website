@@ -1,6 +1,6 @@
 /* ================= Hero Section ================= */
 .hero-section {
-  min-height: 90vh;
+  min-height: 100vh;
   background: linear-gradient(135deg, var(--gradient-blue-light) 0%, var(--gradient-blue-dark) 100%);
   display: flex;
   align-items: center;

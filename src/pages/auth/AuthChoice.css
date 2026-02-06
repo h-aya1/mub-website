@@ -1,7 +1,7 @@
 .auth-choice-page {
     width: 100%;
     min-height: 100vh;
-    background: var(--primary-gold-light);
+    background: var(--gold-gradient-light);
     padding-top: 80px;
     display: flex;
     align-items: center;
@@ -36,7 +36,7 @@
 }
 
 .auth-choice-back-btn:hover {
-    background: var(--primary-gold-lighter);
+    background: var(--gold-gradient-light);
     border-color: var(--primary-blue);
     color: var(--primary-blue);
 }
@@ -72,7 +72,7 @@
 }
 
 .auth-choice-card {
-    background: var(--primary-gold-lighter);
+    background: var(--gold-gradient-light);
     border-radius: 12px;
     padding: 2.5rem;
     text-decoration: none;
@@ -105,8 +105,9 @@
 }
 
 .auth-choice-card:hover .auth-choice-icon {
-    background: var(--primary-blue);
-    color: var(--primary-gold-lighter);
+    background: var(--gold-gradient);
+    color: var(--primary-blue-dark);
+    box-shadow: 0 4px 15px rgba(167, 129, 13, 0.3);
 }
 
 .auth-choice-card-title {
@@ -174,7 +175,7 @@
 }
 
 .draft-modal {
-    background: var(--primary-gold-lighter);
+    background: var(--gold-gradient-light);
     border-radius: 16px;
     max-width: 500px;
     width: 100%;
@@ -311,9 +312,10 @@
 }
 
 .draft-modal-btn-primary {
-    background: var(--primary-blue);
-    color: var(--primary-gold-lighter);
-    box-shadow: 0 2px 8px rgba(25, 45, 99, 0.2);
+    background: var(--gold-gradient);
+    color: var(--primary-blue-dark);
+    box-shadow: 0 4px 15px rgba(167, 129, 13, 0.3);
+    border: none;
 }
 
 .draft-modal-btn-primary:hover:not(:disabled) {

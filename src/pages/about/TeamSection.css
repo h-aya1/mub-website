@@ -1,5 +1,5 @@
 .team-section {
-    background-color: var(--bg-light);
+    background: linear-gradient(135deg, var(--gradient-blue-light) 0%, var(--gradient-blue-dark) 100%);
     padding: 4rem 1rem;
 }
 
@@ -50,7 +50,7 @@
     border: 1px solid rgba(25, 45, 99, 0.1);
     border-radius: 8px;
     overflow: hidden;
-    background: var(--primary-gold-lighter);
+    background: var(--gold-gradient-light);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 

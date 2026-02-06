@@ -1,5 +1,5 @@
 .process-section {
-    background-color: var(--bg-light);
+    background: linear-gradient(135deg, var(--gradient-blue-light) 0%, var(--gradient-blue-dark) 100%);
     padding: 4rem 1rem;
 }
 
@@ -25,7 +25,7 @@
     font-size: 1.875rem;
     font-weight: 700;
     text-align: center;
-    color: var(--text-dark);
+    color: var(--primary-gold-light);
     margin-bottom: 3rem;
 }
 
@@ -43,7 +43,7 @@
 @media (min-width: 768px) {
     .process-grid {
         grid-template-columns: repeat(3, 1fr);
-        gap: 2rem;
+        gap: 3rem;
     }
 }
 
@@ -55,7 +55,7 @@
     padding: 1.5rem;
     border: 1px solid rgba(25, 45, 99, 0.1);
     border-radius: 8px;
-    background: var(--primary-gold-lighter);
+    background: var(--gold-gradient);
     position: relative;
     z-index: 2;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -92,6 +92,9 @@
 }
 
 .process-connector {
+    width: 2px;
+    background: var(--gold-gradient);
+    margin-top: 1rem;
     display: none;
 }
 

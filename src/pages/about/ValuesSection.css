@@ -1,5 +1,5 @@
 .values-section {
-    background-color: var(--bg-light);
+    background: linear-gradient(135deg, var(--gradient-blue-light) 0%, var(--gradient-blue-dark) 100%);
     padding: 4rem 1rem;
 }
 
@@ -37,7 +37,7 @@
 
 .values-grid {
     display: grid;
-    gap: 1.5rem;
+    gap: 1.65rem;
 }
 
 @media (min-width: 768px) {
@@ -53,10 +53,10 @@
 }
 
 .value-card {
+    background: var(--gold-gradient-light);
     padding: 1.5rem;
     border: 1px solid rgba(25, 45, 99, 0.1);
     border-radius: 8px;
-    background: var(--primary-gold-lighter);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 

@@ -1,5 +1,6 @@
 .mission-vision-section {
     padding: 4rem 1rem;
+    background-color: var(--primary-blue-dark);
 }
 
 @media (min-width: 768px) {
@@ -9,7 +10,7 @@
 }
 
 .mission-vision-container {
-    max-width: 896px;
+    max-width: 1152px;
     margin: 0 auto;
     padding: 0 1rem;
 }
@@ -22,7 +23,7 @@
 
 .mission-vision-grid {
     display: grid;
-    gap: 3rem;
+    gap: 9rem;
 }
 
 @media (min-width: 768px) {
@@ -32,14 +33,18 @@
 }
 
 .mission-vision-card {
-    display: flex;
-    flex-direction: column;
+    background: var(--gold-gradient-light);
+    border-radius: 16px;
+    padding: 2rem;
+    text-align: center;
+    box-shadow: 0 4px 20px rgba(25, 45, 99, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .mission-vision-title {
     font-size: 1.875rem;
     font-weight: 700;
-    color: var(--text-dark);
+    color: var(--primary-blue-dark);
     margin-bottom: 1rem;
 }
 

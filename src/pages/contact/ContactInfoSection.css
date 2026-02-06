@@ -1,4 +1,5 @@
 .contact-info-section {
+    background-color: var(--primary-blue-dark);
     padding: 4rem 1rem;
 }
 
@@ -9,7 +10,7 @@
 }
 
 .contact-info-container {
-    max-width: 1152px;
+    max-width: 1300px;
     margin: 0 auto;
     padding: 0 1rem;
 }
@@ -22,7 +23,7 @@
 
 .contact-info-grid {
     display: grid;
-    gap: 1.5rem;
+    gap: 2.5rem;
 }
 
 @media (min-width: 768px) {
@@ -41,7 +42,7 @@
     padding: 1.5rem;
     border: 1px solid rgba(25, 45, 99, 0.06);
     border-radius: 8px;
-    background: var(--primary-gold-light);
+    background: var(--gold-gradient);
     text-align: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -54,7 +55,7 @@
 .contact-info-icon-wrapper {
     width: 3rem;
     height: 3rem;
-    background-color: var(--primary-gold);
+    background: var(--gold-gradient);
     border-radius: 8px;
     display: flex;
     align-items: center;
@@ -63,7 +64,7 @@
 }
 
 .contact-info-icon {
-    color: var(--primary-gold-dark);
+    color: var(--primary-blue-dark);
 }
 
 .contact-info-title {

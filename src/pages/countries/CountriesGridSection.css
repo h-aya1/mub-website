@@ -1,10 +1,10 @@
 .countries-grid-section {
     padding: 4rem 1rem;
-    background: var(--primary-gold-light);
+    background: var(--primary-blue-dark);
 }
 
 .countries-grid-container {
-    max-width: 1200px;
+    max-width: 1400px;
     margin: 0 auto;
     padding: 0 1rem;
 }
@@ -23,7 +23,7 @@
 .countries-grid-title {
     font-size: 2rem;
     font-weight: 700;
-    color: var(--text-dark);
+    color: var(--primary-gold-light);
     margin-bottom: 0.75rem;
 }
 
@@ -35,7 +35,7 @@
 
 .countries-grid-subtitle {
     font-size: 1.125rem;
-    color: var(--text-gray);
+    color: var(--primary-gold-light);
     max-width: 700px;
     margin: 0 auto;
     line-height: 1.6;
@@ -44,7 +44,7 @@
 .countries-grid {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 2rem;
+    gap: 3rem;
 }
 
 @media (min-width: 768px) {
@@ -60,7 +60,7 @@
 }
 
 .country-card {
-    background: var(--primary-gold-lighter);
+    background: var(--gold-gradient);
     border-radius: 12px;
     padding: 2rem;
     box-shadow: 0 4px 20px rgba(25, 45, 99, 0.08);

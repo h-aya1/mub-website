@@ -10,12 +10,12 @@
 .section-header h2 {
   font-size: 2.5rem;
   font-weight: 700;
-  color: var(--text-dark);
+  color: var(--primary-gold-lighter);
   margin-bottom: 1rem;
 }
 
 .section-header p {
-  color: var(--text-light);
+  color: var(--primary-gold-lighter);
   font-size: 1.1rem;
   max-width: 700px;
   margin: 0 auto;
@@ -24,7 +24,7 @@
 /* ================= Trust Section ================= */
 .trust-section {
   padding: 5rem 5%;
-  background: var(--primary-gold-light);
+  background: var(--primary-blue-dark);
   width: 100%;
 }
 
@@ -38,13 +38,13 @@
 }
 
 .trust-card {
-  background: var(--primary-gold-lighter);
+  background: var(--gold-gradient);
   border-radius: 16px;
   padding: 2rem;
   text-align: center;
   box-shadow: 0 4px 20px rgba(25, 45, 99, 0.08);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  border: 1px solid var(--primary-gold-light);
+  border: 1px solid var(--primary-gold-dark);
 }
 
 .trust-card:hover {
@@ -60,16 +60,17 @@
   align-items: center;
   justify-content: center;
   margin: 0 auto 1.5rem;
-  background: var(--primary-gold);
-  color: var(--primary-gold-dark);
+  background: var(--gold-gradient-light);
+  color: var(--primary-blue-dark);
+  box-shadow: 0 8px 15px rgba(167, 129, 13, 0.3);
 }
 
 .trust-icon-gold,
 .trust-icon-gold-light,
 .trust-icon-gold-medium,
 .trust-icon-gold-dark {
-  background: var(--primary-gold);
-  color: #533c03;
+  background: var(--gold-gradient);
+  color: var(--primary-blue-dark);
 }
 
 .trust-card h3 {
@@ -80,8 +81,9 @@
 }
 
 .trust-card p {
-  color: var(--text-light);
+  color: var(--text-gray);
   font-size: 1rem;
+  font-weight: 600;
   line-height: 1.6;
   margin: 0;
 }

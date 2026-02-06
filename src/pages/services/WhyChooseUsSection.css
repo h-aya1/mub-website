@@ -1,4 +1,5 @@
 .why-choose-us-section {
+    background: linear-gradient(135deg, var(--gradient-blue-light) 0%, var(--gradient-blue-dark) 100%);
     padding: 4rem 1rem;
 }
 
@@ -24,7 +25,7 @@
     font-size: 1.875rem;
     font-weight: 700;
     text-align: center;
-    color: var(--text-dark);
+    color: var(--primary-gold-light);
     margin-bottom: 3rem;
 }
 
@@ -45,7 +46,7 @@
     border: 1px solid rgba(25, 45, 99, 0.1);
     border-left: 4px solid var(--primary-blue);
     border-radius: 8px;
-    background: var(--primary-gold-lighter);
+    background: var(--gold-gradient);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 

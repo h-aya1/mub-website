@@ -1,7 +1,7 @@
 /* Featured Opportunities Section */
 .featured-opportunities-section {
     padding: 5rem 5%;
-    background: var(--primary-gold-lighter);
+    background: var(--primary-blue-dark);
     width: 100%;
 }
 
@@ -20,15 +20,15 @@
 .section-header-left h2 {
     font-size: 2.5rem;
     font-weight: 700;
-    color: var(--text-dark);
+    color: var(--primary-gold-lighter);
     margin-bottom: 0.75rem;
 }
 
 .section-header-left p {
-    color: var(--text-light);
+    color: var(--primary-gold-lighter);
     font-size: 1.1rem;
     max-width: 600px;
-}
+}   
 
 .btn-view-all {
     display: inline-flex;
@@ -46,7 +46,7 @@
 }
 
 .btn-view-all:hover {
-    background: var(--primary-blue-dark);
+    background: var(--primary-blue);
     transform: translateY(-2px);
     box-shadow: 0 4px 12px rgba(25, 45, 99, 0.4);
 }
@@ -61,11 +61,10 @@
 }
 
 .job-card-featured {
-    background: var(--primary-gold-lighter);
+    background: var(--gold-gradient);
     border-radius: 12px;
     padding: 1.5rem;
     box-shadow: 0 2px 8px rgba(25, 45, 99, 0.08);
-    border: 1px solid var(--primary-gold-light);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     display: flex;
     flex-direction: column;
