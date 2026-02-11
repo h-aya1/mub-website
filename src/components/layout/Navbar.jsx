@@ -3,6 +3,7 @@ import { Link, useLocation } from 'react-router-dom';
 import { Menu, X, Home, Briefcase, Info, Settings, Mail, Globe, MapPin, HelpCircle } from 'lucide-react';
 import { useTranslation } from '../../contexts/TranslationContext';
 import { useTranslations } from '../../hooks/useTranslations';
+import logo from '../../assets/logo.png';
 import './Navbar.css';
 
 const Navbar = () => {
@@ -50,16 +51,7 @@ const Navbar = () => {
                 {/* Logo */}
                 <Link to="/" className="navbar-logo">
                     <div className="logo-icon">
-                        <svg width="40" height="32" viewBox="0 0 40 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            {/* Blue base */}
-                            <rect x="2" y="22" width="36" height="6" rx="3" fill="var(--primary-blue)" />
-                            {/* Golden-yellow arch */}
-                            <path d="M6 22 Q20 6 34 22" stroke="var(--primary-gold)" strokeWidth="4" fill="none" strokeLinecap="round" strokeLinejoin="round" />
-                            {/* Three dots on top of arch */}
-                            <circle cx="12" cy="12" r="2.5" fill="var(--primary-blue)" />
-                            <circle cx="20" cy="8" r="2.5" fill="var(--primary-gold)" />
-                            <circle cx="28" cy="12" r="2.5" fill="var(--primary-blue-light)" />
-                        </svg>
+                        <img src={logo} alt="MUB Connect Logo" className="navbar-logo-img" />
                     </div>
                     <div className="logo-text-container">
                         <span className="logo-text">MUB Connect</span>

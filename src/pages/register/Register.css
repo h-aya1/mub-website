@@ -1,13 +1,13 @@
 .register-page {
     width: 100%;
     min-height: 100vh;
-    background: var(--gold-gradient-light);
+    background: #ffe7a5;
     padding-top: 80px;
 }
 
 /* Hero Section */
 .register-hero-section {
-    background: linear-gradient(135deg, var(--primary-gold-light) 0%, var(--gradient-blue-dark) 100%);
+    background: linear-gradient(135deg, var(--gradient-blue-light) 0%, var(--gradient-blue-dark) 100%);
     color: var(--primary-gold-lighter);
     padding: 5.5rem 1rem 3.5rem;
 }
@@ -50,7 +50,7 @@
 
 /* Progress Section */
 .register-progress-section {
-    background: var(--gold-gradient-light);
+    background: var(--gold-gradient);
     border-bottom: 1px solid rgba(25, 45, 99, 0.1);
     padding: 2rem 1rem;
 }
@@ -92,18 +92,18 @@
 
 .register-step.completed .register-step-icon {
     background: var(--primary-blue);
-    color: var(--primary-gold-lighter);
+    color: var(--primary-gold);
 }
 
 .register-step-icon {
     width: 2.5rem;
     height: 2.5rem;
     border-radius: 50%;
-    background: var(--bg-light);
+    background: var(--gold-gradient-light);
     display: flex;
     align-items: center;
     justify-content: center;
-    color: var(--text-gray);
+    color: var(--text-dark);
     transition: all 0.3s ease;
     flex-shrink: 0;
 }
@@ -121,7 +121,7 @@
 
 .register-step-number {
     font-size: 0.75rem;
-    color: var(--text-light);
+    color: var(--text-dark);
     font-weight: 500;
 }
 
@@ -143,7 +143,7 @@
 .register-step-connector {
     flex: 1;
     height: 2px;
-    background: var(--bg-light);
+    background: var(--primary-blue-dark);
     min-width: 2rem;
     transition: all 0.3s ease;
 }
@@ -191,7 +191,7 @@
 }
 
 .register-form {
-    background: var(--gold-gradient-light);
+    background-color: var(--primary-blue-dark);
     border-radius: 12px;
     padding: 2rem;
     box-shadow: 0 4px 20px rgba(25, 45, 99, 0.08);
@@ -222,12 +222,12 @@
 .register-step-heading {
     font-size: 1.875rem;
     font-weight: 700;
-    color: var(--text-dark);
+    color: var(--primary-gold);
     margin-bottom: 0.5rem;
 }
 
 .register-step-description {
-    color: var(--text-gray);
+    color: var(--primary-gold);
     margin-bottom: 2rem;
     font-size: 1rem;
 }
@@ -260,11 +260,11 @@
     gap: 0.5rem;
     font-weight: 600;
     font-size: 0.875rem;
-    color: var(--text-dark);
+    color: var(--primary-gold);
 }
 
 .register-label svg {
-    color: var(--primary-blue);
+    color: var(--primary-gold);
 }
 
 .register-input,
@@ -274,7 +274,7 @@
     padding: 0.75rem 1rem;
     border: 1px solid rgba(25, 45, 99, 0.1);
     border-radius: 8px;
-    background: var(--primary-gold-lighter);
+    background: var(--primary-gold-light);
     color: var(--text-dark);
     font-family: inherit;
     font-size: 1rem;
@@ -285,7 +285,7 @@
 .register-textarea:focus,
 .register-select:focus {
     outline: none;
-    border-color: var(--primary-blue);
+    border-color: var(--primary-gold);
     box-shadow: 0 0 0 3px rgba(25, 45, 99, 0.1);
 }
 
@@ -312,12 +312,12 @@
 }
 
 .register-file-label svg {
-    color: var(--primary-blue);
+    color: var(--primary-gold);
 }
 
 .register-file-hint {
-    font-size: 0.75rem;
-    color: var(--text-light);
+    font-size: 0.85rem;
+    color: var(--text-dark);
     font-weight: 400;
 }
 
@@ -331,13 +331,13 @@
 }
 
 .register-file-input:hover {
-    border-color: var(--primary-blue);
+    border-color: var(--primary-gold);
     background: rgba(25, 45, 99, 0.05);
 }
 
 .register-file-name {
     font-size: 0.875rem;
-    color: var(--primary-blue);
+    color: var(--primary-gold);
     font-weight: 500;
     margin-top: 0.25rem;
 }
@@ -351,9 +351,9 @@
 
 .register-review-group {
     padding: 1.5rem;
-    background: var(--bg-light);
+    background: var(--primary-gold-light);
     border-radius: 8px;
-    border-left: 4px solid var(--primary-blue);
+    border-left: 4px solid var(--primary-gold);
 }
 
 .register-review-title {
@@ -438,13 +438,13 @@
 }
 
 .register-btn-primary {
-    background: var(--primary-blue);
-    color: var(--primary-gold-lighter);
+    background: var(--gold-gradient);
+    color: var(--primary-blue-dark);
     box-shadow: 0 4px 15px rgba(25, 45, 99, 0.4);
 }
 
 .register-btn-primary:hover:not(:disabled) {
-    background: var(--primary-blue-dark);
+    background: var(--gold-gradient-soft);
     transform: translateY(-2px);
     box-shadow: 0 6px 20px rgba(25, 45, 99, 0.6);
 }
@@ -455,7 +455,7 @@
 }
 
 .register-btn-secondary {
-    background: transparent;
+    background: var(--gold-gradient-light);
     color: var(--text-dark);
     border: 2px solid rgba(25, 45, 99, 0.1);
 }
@@ -468,7 +468,7 @@
 
 .register-error {
     background: var(--primary-gold-lighter);
-    color: var(--primary-gold);
+    color: red ;
     padding: 0.75rem 1rem;
     border-radius: 8px;
     margin-bottom: 1.5rem;
@@ -593,7 +593,7 @@
 }
 
 .document-upload-card {
-    background: var(--bg-light);
+    background: var(--primary-gold-light);
     border: 2px solid rgba(25, 45, 99, 0.08);
     border-radius: 12px;
     padding: 1.5rem;
@@ -620,7 +620,7 @@
 }
 
 .document-check {
-    color: var(--primary-blue);
+    color: var(--primary-blue-dark);
 }
 
 .document-upload-label {
@@ -641,7 +641,7 @@
     background: var(--primary-gold-lighter);
     border: 2px dashed rgba(25, 45, 99, 0.2);
     border-radius: 8px;
-    color: var(--primary-blue);
+    color: var(--primary-blue-dark);
     font-weight: 600;
     transition: all 0.3s ease;
 }
@@ -655,7 +655,7 @@
     display: block;
     margin-top: 0.5rem;
     font-size: 0.75rem;
-    color: var(--text-light);
+    color: var(--text-dark);
     text-align: center;
 }
 
@@ -669,7 +669,7 @@
 }
 
 .document-uploaded-text {
-    color: var(--primary-blue);
+    color: var(--primary-blue-dark);
     font-weight: 600;
     font-size: 0.9rem;
 }
@@ -682,7 +682,7 @@
     background: var(--primary-gold-lighter);
     border: 1px solid rgba(25, 45, 99, 0.1);
     border-radius: 6px;
-    color: var(--primary-gold);
+    color: var(--primary-blue-dark);
     font-size: 0.8rem;
     font-weight: 600;
     cursor: pointer;
@@ -703,7 +703,7 @@
 }
 
 .document-info-box p {
-    color: var(--primary-blue-dark);
+    color: red;
     font-size: 0.9rem;
     line-height: 1.5;
     margin: 0;

@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import { Facebook, Twitter, Instagram, Linkedin, Youtube } from 'lucide-react';
 import { useTranslations } from '../../hooks/useTranslations';
+import logo from '../../assets/logo.png';
 import './Footer.css';
 
 const Footer = () => {
@@ -12,15 +13,7 @@ const Footer = () => {
                 <div className="footer-col brand-col">
                     <Link to="/" className="footer-logo">
                         <div className="footer-logo-icon">
-                            <svg width="40" height="40" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M16 4L20 12L28 14L20 16L16 24L12 16L4 14L12 12L16 4Z" fill="url(#footerLogoGradient)" />
-                                <defs>
-                                    <linearGradient id="footerLogoGradient" x1="4" y1="4" x2="28" y2="24" gradientUnits="userSpaceOnUse">
-                                        <stop stopColor="var(--primary-gold)" />
-                                        <stop offset="1" stopColor="var(--primary-blue)" />
-                                    </linearGradient>
-                                </defs>
-                            </svg>
+                            <img src={logo} alt="MUB Connect Logo" className="footer-logo-img" />
                         </div>
                         <span>MUB Connect</span>
                     </Link>

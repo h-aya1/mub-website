@@ -2,7 +2,7 @@
 .partner-register-page {
     width: 100%;
     min-height: 100vh;
-    background: var(--primary-gold-light);
+    background: var(--primary-blue-dark);
     padding-top: 80px;
 }
 
@@ -20,17 +20,17 @@
 .partner-register-title {
     font-size: 2rem;
     font-weight: 700;
-    color: var(--text-dark);
+    color: var(--primary-gold);
     margin-bottom: 0.5rem;
 }
 
 .partner-register-subtitle {
-    color: var(--text-gray);
+    color: var(--primary-gold-light);
     font-size: 1.1rem;
 }
 
 .partner-register-form {
-    background: var(--primary-gold-lighter);
+    background: var(--primary-gold-light);
     border-radius: 12px;
     padding: 2rem;
     box-shadow: 0 4px 20px rgba(25, 45, 99, 0.08);
