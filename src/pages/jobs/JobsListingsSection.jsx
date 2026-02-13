@@ -76,6 +76,15 @@ const JobsListingsSection = ({
                                     <Link key={job.id} to={`/jobs/${job.id}`} className="jobs-job-card-link">
                                         <div className="jobs-job-card">
                                             <div className="jobs-job-card-content">
+                                                {(job.thumbnailUrl || job.logoUrl) && (
+                                                    <div className="jobs-job-logo">
+                                                        <img
+                                                            src={`http://localhost:3000${job.thumbnailUrl || job.logoUrl}`}
+                                                            alt={job.company}
+                                                            onError={(e) => { e.target.style.display = 'none'; }}
+                                                        />
+                                                    </div>
+                                                )}
                                                 <div className="jobs-job-card-main">
                                                     <h3 className="jobs-job-title">{job.title}</h3>
                                                     <p className="jobs-job-company">{job.company}</p>

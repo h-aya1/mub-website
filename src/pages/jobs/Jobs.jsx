@@ -1,119 +1,55 @@
-import React, { useState, useMemo } from 'react';
+import React, { useState, useMemo, useEffect } from 'react';
+import { jobService } from '../../services/jobs.service';
 import JobsHeroSection from './JobsHeroSection';
 import JobsSearchSection from './JobsSearchSection';
 import JobsListingsSection from './JobsListingsSection';
 import JobsPageCTA from './JobsPageCTA';
 import './Jobs.css';
 
-// Note: This is demo data. In production, fetch from database/API
-const mockJobs = [
-    {
-        id: 1,
-        title: "Domestic Helper",
-        company: "Private Household",
-        location: "Saudi Arabia",
-        salary: "$200-300/month",
-        salaryMin: 200,
-        type: "Full-time",
-        experience: "2+ years",
-        posted: "Dec 20, 2025",
-        description:
-            "Seeking experienced domestic helper for household management. Responsibilities include cleaning, cooking, and childcare.",
-    },
-    {
-        id: 2,
-        title: "Healthcare Aide",
-        company: "Al Noor Hospital",
-        location: "United Arab Emirates",
-        salary: "$400-550/month",
-        salaryMin: 400,
-        type: "Full-time",
-        experience: "3+ years",
-        posted: "Dec 19, 2025",
-        description:
-            "Healthcare professionals needed for nursing support and patient care duties in modern hospital facility.",
-    },
-    {
-        id: 3,
-        title: "Construction Worker",
-        company: "Gulf Construction Ltd",
-        location: "Qatar",
-        salary: "$350-450/month",
-        salaryMin: 350,
-        type: "Full-time",
-        experience: "2+ years",
-        posted: "Dec 18, 2025",
-        description: "Skilled construction workers needed for ongoing infrastructure projects with competitive benefits.",
-    },
-    {
-        id: 4,
-        title: "Hotel Housekeeper",
-        company: "Luxury Hotel Group",
-        location: "United Arab Emirates",
-        salary: "$280-380/month",
-        salaryMin: 280,
-        type: "Full-time",
-        experience: "1+ year",
-        posted: "Dec 18, 2025",
-        description: "Housekeeping staff for 5-star hotel. Must be reliable, detail-oriented, and customer-focused.",
-    },
-    {
-        id: 5,
-        title: "Nanny/Childcare Provider",
-        company: "Private Family",
-        location: "Kuwait",
-        salary: "$250-350/month",
-        salaryMin: 250,
-        type: "Full-time",
-        experience: "2+ years",
-        posted: "Dec 17, 2025",
-        description:
-            "Experienced nanny needed for family with children. Responsibilities include childcare and light household tasks.",
-    },
-    {
-        id: 6,
-        title: "Chef/Cook",
-        company: "Restaurant Group",
-        location: "Bahrain",
-        salary: "$500-700/month",
-        salaryMin: 500,
-        type: "Full-time",
-        experience: "3+ years",
-        posted: "Dec 16, 2025",
-        description:
-            "Professional chef with experience in Middle Eastern and international cuisine for upscale restaurant.",
-    },
-    {
-        id: 7,
-        title: "Office Cleaner",
-        company: "Cleaning Services Co.",
-        location: "Saudi Arabia",
-        salary: "$220-280/month",
-        salaryMin: 220,
-        type: "Full-time",
-        experience: "1+ year",
-        posted: "Dec 16, 2025",
-        description: "Office and building cleaning services. Evening shift available with transportation provided.",
-    },
-    {
-        id: 8,
-        title: "Nurse - Medical Care",
-        company: "King Fahad Medical City",
-        location: "Saudi Arabia",
-        salary: "$800-1000/month",
-        salaryMin: 800,
-        type: "Full-time",
-        experience: "5+ years",
-        posted: "Dec 15, 2025",
-        description: "RN or LPN with extensive experience in patient care and medical procedures for major medical center.",
-    },
-];
+
 
 const Jobs = () => {
+    const [jobs, setJobs] = useState([]);
+    const [loading, setLoading] = useState(true);
     const [searchTerm, setSearchTerm] = useState("");
     const [selectedLocations, setSelectedLocations] = useState(["All"]);
     const [selectedSalaries, setSelectedSalaries] = useState([0]);
     const [showFilters, setShowFilters] = useState(false);
+
+    useEffect(() => {
+        const fetchJobs = async () => {
+            try {
+                const data = await jobService.getJobs({ pageSize: 50 });
+                const mappedJobs = data.items.map(job => {
+                    let salaryMin = 0;
+                    if (job.salaryRange) {
+                        const match = job.salaryRange.match(/(\d+)/);
+                        if (match) salaryMin = parseInt(match[0], 10);
+                    }
+                    return {
+                        id: job.id,
+                        title: job.jobTitle,
+                        company: job.employer?.organizationName || 'Confidential',
+                        logoUrl: job.employer?.logoUrl, // Add logoUrl
+                        thumbnailUrl: job.thumbnailUrl, // Add thumbnailUrl
+                        location: job.city ? `${job.city}, ${job.country}` : job.country,
+                        salary: job.salaryRange || 'Check details',
+                        salaryMin: salaryMin,
+                        type: job.contractType?.replace(/_/g, ' ').toLowerCase() || 'Full time',
+                        vacancies: job.vacancies,
+                        posted: new Date(job.createdAt).toLocaleDateString(),
+                        description: job.jobDescription
+                    };
+                });
+                setJobs(mappedJobs);
+            } catch (err) {
+                console.error("Failed to fetch jobs", err);
+            } finally {
+                setLoading(false);
+            }
+        };
+        fetchJobs();
+    }, []);
 
     const locations = ["All", "Saudi Arabia", "United Arab Emirates", "Qatar", "Kuwait", "Bahrain"];
     const salaryRanges = [0, 300, 500, 800];
@@ -127,8 +63,8 @@ const Jobs = () => {
                 const newLocations = prev.includes("All")
                     ? [location]
                     : prev.includes(location)
-                    ? prev.filter((loc) => loc !== location)
-                    : [...prev.filter((loc) => loc !== "All"), location];
+                        ? prev.filter((loc) => loc !== location)
+                        : [...prev.filter((loc) => loc !== "All"), location];
                 return newLocations.length === 0 ? ["All"] : newLocations;
             });
         }
@@ -143,21 +79,21 @@ const Jobs = () => {
                 const newSalaries = prev.includes(0)
                     ? [salary]
                     : prev.includes(salary)
-                    ? prev.filter((sal) => sal !== salary)
-                    : [...prev.filter((sal) => sal !== 0), salary];
+                        ? prev.filter((sal) => sal !== salary)
+                        : [...prev.filter((sal) => sal !== 0), salary];
                 return newSalaries.length === 0 ? [0] : newSalaries;
             });
         }
     };
 
     const filteredJobs = useMemo(() => {
-        return mockJobs.filter((job) => {
+        return jobs.filter((job) => {
             const matchesSearch =
                 job.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
                 job.description.toLowerCase().includes(searchTerm.toLowerCase());
 
             const matchesLocation =
-                selectedLocations.includes("All") || selectedLocations.includes(job.location);
+                selectedLocations.includes("All") || selectedLocations.some(loc => job.location.includes(loc));
 
             const matchesSalary =
                 selectedSalaries.includes(0) ||
@@ -165,11 +101,11 @@ const Jobs = () => {
 
             return matchesSearch && matchesLocation && matchesSalary;
         });
-    }, [searchTerm, selectedLocations, selectedSalaries]);
+    }, [jobs, searchTerm, selectedLocations, selectedSalaries]);
 
     return (
         <div className="jobs-page">
-            <JobsHeroSection totalJobs={mockJobs.length} />
+            <JobsHeroSection totalJobs={jobs.length} />
             <JobsSearchSection
                 searchTerm={searchTerm}
                 setSearchTerm={setSearchTerm}
@@ -182,16 +118,20 @@ const Jobs = () => {
                 locations={locations}
                 salaryRanges={salaryRanges}
             />
-            <JobsListingsSection
-                filteredJobs={filteredJobs}
-                totalJobs={mockJobs.length}
-                selectedLocations={selectedLocations}
-                handleLocationChange={handleLocationChange}
-                selectedSalaries={selectedSalaries}
-                handleSalaryChange={handleSalaryChange}
-                locations={locations}
-                salaryRanges={salaryRanges}
-            />
+            {loading ? (
+                <div style={{ textAlign: 'center', padding: '4rem' }}>Loading jobs...</div>
+            ) : (
+                <JobsListingsSection
+                    filteredJobs={filteredJobs}
+                    totalJobs={jobs.length}
+                    selectedLocations={selectedLocations}
+                    handleLocationChange={handleLocationChange}
+                    selectedSalaries={selectedSalaries}
+                    handleSalaryChange={handleSalaryChange}
+                    locations={locations}
+                    salaryRanges={salaryRanges}
+                />
+            )}
             <JobsPageCTA />
         </div>
     );

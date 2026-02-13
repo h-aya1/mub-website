@@ -1,4 +1,6 @@
+import { useState, useEffect } from 'react';
 import { useTranslations } from '../../hooks/useTranslations';
+import { jobService } from '../../services/jobs.service';
 import { Link } from 'react-router-dom';
 import { ArrowRight, AlertCircle, MapPin, Clock, CheckCircle } from 'lucide-react';
 import './FeaturedOpportunitiesSection.css';
@@ -7,47 +9,41 @@ const FeaturedOpportunitiesSection = () => {
     const { t } = useTranslations();
 
     // Fetch first 3 jobs (same data structure as jobs page)
-    const featuredJobs = [
-        {
-            id: 1,
-            title: 'Household Manager',
-            location: 'Dubai, UAE',
-            salary: 'Monthly Salary',
-            type: 'Full-time, Live-in',
-            urgent: true,
-            requirements: [
-                'Minimum 2 years experience',
-                'English communication skills',
-                'Cooking and cleaning expertise'
-            ]
-        },
-        {
-            id: 2,
-            title: 'Private Driver',
-            location: 'Riyadh, Saudi Arabia',
-            salary: 'Monthly Salary',
-            type: 'Full-time',
-            urgent: false,
-            requirements: [
-                'Valid international driving license',
-                'Clean driving record',
-                'Basic Arabic preferred'
-            ]
-        },
-        {
-            id: 3,
-            title: 'Childcare Specialist',
-            location: 'Doha, Qatar',
-            salary: 'Monthly Salary',
-            type: 'Full-time, Live-in',
-            urgent: true,
-            requirements: [
-                'Experience with children 0-5 years',
-                'First aid certification',
-                'Patient and caring nature'
-            ]
-        }
-    ];
+    const [featuredJobs, setFeaturedJobs] = useState([]);
+    const [loading, setLoading] = useState(true);
+
+    useEffect(() => {
+        const fetchJobs = async () => {
+            try {
+                const data = await jobService.getJobs({ pageSize: 3 });
+                const mappedJobs = data.items.map(job => ({
+                    id: job.id,
+                    title: job.jobTitle,
+                    company: job.employer?.organizationName || 'Confidential',
+                    logoUrl: job.employer?.logoUrl,
+                    thumbnailUrl: job.thumbnailUrl,
+                    location: [job.city, job.country].filter(Boolean).join(', '),
+                    salary: job.salaryRange || t('home.featured.salaryNegotiable'),
+                    type: job.contractType?.replace(/_/g, ' ').toLowerCase() || 'Full time',
+                    urgent: false,
+                    requirements: job.jobDescription
+                        ? job.jobDescription.split('\n').filter(line => line.trim().length > 0).slice(0, 3)
+                        : [t('home.featured.seeDetails')]
+                }));
+                setFeaturedJobs(mappedJobs);
+            } catch (err) {
+                console.error("Failed to load featured jobs", err);
+            } finally {
+                setLoading(false);
+            }
+        };
+
+        fetchJobs();
+    }, [t]);
+
+    if (loading) {
+        return <div className="loading-spinner">Loading opportunities...</div>; // Simple loading state
+    }
 
     return (
         <section className="featured-opportunities-section">
@@ -66,6 +62,15 @@ const FeaturedOpportunitiesSection = () => {
                 {featuredJobs.map(job => (
                     <div key={job.id} className="job-card-featured">
                         <div className="job-card-header-featured">
+                            {(job.thumbnailUrl || job.logoUrl) && (
+                                <div className="featured-job-logo">
+                                    <img
+                                        src={`http://localhost:3000${job.thumbnailUrl || job.logoUrl}`}
+                                        alt={job.company}
+                                        onError={(e) => { e.target.style.display = 'none'; }}
+                                    />
+                                </div>
+                            )}
                             <div className="job-title-row">
                                 <h3>{job.title}</h3>
                                 {job.urgent && (
