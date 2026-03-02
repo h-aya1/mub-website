@@ -54,8 +54,8 @@ const Navbar = () => {
                         <img src={logo} alt="MUB Connect Logo" className="navbar-logo-img" />
                     </div>
                     <div className="logo-text-container">
-                        <span className="logo-text">MUB Connect</span>
-                        <span className="logo-tagline">Empowering Workers, Bridging Worlds</span>
+                        <span className="logo-text">{t('nav.brandName')}</span>
+                        <span className="logo-tagline">{t('nav.tagline')}</span>
                     </div>
                 </Link>
 

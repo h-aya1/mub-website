@@ -20,7 +20,7 @@ const PartnerRegister = () => {
         ownerName: '',
         ownerIdNumber: '',
         licenseNumber: '',
-        licenseFileUrl: '',
+        licenseFile: null, // Storing File object
         licenseExpiry: ''
     });
 
@@ -44,23 +44,12 @@ const PartnerRegister = () => {
             return;
         }
 
-        try {
-            const base64 = await new Promise((resolve, reject) => {
-                const reader = new FileReader();
-                reader.onload = () => resolve(reader.result);
-                reader.onerror = reject;
-                reader.readAsDataURL(file);
-            });
-
-            setFormData(prev => ({
-                ...prev,
-                licenseFileUrl: base64
-            }));
-            setLicenseFileName(file.name);
-            setError('');
-        } catch (err) {
-            setError('Failed to process file. Please try again.');
-        }
+        setFormData(prev => ({
+            ...prev,
+            licenseFile: file
+        }));
+        setLicenseFileName(file.name);
+        setError('');
     };
 
     const handleSubmit = async (e) => {
@@ -68,19 +57,24 @@ const PartnerRegister = () => {
         setLoading(true);
         setError('');
 
-        if (!formData.licenseFileUrl) {
+        if (!formData.licenseFile) {
             setError('Please upload your business license document.');
             setLoading(false);
             return;
         }
 
         try {
+            const formDataToSend = new FormData();
+            Object.keys(formData).forEach(key => {
+                const value = formData[key];
+                if (value !== '' && value !== null && value !== undefined) {
+                    formDataToSend.append(key, value);
+                }
+            });
+
             const response = await fetch(`${API_BASE_URL}/api/employers/register`, {
                 method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify(formData),
+                body: formDataToSend,
             });
 
             if (!response.ok) {

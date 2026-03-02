@@ -4,6 +4,5 @@
     font-family: 'Inter', system-ui, -apple-system, sans-serif;
     display: flex;
     flex-direction: column;
+    box-sizing: border-box;
 }
-
-

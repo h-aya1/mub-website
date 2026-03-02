@@ -77,9 +77,10 @@ const AuthChoice = () => {
 
                 <div className="auth-choice-options">
                     <button
-                        onClick={() => navigate('/')}
+                        onClick={() => navigate('/login')}
                         className="auth-choice-card auth-choice-button"
                     >
+
                         <div className="auth-choice-icon">
                             <LogIn size={32} />
                         </div>

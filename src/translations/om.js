@@ -69,6 +69,8 @@ export const translations = {
         countries: "Biyyoota",
         faq: "Gaaffilee Yeroo Baay'ee",
         startJourney: "Imalaa Keessan Jalqabaa",
+        brandName: "MUB Konnekti",
+        tagline: "Hojjettoota Dandeessisuu, Addunyaa Walitti Hidhuu",
     },
     home: {
         hero: {

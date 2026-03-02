@@ -1,4 +1,4 @@
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route, Navigate } from 'react-router-dom';
 import MainLayout from './components/layout/MainLayout';
 import Home from './pages/home/Home';
 import About from './pages/about/About';
@@ -26,6 +26,7 @@ function App() {
         <Route path="/services" element={<Services />} />
         <Route path="/countries" element={<Countries />} />
         <Route path="/jobs" element={<Jobs />} />
+        <Route path="/jobs/:id" element={<Navigate to="/auth-choice" replace />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/faq" element={<FAQ />} />
         <Route path="/auth-choice" element={<AuthChoice />} />
@@ -42,3 +43,4 @@ function App() {
 }
 
 export default App;
+

@@ -69,6 +69,8 @@ export const translations = {
         countries: "ሀገራት",
         faq: "ተደጋጋሚ ጥያቄዎች",
         startJourney: "ጉዞዎን ይጀምሩ",
+        brandName: "MUB ኮኔክት",
+        tagline: "ሰራተኞችን ማብቃት፣ አለምን ማገናኘት",
     },
     home: {
         hero: {

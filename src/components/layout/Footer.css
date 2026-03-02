@@ -112,6 +112,9 @@
     font-weight: 600;
     letter-spacing: 0.5px;
     text-transform: uppercase;
+    overflow-wrap: break-word;
+    /* Ensure long translated titles don't overflow */
+    hyphens: auto;
 }
 
 .links-col ul {
@@ -148,6 +151,7 @@
     display: flex;
     flex-direction: column;
     gap: 0.75rem;
+    width: 100%;
 }
 
 .cert-btn {
@@ -161,6 +165,9 @@
     cursor: pointer;
     transition: all 0.3s;
     text-align: left;
+    white-space: normal;
+    /* Allow long text to wrap in buttons */
+    line-height: 1.2;
 }
 
 .cert-btn:hover {

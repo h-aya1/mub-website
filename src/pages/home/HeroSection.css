@@ -24,6 +24,8 @@
   line-height: 1.2;
   margin-bottom: 1.5rem;
   letter-spacing: -1px;
+  color: var(--primary-gold-light);
+  overflow-wrap: break-word;
 }
 
 .hero-title .highlight {
@@ -61,7 +63,10 @@
   gap: 0.5rem;
   cursor: pointer;
   border: none;
-  white-space: nowrap;
+  white-space: normal;
+  /* Allow long translations to wrap */
+  text-align: center;
+  line-height: 1.2;
 }
 
 .btn-primary {

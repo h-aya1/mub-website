@@ -69,6 +69,8 @@ export const translations = {
         countries: "Countries",
         faq: "FAQ",
         startJourney: "Start Your Journey",
+        brandName: "MUB Connect",
+        tagline: "Empowering Workers, Bridging Worlds",
     },
     home: {
         hero: {

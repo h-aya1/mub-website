@@ -35,17 +35,14 @@ const Footer = () => {
                         <li><Link to="/">{t('nav.home')}</Link></li>
                         <li><Link to="/jobs">{t('nav.jobs')}</Link></li>
                         <li><Link to="/register-type">{t('footer.register')}</Link></li>
-                        <li><Link to="/track">{t('footer.trackApp')}</Link></li>
                     </ul>
                 </div>
 
                 <div className="footer-col links-col">
                     <h4>{t('footer.resources')}</h4>
                     <ul>
-                        <li><Link to="/cultural-prep">{t('footer.culturalPre')}</Link></li>
-                        <li><Link to="/success-stories">{t('footer.successStories')}</Link></li>
                         <li><Link to="/faq">{t('nav.faq')}</Link></li>
-                        <li><Link to="/support">{t('footer.support')}</Link></li>
+                        <li><Link to="/contact">{t('footer.support')}</Link></li>
                     </ul>
                 </div>
 

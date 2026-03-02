@@ -28,22 +28,31 @@ const Register = () => {
         // Required fields
         phone: '',
         firstName: '',
+        middleName: '',
         lastName: '',
+        gender: '',
+        dateOfBirth: '',
+        placeOfBirth: '',
         nationality: '',
+        maritalStatus: '',
+        occupation: '',
+        laborId: '',
         passportNumber: '',
+        passportPlace: '',
+        passportIssueDate: '',
+        passportExpiry: '',
 
         // Optional fields
         email: '',
-        gender: '',
-        dateOfBirth: '',
+        religion: '',
+        numberOfChildren: '',
+        height: '',
+        weight: '',
         address: '',
-        maritalStatus: '',
-        passportExpiry: '',
-        laborId: '',
         region: '',
 
-        // Documents
-        documents: []
+        // Documents (storing File objects now)
+        documents: {}
     });
 
     // Track if draft has been loaded
@@ -74,18 +83,31 @@ const Register = () => {
                             ...prev,
                             phone: data.phone || '',
                             firstName: data.firstName || '',
+                            middleName: data.middleName || '',
                             lastName: data.lastName || '',
                             nationality: data.nationality || '',
                             passportNumber: data.passportNumber || '',
                             email: data.email || '',
                             gender: data.gender || '',
                             dateOfBirth: data.dateOfBirth ? data.dateOfBirth.split('T')[0] : '',
-                            passportExpiry: data.passportExpiry ? data.passportExpiry.split('T')[0] : '',
-                            address: data.address || '',
+                            placeOfBirth: data.placeOfBirth || '',
+                            religion: data.religion || '',
                             maritalStatus: data.maritalStatus || '',
+                            occupation: data.occupation || '',
+                            numberOfChildren: data.numberOfChildren || '',
+                            height: data.height || '',
+                            weight: data.weight || '',
                             laborId: data.laborId || '',
+                            address: data.address || '',
+                            passportPlace: data.passportPlace || '',
+                            passportIssueDate: data.passportIssueDate ? data.passportIssueDate.split('T')[0] : '',
+                            passportExpiry: data.passportExpiry ? data.passportExpiry.split('T')[0] : '',
                             region: data.region || '',
-                            documents: data.documents || []
+                            // Note: backend documents are URLs, we just need to know which ones exist
+                            documents: (data.documents || []).reduce((acc, doc) => {
+                                acc[doc.documentType] = { name: 'Existing File', existing: true, url: doc.fileUrl };
+                                return acc;
+                            }, {})
                         }));
                         if (data.applicantId) setApplicantId(data.applicantId);
                     } else {
@@ -121,41 +143,29 @@ const Register = () => {
             return;
         }
 
-        try {
-            // Convert to base64
-            const base64 = await new Promise((resolve, reject) => {
-                const reader = new FileReader();
-                reader.onload = () => resolve(reader.result);
-                reader.onerror = reject;
-                reader.readAsDataURL(file);
-            });
-
-            // Update documents array
-            console.log(`Uploading ${documentType}...`); // Debug log
-            setFormData(prev => {
-                const existingDocs = prev.documents || [];
-                const filteredDocs = existingDocs.filter(doc => doc.documentType !== documentType);
-                const newDocs = [...filteredDocs, { documentType, fileUrl: base64 }];
-                console.log('New Documents State:', newDocs); // Debug log
-                return {
-                    ...prev,
-                    documents: newDocs
-                };
-            });
-        } catch (err) {
-            setError(`Failed to upload ${file.name}`);
-        }
+        setFormData(prev => ({
+            ...prev,
+            documents: {
+                ...prev.documents,
+                [documentType]: file
+            }
+        }));
+        setError('');
     };
 
     const removeDocument = (documentType) => {
-        setFormData(prev => ({
-            ...prev,
-            documents: (prev.documents || []).filter(doc => doc.documentType !== documentType)
-        }));
+        setFormData(prev => {
+            const newDocs = { ...prev.documents };
+            delete newDocs[documentType];
+            return {
+                ...prev,
+                documents: newDocs
+            };
+        });
     };
 
     const getUploadedDocument = (documentType) => {
-        return (formData.documents || []).find(doc => doc.documentType === documentType);
+        return formData.documents[documentType];
     };
 
     const updateLocalStorage = (token, id) => {
@@ -202,15 +212,40 @@ const Register = () => {
         setError('');
 
         try {
-            const payload = cleanPayload(formData);
-            console.log('Saving Draft Payload:', JSON.stringify(payload, null, 2)); // Debug log
+            const formDataToSend = new FormData();
+
+            // Append basic fields
+            Object.keys(formData).forEach(key => {
+                if (key === 'documents') return;
+
+                const value = formData[key];
+                if (value !== '' && value !== null && value !== undefined) {
+                    formDataToSend.append(key, value);
+                }
+            });
+
+            // Append documents
+            Object.keys(formData.documents).forEach(type => {
+                const file = formData.documents[type];
+                if (file && !file.existing) {
+                    // Map frontend type to backend field name
+                    const fieldName =
+                        type === 'PASSPORT' ? 'passportFile' :
+                            type === 'PERSONAL_PHOTO' ? 'personalPhoto' :
+                                type === 'COC_CERTIFICATE' ? 'cocCertificateFile' :
+                                    type === 'LABOR_ID' ? 'applicantIdFile' : null;
+
+                    if (fieldName) {
+                        formDataToSend.append(fieldName, file);
+                    }
+                }
+            });
+
+            console.log('Saving Draft FormData...'); // Debug log
 
             const response = await fetch(`${API_BASE_URL}/api/public/applicants/draft`, {
                 method: 'PUT',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify(payload),
+                body: formDataToSend,
             });
 
             if (!response.ok) {
@@ -243,7 +278,7 @@ const Register = () => {
         setError('');
 
         // Check if all required documents are uploaded
-        const uploadedDocTypes = new Set((formData.documents || []).map(d => d.documentType));
+        const uploadedDocTypes = new Set(Object.keys(formData.documents));
         const missingDocs = REQUIRED_DOCUMENTS.filter(doc => !uploadedDocTypes.has(doc.type));
 
         if (missingDocs.length > 0) {
@@ -493,6 +528,21 @@ const Register = () => {
                                     <div className="register-input-group">
                                         <label className="register-label">
                                             <User size={16} />
+                                            Middle Name
+                                        </label>
+                                        <input
+                                            type="text"
+                                            name="middleName"
+                                            value={formData.middleName}
+                                            onChange={handleChange}
+                                            className="register-input"
+                                            placeholder="Enter your middle name"
+                                        />
+                                    </div>
+
+                                    <div className="register-input-group">
+                                        <label className="register-label">
+                                            <User size={16} />
                                             Last Name *
                                         </label>
                                         <input
@@ -524,6 +574,22 @@ const Register = () => {
 
                                     <div className="register-input-group">
                                         <label className="register-label">
+                                            <MapPin size={16} />
+                                            Place of Birth *
+                                        </label>
+                                        <input
+                                            type="text"
+                                            name="placeOfBirth"
+                                            value={formData.placeOfBirth}
+                                            onChange={handleChange}
+                                            className="register-input"
+                                            placeholder="City, Country"
+                                            required
+                                        />
+                                    </div>
+
+                                    <div className="register-input-group">
+                                        <label className="register-label">
                                             <FileText size={16} />
                                             Passport Number *
                                         </label>
@@ -534,6 +600,36 @@ const Register = () => {
                                             onChange={handleChange}
                                             className="register-input"
                                             placeholder="Enter your passport number"
+                                            required
+                                        />
+                                    </div>
+
+                                    <div className="register-input-group">
+                                        <label className="register-label">
+                                            <MapPin size={16} />
+                                            Passport Issued At *
+                                        </label>
+                                        <input
+                                            type="text"
+                                            name="passportPlace"
+                                            value={formData.passportPlace}
+                                            onChange={handleChange}
+                                            className="register-input"
+                                            placeholder="Issuing City"
+                                            required
+                                        />
+                                    </div>
+
+                                    <div className="register-input-group">
+                                        <label className="register-label">
+                                            Passport Issue Date *
+                                        </label>
+                                        <input
+                                            type="date"
+                                            name="passportIssueDate"
+                                            value={formData.passportIssueDate || ''}
+                                            onChange={handleChange}
+                                            className="register-input"
                                             required
                                         />
                                     </div>
@@ -579,6 +675,18 @@ const Register = () => {
                                         </select>
                                     </div>
 
+                                    <div className="register-input-group">
+                                        <label className="register-label">Religion</label>
+                                        <input
+                                            type="text"
+                                            name="religion"
+                                            value={formData.religion}
+                                            onChange={handleChange}
+                                            className="register-input"
+                                            placeholder="e.g., Islam, Christian"
+                                        />
+                                    </div>
+
                                     <div className="register-input-group register-input-full">
                                         <label className="register-label">
                                             <MapPin size={16} />
@@ -613,6 +721,19 @@ const Register = () => {
                                     </div>
 
                                     <div className="register-input-group">
+                                        <label className="register-label">Occupation *</label>
+                                        <input
+                                            type="text"
+                                            name="occupation"
+                                            value={formData.occupation}
+                                            onChange={handleChange}
+                                            className="register-input"
+                                            placeholder="Your current job"
+                                            required
+                                        />
+                                    </div>
+
+                                    <div className="register-input-group">
                                         <label className="register-label">
                                             Labor ID *
                                         </label>
@@ -639,6 +760,42 @@ const Register = () => {
                                             className="register-input"
                                             placeholder="Region"
                                             required
+                                        />
+                                    </div>
+
+                                    <div className="register-input-group">
+                                        <label className="register-label">No. of Children</label>
+                                        <input
+                                            type="number"
+                                            name="numberOfChildren"
+                                            value={formData.numberOfChildren}
+                                            onChange={handleChange}
+                                            className="register-input"
+                                            placeholder="0"
+                                        />
+                                    </div>
+
+                                    <div className="register-input-group">
+                                        <label className="register-label">Height (cm)</label>
+                                        <input
+                                            type="number"
+                                            name="height"
+                                            value={formData.height}
+                                            onChange={handleChange}
+                                            className="register-input"
+                                            placeholder="170"
+                                        />
+                                    </div>
+
+                                    <div className="register-input-group">
+                                        <label className="register-label">Weight (kg)</label>
+                                        <input
+                                            type="number"
+                                            name="weight"
+                                            value={formData.weight}
+                                            onChange={handleChange}
+                                            className="register-input"
+                                            placeholder="70"
                                         />
                                     </div>
                                 </div>
@@ -729,18 +886,26 @@ const Register = () => {
                                         <div className="register-review-content">
                                             {formData.phone && <p><strong>Phone:</strong> {formData.phone}</p>}
                                             {formData.email && <p><strong>Email:</strong> {formData.email}</p>}
-                                            {(formData.firstName || formData.lastName) && (
-                                                <p><strong>Name:</strong> {formData.firstName} {formData.lastName}</p>
+                                            {(formData.firstName || formData.middleName || formData.lastName) && (
+                                                <p><strong>Name:</strong> {formData.firstName} {formData.middleName} {formData.lastName}</p>
                                             )}
                                             {formData.nationality && <p><strong>Nationality:</strong> {formData.nationality}</p>}
+                                            {formData.placeOfBirth && <p><strong>Place of Birth:</strong> {formData.placeOfBirth}</p>}
+                                            {formData.religion && <p><strong>Religion:</strong> {formData.religion}</p>}
                                             {formData.passportNumber && <p><strong>Passport Number:</strong> {formData.passportNumber}</p>}
+                                            {formData.passportPlace && <p><strong>Passport Issued At:</strong> {formData.passportPlace}</p>}
+                                            {formData.passportIssueDate && <p><strong>Passport Issue Date:</strong> {formData.passportIssueDate}</p>}
                                             {formData.passportExpiry && <p><strong>Passport Expiry:</strong> {formData.passportExpiry}</p>}
                                             {formData.dateOfBirth && <p><strong>Date of Birth:</strong> {formData.dateOfBirth}</p>}
                                             {formData.gender && <p><strong>Gender:</strong> {formData.gender}</p>}
                                             {formData.address && <p><strong>Address:</strong> {formData.address}</p>}
                                             {formData.maritalStatus && <p><strong>Marital Status:</strong> {formData.maritalStatus}</p>}
+                                            {formData.occupation && <p><strong>Occupation:</strong> {formData.occupation}</p>}
                                             {formData.laborId && <p><strong>Labor ID:</strong> {formData.laborId}</p>}
                                             {formData.region && <p><strong>Region:</strong> {formData.region}</p>}
+                                            {formData.numberOfChildren && <p><strong>No. of Children:</strong> {formData.numberOfChildren}</p>}
+                                            {formData.height && <p><strong>Height:</strong> {formData.height} cm</p>}
+                                            {formData.weight && <p><strong>Weight:</strong> {formData.weight} kg</p>}
                                         </div>
                                     </div>
 
