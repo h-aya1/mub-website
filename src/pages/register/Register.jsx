@@ -3,9 +3,7 @@ import { User, Mail, Phone, MapPin, Globe, FileText, CheckCircle, ArrowLeft, Che
 import { useNavigate } from 'react-router-dom';
 import './Register.css';
 
-const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || 'http://localhost:3000';
-
-const REQUIRED_DOCUMENTS = [
+import { API_CONFIG } from '../../utils/api'; const REQUIRED_DOCUMENTS = [
     { type: 'PASSPORT', label: 'Passport Copy', accept: 'image/*,.pdf' },
     { type: 'PERSONAL_PHOTO', label: 'Personal Photo', accept: 'image/*' },
     { type: 'COC_CERTIFICATE', label: 'COC Certificate', accept: 'image/*,.pdf' },
@@ -71,7 +69,7 @@ const Register = () => {
             if (draftToken && !draftLoadedRef.current) {
                 draftLoadedRef.current = true; // Mark as loaded
                 try {
-                    const response = await fetch(`${API_BASE_URL}/api/public/applicants/draft/me`, {
+                    const response = await fetch(API_CONFIG.ENDPOINTS.APPLICANTS.GET_DRAFT, {
                         headers: {
                             'x-draft-token': draftToken
                         }
@@ -243,7 +241,7 @@ const Register = () => {
 
             console.log('Saving Draft FormData...'); // Debug log
 
-            const response = await fetch(`${API_BASE_URL}/api/public/applicants/draft`, {
+            const response = await fetch(API_CONFIG.ENDPOINTS.APPLICANTS.SAVE_DRAFT, {
                 method: 'PUT',
                 body: formDataToSend,
             });
@@ -295,7 +293,7 @@ const Register = () => {
         try {
             const currentToken = localStorage.getItem('applicantDraftToken');
 
-            const response = await fetch(`${API_BASE_URL}/api/public/applicants/submit`, {
+            const response = await fetch(API_CONFIG.ENDPOINTS.APPLICANTS.SUBMIT, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

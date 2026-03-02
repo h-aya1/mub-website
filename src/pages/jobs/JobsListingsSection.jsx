@@ -79,7 +79,7 @@ const JobsListingsSection = ({
                                                 {(job.thumbnailUrl || job.logoUrl) && (
                                                     <div className="jobs-job-logo">
                                                         <img
-                                                            src={`http://localhost:3000${job.thumbnailUrl || job.logoUrl}`}
+                                                            src={`${API_CONFIG.BASE_URL}${job.thumbnailUrl || job.logoUrl}`}
                                                             alt={job.company}
                                                             onError={(e) => { e.target.style.display = 'none'; }}
                                                         />

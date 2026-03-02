@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { ArrowLeft, Upload, CheckCircle2, FileText, AlertCircle } from 'lucide-react';
 import './PartnerRegister.css';
 
-const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || 'http://localhost:3000';
+import { API_CONFIG } from '../../utils/api';
 
 const PartnerRegister = () => {
     const navigate = useNavigate();
@@ -72,7 +72,7 @@ const PartnerRegister = () => {
                 }
             });
 
-            const response = await fetch(`${API_BASE_URL}/api/employers/register`, {
+            const response = await fetch(API_CONFIG.ENDPOINTS.EMPLOYERS.REGISTER, {
                 method: 'POST',
                 body: formDataToSend,
             });

@@ -1,4 +1,4 @@
-const API_BASE_URL = 'http://localhost:3000/api/public/jobs';
+import { API_CONFIG } from '../utils/api';
 
 export const jobService = {
     /**
@@ -19,7 +19,7 @@ export const jobService = {
         if (filters.pageSize) params.append('pageSize', filters.pageSize);
 
         try {
-            const response = await fetch(`${API_BASE_URL}?${params.toString()}`);
+            const response = await fetch(`${API_CONFIG.ENDPOINTS.JOBS.PUBLIC_LIST}?${params.toString()}`);
             if (!response.ok) {
                 throw new Error('Failed to fetch jobs');
             }

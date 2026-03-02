@@ -3,7 +3,7 @@ import { Link, useNavigate, useLocation } from 'react-router-dom';
 import { LogIn, UserPlus, ArrowLeft, FileEdit, X } from 'lucide-react';
 import './AuthChoice.css';
 
-const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || 'http://localhost:3000';
+import { API_CONFIG } from '../../utils/api';
 
 const AuthChoice = () => {
     const navigate = useNavigate();
@@ -27,7 +27,7 @@ const AuthChoice = () => {
                 payload.passportNumber = passportNumber.trim();
             }
 
-            const response = await fetch(`${API_BASE_URL}/api/public/applicants/draft-token`, {
+            const response = await fetch(API_CONFIG.ENDPOINTS.APPLICANTS.DRAFT_TOKEN, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
