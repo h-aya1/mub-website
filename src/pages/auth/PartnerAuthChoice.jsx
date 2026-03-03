@@ -25,7 +25,7 @@ const PartnerAuthChoice = () => {
 
                 <div className="partner-auth-options">
                     <button
-                        onClick={() => navigate('/')}
+                        onClick={() => window.location.href = 'https://mub-portal.onrender.com'}
                         className="partner-auth-card"
                     >
                         <div className="partner-auth-icon">

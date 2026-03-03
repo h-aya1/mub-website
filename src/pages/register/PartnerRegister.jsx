@@ -17,14 +17,20 @@ const PartnerRegister = () => {
         contactEmail: '',
         contactPhone: '',
         address: '',
+        logo: null,
         ownerName: '',
         ownerIdNumber: '',
+        ownerIdFile: null,
         licenseNumber: '',
-        licenseFile: null, // Storing File object
+        licenseFile: null,
         licenseExpiry: ''
     });
 
-    const [licenseFileName, setLicenseFileName] = useState('');
+    const [fileNames, setFileNames] = useState({
+        logo: '',
+        ownerIdFile: '',
+        licenseFile: ''
+    });
 
     const handleChange = (e) => {
         const { name, value } = e.target;
@@ -35,7 +41,7 @@ const PartnerRegister = () => {
         setError('');
     };
 
-    const handleFileUpload = async (e) => {
+    const handleFileUpload = async (e, fieldName) => {
         const file = e.target.files[0];
         if (!file) return;
 
@@ -46,9 +52,12 @@ const PartnerRegister = () => {
 
         setFormData(prev => ({
             ...prev,
-            licenseFile: file
+            [fieldName]: file
         }));
-        setLicenseFileName(file.name);
+        setFileNames(prev => ({
+            ...prev,
+            [fieldName]: file.name
+        }));
         setError('');
     };
 
@@ -56,12 +65,6 @@ const PartnerRegister = () => {
         e.preventDefault();
         setLoading(true);
         setError('');
-
-        if (!formData.licenseFile) {
-            setError('Please upload your business license document.');
-            setLoading(false);
-            return;
-        }
 
         try {
             const formDataToSend = new FormData();
@@ -113,12 +116,20 @@ const PartnerRegister = () => {
                             Thank you for registering your organization. Your application is under review.
                             We will contact you via email once approved.
                         </p>
-                        <button
-                            onClick={() => navigate('/')}
-                            className="partner-btn partner-btn-primary"
-                        >
-                            Back to Home
-                        </button>
+                        <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center' }}>
+                            <button
+                                onClick={() => navigate(-1)}
+                                className="partner-btn partner-btn-secondary"
+                            >
+                                Go Back
+                            </button>
+                            <button
+                                onClick={() => window.location.href = 'https://mub-portal.onrender.com'}
+                                className="partner-btn partner-btn-primary"
+                            >
+                                Go to Portal
+                            </button>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -161,7 +172,7 @@ const PartnerRegister = () => {
 
                     <div className="partner-form-grid">
                         <div className="partner-input-group partner-input-full">
-                            <label className="partner-label">Organization Name *</label>
+                            <label className="partner-label">Organization Name <span className="required-asterisk">*</span></label>
                             <input
                                 type="text"
                                 name="organizationName"
@@ -175,7 +186,7 @@ const PartnerRegister = () => {
                         </div>
 
                         <div className="partner-input-group">
-                            <label className="partner-label">Country *</label>
+                            <label className="partner-label">Country <span className="required-asterisk">*</span></label>
                             <input
                                 type="text"
                                 name="country"
@@ -189,7 +200,7 @@ const PartnerRegister = () => {
                         </div>
 
                         <div className="partner-input-group">
-                            <label className="partner-label">Contact Email *</label>
+                            <label className="partner-label">Contact Email <span className="required-asterisk">*</span></label>
                             <input
                                 type="email"
                                 name="contactEmail"
@@ -202,7 +213,7 @@ const PartnerRegister = () => {
                         </div>
 
                         <div className="partner-input-group">
-                            <label className="partner-label">Contact Phone *</label>
+                            <label className="partner-label">Contact Phone <span className="required-asterisk">*</span></label>
                             <input
                                 type="tel"
                                 name="contactPhone"
@@ -227,8 +238,33 @@ const PartnerRegister = () => {
                             />
                         </div>
 
+                        <div className="partner-input-group partner-input-full">
+                            <label className="partner-label">Company Logo</label>
+                            <div className="partner-file-upload">
+                                <label className="partner-btn partner-btn-secondary file-input-wrapper" style={{ width: '100%', textAlign: 'center', border: '2px dashed rgba(0,0,0,0.2)', padding: '2rem' }}>
+                                    <input
+                                        type="file"
+                                        accept="image/*"
+                                        onChange={(e) => handleFileUpload(e, 'logo')}
+                                        className="file-input"
+                                    />
+                                    <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', pointerEvents: 'none' }}>
+                                        <Upload size={24} style={{ marginBottom: '0.5rem', color: 'var(--primary-blue)' }} />
+                                        <span>{fileNames.logo ? 'Change Logo' : 'Click to Upload Logo (Image)'}</span>
+                                        <small style={{ color: 'var(--text-light)', marginTop: '0.5rem' }}>Max 5MB</small>
+                                    </div>
+                                </label>
+                            </div>
+                            {fileNames.logo && (
+                                <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', color: 'var(--primary-blue)', fontSize: '0.9rem', marginTop: '-1rem', marginBottom: '1rem' }}>
+                                    <FileText size={16} />
+                                    {fileNames.logo}
+                                </div>
+                            )}
+                        </div>
+
                         <div className="partner-input-group">
-                            <label className="partner-label">Owner Name *</label>
+                            <label className="partner-label">Owner Name <span className="required-asterisk">*</span></label>
                             <input
                                 type="text"
                                 name="ownerName"
@@ -242,7 +278,7 @@ const PartnerRegister = () => {
                         </div>
 
                         <div className="partner-input-group">
-                            <label className="partner-label">Owner ID Number *</label>
+                            <label className="partner-label">Owner ID Number</label>
                             <input
                                 type="text"
                                 name="ownerIdNumber"
@@ -251,12 +287,36 @@ const PartnerRegister = () => {
                                 className="partner-input"
                                 placeholder="National ID / Passport No."
                                 minLength={3}
-                                required
                             />
                         </div>
 
+                        <div className="partner-input-group partner-input-full">
+                            <label className="partner-label">Owner ID Document</label>
+                            <div className="partner-file-upload">
+                                <label className="partner-btn partner-btn-secondary file-input-wrapper" style={{ width: '100%', textAlign: 'center', border: '2px dashed rgba(0,0,0,0.2)', padding: '2rem' }}>
+                                    <input
+                                        type="file"
+                                        accept=".pdf,image/*"
+                                        onChange={(e) => handleFileUpload(e, 'ownerIdFile')}
+                                        className="file-input"
+                                    />
+                                    <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', pointerEvents: 'none' }}>
+                                        <Upload size={24} style={{ marginBottom: '0.5rem', color: 'var(--primary-blue)' }} />
+                                        <span>{fileNames.ownerIdFile ? 'Change File' : 'Click to Upload Owner ID (PDF/Image)'}</span>
+                                        <small style={{ color: 'var(--text-light)', marginTop: '0.5rem' }}>Max 5MB</small>
+                                    </div>
+                                </label>
+                            </div>
+                            {fileNames.ownerIdFile && (
+                                <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', color: 'var(--primary-blue)', fontSize: '0.9rem', marginTop: '-1rem', marginBottom: '1rem' }}>
+                                    <FileText size={16} />
+                                    {fileNames.ownerIdFile}
+                                </div>
+                            )}
+                        </div>
+
                         <div className="partner-input-group">
-                            <label className="partner-label">License Number *</label>
+                            <label className="partner-label">License Number <span className="required-asterisk">*</span></label>
                             <input
                                 type="text"
                                 name="licenseNumber"
@@ -281,26 +341,26 @@ const PartnerRegister = () => {
                         </div>
 
                         <div className="partner-input-group partner-input-full">
-                            <label className="partner-label">Business License Document *</label>
+                            <label className="partner-label">Business License Document</label>
                             <div className="partner-file-upload">
                                 <label className="partner-btn partner-btn-secondary file-input-wrapper" style={{ width: '100%', textAlign: 'center', border: '2px dashed rgba(0,0,0,0.2)', padding: '2rem' }}>
                                     <input
                                         type="file"
                                         accept=".pdf,image/*"
-                                        onChange={handleFileUpload}
+                                        onChange={(e) => handleFileUpload(e, 'licenseFile')}
                                         className="file-input"
                                     />
                                     <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', pointerEvents: 'none' }}>
                                         <Upload size={24} style={{ marginBottom: '0.5rem', color: 'var(--primary-blue)' }} />
-                                        <span>{licenseFileName ? 'Change File' : 'Click to Upload License (PDF/Image)'}</span>
+                                        <span>{fileNames.licenseFile ? 'Change File' : 'Click to Upload License (PDF/Image)'}</span>
                                         <small style={{ color: 'var(--text-light)', marginTop: '0.5rem' }}>Max 5MB</small>
                                     </div>
                                 </label>
                             </div>
-                            {licenseFileName && (
+                            {fileNames.licenseFile && (
                                 <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', color: 'var(--primary-blue)', fontSize: '0.9rem', marginTop: '-1rem' }}>
                                     <FileText size={16} />
-                                    {licenseFileName}
+                                    {fileNames.licenseFile}
                                 </div>
                             )}
                         </div>

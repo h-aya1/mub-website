@@ -155,3 +155,7 @@
     opacity: 0;
     cursor: pointer;
 }
+
+.required-asterisk {
+    color: #ef4444; /* red color */
+}

@@ -77,7 +77,7 @@ const AuthChoice = () => {
 
                 <div className="auth-choice-options">
                     <button
-                        onClick={() => navigate('/login')}
+                        onClick={() => window.location.href = 'https://mub-portal.onrender.com'}
                         className="auth-choice-card auth-choice-button"
                     >
 

@@ -389,12 +389,20 @@ const Register = () => {
                                         Continue Editing
                                     </button>
                                 ) : (
-                                    <button
-                                        onClick={() => navigate('/')}
-                                        className="register-btn register-btn-primary"
-                                    >
-                                        Back to Home
-                                    </button>
+                                    <>
+                                        <button
+                                            onClick={() => navigate(-1)}
+                                            className="register-btn register-btn-secondary"
+                                        >
+                                            Go Back
+                                        </button>
+                                        <button
+                                            onClick={() => window.location.href = 'https://mub-portal.onrender.com'}
+                                            className="register-btn register-btn-primary"
+                                        >
+                                            Go to Portal
+                                        </button>
+                                    </>
                                 )}
                             </div>
                         </div>
@@ -479,7 +487,7 @@ const Register = () => {
                                     <div className="register-input-group">
                                         <label className="register-label">
                                             <Phone size={16} />
-                                            Phone Number *
+                                            Phone Number <span className="required-asterisk">*</span>
                                         </label>
                                         <input
                                             type="tel"
@@ -510,7 +518,7 @@ const Register = () => {
                                     <div className="register-input-group">
                                         <label className="register-label">
                                             <User size={16} />
-                                            First Name *
+                                            First Name <span className="required-asterisk">*</span>
                                         </label>
                                         <input
                                             type="text"
@@ -541,7 +549,7 @@ const Register = () => {
                                     <div className="register-input-group">
                                         <label className="register-label">
                                             <User size={16} />
-                                            Last Name *
+                                            Last Name <span className="required-asterisk">*</span>
                                         </label>
                                         <input
                                             type="text"
@@ -557,7 +565,7 @@ const Register = () => {
                                     <div className="register-input-group">
                                         <label className="register-label">
                                             <Globe size={16} />
-                                            Nationality *
+                                            Nationality <span className="required-asterisk">*</span>
                                         </label>
                                         <input
                                             type="text"
@@ -573,7 +581,7 @@ const Register = () => {
                                     <div className="register-input-group">
                                         <label className="register-label">
                                             <MapPin size={16} />
-                                            Place of Birth *
+                                            Place of Birth <span className="required-asterisk">*</span>
                                         </label>
                                         <input
                                             type="text"
@@ -589,7 +597,7 @@ const Register = () => {
                                     <div className="register-input-group">
                                         <label className="register-label">
                                             <FileText size={16} />
-                                            Passport Number *
+                                            Passport Number <span className="required-asterisk">*</span>
                                         </label>
                                         <input
                                             type="text"
@@ -605,7 +613,7 @@ const Register = () => {
                                     <div className="register-input-group">
                                         <label className="register-label">
                                             <MapPin size={16} />
-                                            Passport Issued At *
+                                            Passport Issued At <span className="required-asterisk">*</span>
                                         </label>
                                         <input
                                             type="text"
@@ -620,7 +628,7 @@ const Register = () => {
 
                                     <div className="register-input-group">
                                         <label className="register-label">
-                                            Passport Issue Date *
+                                            Passport Issue Date <span className="required-asterisk">*</span>
                                         </label>
                                         <input
                                             type="date"
@@ -634,7 +642,7 @@ const Register = () => {
 
                                     <div className="register-input-group">
                                         <label className="register-label">
-                                            Passport Expiry *
+                                            Passport Expiry <span className="required-asterisk">*</span>
                                         </label>
                                         <input
                                             type="date"
@@ -647,7 +655,7 @@ const Register = () => {
                                     </div>
 
                                     <div className="register-input-group">
-                                        <label className="register-label">Date of Birth *</label>
+                                        <label className="register-label">Date of Birth <span className="required-asterisk">*</span></label>
                                         <input
                                             type="date"
                                             name="dateOfBirth"
@@ -659,7 +667,7 @@ const Register = () => {
                                     </div>
 
                                     <div className="register-input-group">
-                                        <label className="register-label">Gender *</label>
+                                        <label className="register-label">Gender <span className="required-asterisk">*</span></label>
                                         <select
                                             name="gender"
                                             value={formData.gender}
@@ -688,7 +696,7 @@ const Register = () => {
                                     <div className="register-input-group register-input-full">
                                         <label className="register-label">
                                             <MapPin size={16} />
-                                            Address *
+                                            Address
                                         </label>
                                         <input
                                             type="text"
@@ -702,7 +710,7 @@ const Register = () => {
                                     </div>
 
                                     <div className="register-input-group">
-                                        <label className="register-label">Marital Status *</label>
+                                        <label className="register-label">Marital Status <span className="required-asterisk">*</span></label>
                                         <select
                                             name="maritalStatus"
                                             value={formData.maritalStatus}
@@ -719,7 +727,7 @@ const Register = () => {
                                     </div>
 
                                     <div className="register-input-group">
-                                        <label className="register-label">Occupation *</label>
+                                        <label className="register-label">Occupation <span className="required-asterisk">*</span></label>
                                         <input
                                             type="text"
                                             name="occupation"
@@ -733,7 +741,7 @@ const Register = () => {
 
                                     <div className="register-input-group">
                                         <label className="register-label">
-                                            Labor ID *
+                                            Labor ID <span className="required-asterisk">*</span>
                                         </label>
                                         <input
                                             type="text"
@@ -748,7 +756,7 @@ const Register = () => {
 
                                     <div className="register-input-group">
                                         <label className="register-label">
-                                            Region *
+                                            Region
                                         </label>
                                         <input
                                             type="text"

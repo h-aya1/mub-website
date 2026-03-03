@@ -12,7 +12,6 @@ import PartnerRegister from './pages/register/PartnerRegister';
 import AuthChoice from './pages/auth/AuthChoice';
 import PartnerAuthChoice from './pages/auth/PartnerAuthChoice';
 import RegistrationType from './pages/auth/RegistrationType';
-import Login from './pages/auth/Login';
 import Track from './pages/track/Track';
 import NotFound from './pages/not-found/NotFound';
 import './styles/App.css';
@@ -33,7 +32,6 @@ function App() {
         <Route path="/register-type" element={<RegistrationType />} />
         <Route path="/partner-auth" element={<PartnerAuthChoice />} />
         <Route path="/partner-register" element={<PartnerRegister />} />
-        <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
         <Route path="/track" element={<Track />} />
         <Route path="*" element={<NotFound />} />
